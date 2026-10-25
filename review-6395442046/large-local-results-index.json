@@ -1,0 +1,12 @@
+{
+  "baseline-final-jest-results.json": {
+    "bytes": 10183531,
+    "sha256": "7a46f06549e92673a40c5a5301861caa06b3d6cf2ee00facbd43705a988d2262",
+    "location": "retained in local ci-evidence/heartbeat0902-ragflow-review-runtime; complete raw text logs and all normalized failure IDs are public here"
+  },
+  "candidate-jest-results.json": {
+    "bytes": 10195917,
+    "sha256": "22f5e2512d22478b38e0ec0cb9c864d488d20061f93f8e687e02e7fb0b49c08a",
+    "location": "retained in local ci-evidence/heartbeat0902-ragflow-review-runtime; complete raw text logs and all normalized failure IDs are public here"
+  }
+}

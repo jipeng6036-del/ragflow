@@ -1,0 +1,15 @@
+{
+  "base": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+  "host": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "851297418e935912405a488cc7d8bd7977bdca13545980ee6b2a1d827df9858a",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "aa06d3300e44c7dab40924d57b03cf65ca1a8e178e75a244376def2768858270"
+  },
+  "ram": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "851297418e935912405a488cc7d8bd7977bdca13545980ee6b2a1d827df9858a",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "aa06d3300e44c7dab40924d57b03cf65ca1a8e178e75a244376def2768858270"
+  },
+  "host_matches_ram": true,
+  "tested_matches_staged": true,
+  "staged_git_modes_and_blobs": "100644 377a3517fc2ac018e23156a6da2de353fb464844 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n100644 57fd9bf11c1cde33c2f8f9a711b29a55fb02f4f6 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+  "host_index_staged": false
+}

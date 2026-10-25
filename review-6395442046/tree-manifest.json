@@ -1,0 +1,66 @@
+{
+  "baseline": {
+    "head": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+    "branch": "fix/hide-unsupported-pdf-cleanup-options",
+    "tracked_count": 5452,
+    "head_blob_mismatches": [],
+    "head_mode_mismatches": [],
+    "status": "",
+    "owned": {
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": {
+        "sha256": "253e5feb98eb18f09b38815bc377c1292c68eb4b6f02cd8bf2058c73daaacc35",
+        "raw_blob_sha1": "ceea40e18f5d409bed9eab6ae632ed06ff562592",
+        "mode": "0o644"
+      },
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": {
+        "sha256": "a8b8b17fdeb4beb0e8f42b142a09207d88683860e69f5fb32c19ba1951341bb9",
+        "raw_blob_sha1": "44c823aff06993cbc660800064dfc87c8caf4543",
+        "mode": "0o644"
+      }
+    },
+    "config_sha256": {
+      "web/package.json": "93d6fde9840c0f9551dcb3cc69e8dc7d4b336928631d060fc569378a3ad65345",
+      "web/package-lock.json": "6a798e5dbd7caeecb3a6a3e4232cf26f7890dbe48087d77a217be5de0f4021da",
+      "web/tsconfig.json": "7c6eb07e54eff9f0d0fee3d941428f0228465e699ef56267c6fac9632ef5e1e5",
+      "web/jest.config.ts": "8c618a784b562851e39c02ada6e0ed92d7c149331ad2faf029f878c7a3c8afc7",
+      "lefthook.yml": "d6501ca50d8f1dd0b241ac60dbbf6b78285426af1a5976624bf20bab3ad48b45",
+      "AGENTS.md": "58cca691497b68f7f077cd043525b832df3b9b9413502919fd1a41ee357115af",
+      "web/AGENTS.md": "cdb526d718afde8b608bcc0cbccbf5775e0b342ab1655e45e222f29204b0560c"
+    }
+  },
+  "candidate": {
+    "head": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+    "branch": "fix/hide-unsupported-pdf-cleanup-options",
+    "tracked_count": 5452,
+    "head_blob_mismatches": [
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx"
+    ],
+    "head_mode_mismatches": [],
+    "status": "M  web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM  web/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "owned": {
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": {
+        "sha256": "851297418e935912405a488cc7d8bd7977bdca13545980ee6b2a1d827df9858a",
+        "raw_blob_sha1": "57fd9bf11c1cde33c2f8f9a711b29a55fb02f4f6",
+        "mode": "0o644"
+      },
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": {
+        "sha256": "aa06d3300e44c7dab40924d57b03cf65ca1a8e178e75a244376def2768858270",
+        "raw_blob_sha1": "377a3517fc2ac018e23156a6da2de353fb464844",
+        "mode": "0o644"
+      }
+    },
+    "config_sha256": {
+      "web/package.json": "93d6fde9840c0f9551dcb3cc69e8dc7d4b336928631d060fc569378a3ad65345",
+      "web/package-lock.json": "6a798e5dbd7caeecb3a6a3e4232cf26f7890dbe48087d77a217be5de0f4021da",
+      "web/tsconfig.json": "7c6eb07e54eff9f0d0fee3d941428f0228465e699ef56267c6fac9632ef5e1e5",
+      "web/jest.config.ts": "8c618a784b562851e39c02ada6e0ed92d7c149331ad2faf029f878c7a3c8afc7",
+      "lefthook.yml": "d6501ca50d8f1dd0b241ac60dbbf6b78285426af1a5976624bf20bab3ad48b45",
+      "AGENTS.md": "58cca691497b68f7f077cd043525b832df3b9b9413502919fd1a41ee357115af",
+      "web/AGENTS.md": "cdb526d718afde8b608bcc0cbccbf5775e0b342ab1655e45e222f29204b0560c"
+    },
+    "staged_files": "100644 377a3517fc2ac018e23156a6da2de353fb464844 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n100644 57fd9bf11c1cde33c2f8f9a711b29a55fb02f4f6 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "staged_numstat": "66\t6\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n7\t10\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "unstaged_diff": ""
+  }
+}

@@ -1,0 +1,4088 @@
+
+> lint
+> oxlint src
+
+
+  ! eslint(no-unused-vars): Variable 'loading' is declared but never used.
+    ,-[src/pages/memory/memory-message/index.tsx:16:5]
+ 15 |     handleFilterSubmit,
+ 16 |     loading,
+    :     ^^^|^^^
+    :        `-- 'loading' is declared here
+ 17 |   } = useFetchMemoryMessageList();
+    `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/tavily-form/use-watch-change.ts:22:6]
+ 12 |     if (id) {
+ 13 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 14 |       const nextValues: any = {
+ 15 |         ...values,
+ 16 |         include_domains: convertToStringArray(values.include_domains),
+ 17 |         exclude_domains: convertToStringArray(values.exclude_domains),
+ 18 |       };
+ 19 | 
+ 20 |       updateNodeForm(id, nextValues);
+ 21 |     }
+ 22 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 23 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'handleClickUpdateMessageState', and 'handleClickMessageContentDialog'
+     ,-[src/pages/memory/memory-message/message-table.tsx:335:5]
+ 266 |             disabled={disabledRowFunc(row)}
+ 267 |             onUpdate={handleClickUpdateMessageState}
+     :                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 268 |           />
+ 269 |         ),
+ 270 |       },
+ 271 |       columnHelper.display({
+ 272 |         id: 'task_progress',
+ 273 |         cell: ({ row }) => {
+ 274 |           const { task } = row.original;
+ 275 | 
+ 276 |           if (!task) {
+ 277 |             return null;
+ 278 |           }
+ 279 | 
+ 280 |           const taskStatus = getTaskStatus(task.progress);
+ 281 | 
+ 282 |           return (
+ 283 |             <Button
+ 284 |               variant="transparent"
+ 285 |               size="icon"
+ 286 |               className="border-0 size-8"
+ 287 |               onClick={() => {
+ 288 |                 showLog(row);
+ 289 |               }}
+ 290 |             >
+ 291 |               <div
+ 292 |                 className={cn('size-1 rounded-full', {
+ 293 |                   'bg-state-success': taskStatus === RunningStatus.DONE,
+ 294 |                   'bg-state-error': taskStatus === RunningStatus.FAIL,
+ 295 |                   'bg-state-warning': taskStatus === RunningStatus.RUNNING,
+ 296 |                   'bg-text-secondary': taskStatus === RunningStatus.UNSTART,
+ 297 |                 })}
+ 298 |               />
+ 299 |             </Button>
+ 300 |           );
+ 301 |         },
+ 302 |       }),
+ 303 |       {
+ 304 |         accessorKey: 'action',
+ 305 |         header: () => <span>{t('memory.messages.action')}</span>,
+ 306 |         meta: {
+ 307 |           cellClassName: 'w-12',
+ 308 |         },
+ 309 |         cell: ({ row }) => (
+ 310 |           <div className=" flex opacity-0 group-hover:opacity-100">
+ 311 |             <Button
+ 312 |               variant={'ghost'}
+ 313 |               className="bg-transparent"
+ 314 |               onClick={() => {
+ 315 |                 handleClickMessageContentDialog(row.original);
+     :                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 316 |               }}
+ 317 |             >
+ 318 |               <TextSelect />
+ 319 |             </Button>
+ 320 |             <Button
+ 321 |               variant={'delete'}
+ 322 |               disabled={disabledRowFunc(row)}
+ 323 |               className="bg-transparent"
+ 324 |               aria-label="Edit"
+ 325 |               onClick={() => {
+ 326 |                 handleClickDeleteMessage(row.original);
+ 327 |               }}
+ 328 |             >
+ 329 |               <Eraser />
+ 330 |             </Button>
+ 331 |           </div>
+ 332 |         ),
+ 333 |       },
+ 334 |     ],
+ 335 |     [handleClickDeleteMessage],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 336 |   );
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataset/setting/components/added-source-card.tsx:66:19]
+ 65 |                 onClick={() => {
+ 66 |                   console.log('item--->', item);
+    :                   ^^^^^^^^^^^
+ 67 |                   onCheck(item);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Identifier 't' is imported but never used.
+    ,-[src/pages/agent/gobal-variable-sheet/index.tsx:14:10]
+ 13 | import { cn } from '@/lib/utils';
+ 14 | import { t } from 'i18next';
+    :          |
+    :          `-- 't' is imported here
+ 15 | import { Trash2 } from 'lucide-react';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataset/setting/components/link-data-source-modal.tsx:36:5]
+ 35 |   const handleFormSubmit = (values: any) => {
+ 36 |     console.log(values, selectedList);
+    :     ^^^^^^^^^^^
+ 37 |     onSubmit?.(list);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/user-setting/data-source/constant/confluence-constant.tsx:63:7]
+ 62 |       const index_mode = formValues?.config?.index_mode;
+ 63 |       console.log('index_mode', index_mode, val);
+    :       ^^^^^^^^^^^
+ 64 |       if (!val && index_mode === 'page') {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/dataset/setting/components/link-data-source.tsx:198:5]
+ 197 |   const openLinkModalFunc = (open: boolean, data?: IDataSourceNodeProps) => {
+ 198 |     console.log('open', open, data);
+     :     ^^^^^^^^^^^
+ 199 |     setOpenLinkModal(open);
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/dataset/setting/components/link-data-source.tsx:203:5]
+ 202 |   const handleLinkOrEditSubmit = (submitted: IDataSourceBase[] | undefined) => {
+ 203 |     console.log('handleLinkOrEditSubmit', submitted);
+     :     ^^^^^^^^^^^
+ 204 |     const existingIds = new Set(
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/memory/memory-setting/advanced-settings-form.tsx:61:21]
+ 60 |                   onValueChange={(value) => {
+ 61 |                     console.log(value);
+    :                     ^^^^^^^^^^^
+ 62 |                     field.onChange(value);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Variable 'res' is assigned a value but never used.
+    ,-[src/pages/memory/memory-setting/hook.ts:11:11]
+ 10 |     async (data: IMemory) => {
+ 11 |       let res;
+    :           ^|^
+    :            `-- 'res' is declared here
+ 12 |       setLoading(true);
+ 13 |       if (data?.id) {
+ 14 |         // console.log('memory-->', memory, data);
+ 15 |         try {
+ 16 |           const params = omit(data, [
+ 17 |             'id',
+ 18 |             // 'memory_type',
+ 19 |             // 'embd_id',
+ 20 |             // 'storage_type',
+ 21 |           ]);
+ 22 |           res = await updateMemory({
+    :           ^|^
+    :            `-- it was last assigned here
+ 23 |             // ...memoryDataTemp,
+    `----
+  help: Did you mean to use this variable?
+
+  ! eslint(no-unused-vars): Identifier 'Popover' is imported but never used.
+    ,-[src/components/ui/audio-button.tsx:12:10]
+ 11 | import { Input } from './input';
+ 12 | import { Popover, PopoverContent, PopoverTrigger } from './popover';
+    :          ^^^|^^^
+    :             `-- 'Popover' is imported here
+ 13 | import message from './message';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'PopoverContent' is imported but never used.
+    ,-[src/components/ui/audio-button.tsx:12:19]
+ 11 | import { Input } from './input';
+ 12 | import { Popover, PopoverContent, PopoverTrigger } from './popover';
+    :                   ^^^^^^^|^^^^^^
+    :                          `-- 'PopoverContent' is imported here
+ 13 | import message from './message';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'PopoverTrigger' is imported but never used.
+    ,-[src/components/ui/audio-button.tsx:12:35]
+ 11 | import { Input } from './input';
+ 12 | import { Popover, PopoverContent, PopoverTrigger } from './popover';
+    :                                   ^^^^^^^|^^^^^^
+    :                                          `-- 'PopoverTrigger' is imported here
+ 13 | import message from './message';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Variable 'VoiceInputBox' is declared but never used.
+     ,-[src/components/ui/audio-button.tsx:170:7]
+ 169 | 
+ 170 | const VoiceInputBox = ({
+     :       ^^^^^^|^^^^^^
+     :             `-- 'VoiceInputBox' is declared here
+ 171 |   isRecording,
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'recordingTime' is declared but never used.
+     ,-[src/components/ui/audio-button.tsx:227:10]
+ 226 |   const [isProcessing, setIsProcessing] = useState(false);
+ 227 |   const [recordingTime, setRecordingTime] = useState(0);
+     :          ^^^^^^|^^^^^^
+     :                `-- 'recordingTime' is declared here
+ 228 |   const [transcript, setTranscript] = useState('');
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'transcript' is declared but never used.
+     ,-[src/components/ui/audio-button.tsx:228:10]
+ 227 |   const [recordingTime, setRecordingTime] = useState(0);
+ 228 |   const [transcript, setTranscript] = useState('');
+     :          ^^^^^|^^^^
+     :               `-- 'transcript' is declared here
+ 229 |   const [popoverOpen, setPopoverOpen] = useState(false);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'popoverOpen' is declared but never used.
+     ,-[src/components/ui/audio-button.tsx:229:10]
+ 228 |   const [transcript, setTranscript] = useState('');
+ 229 |   const [popoverOpen, setPopoverOpen] = useState(false);
+     :          ^^^^^|^^^^^
+     :               `-- 'popoverOpen' is declared here
+ 230 |   const recorderControls = useAudioRecorder();
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:83:7]
+ 82 |       hook.scrollRef.current = { scrollIntoView: mockScroll } as any;
+ 83 |       console.log('HOOK: isAtBottom:', hook.isAtBottom);
+    :       ^^^^^^^^^^^
+ 84 |       return hook;
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:99:7]
+  98 |       jest.advanceTimersByTime(10);
+  99 |       console.log('AFTER SCROLL: isAtBottom:', result.current.isAtBottom);
+     :       ^^^^^^^^^^^
+ 100 |     });
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:105:5]
+ 104 | 
+ 105 |     console.log('AFTER RERENDER: isAtBottom:', result.current.isAtBottom);
+     :     ^^^^^^^^^^^
+ 106 | 
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/begin-form/use-watch-change.ts:58:6]
+ 36 |     if (id) {
+ 37 |       values = form?.getValues() || {};
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 38 | 
+ 39 |       let outputs: Record<string, any> = {};
+ 40 | 
+ 41 |       // For webhook mode, use schema properties as direct outputs
+ 42 |       // Each property (body, headers, query) should be able to show secondary menu
+ 43 |       if (
+ 44 |         values.mode === AgentDialogueMode.Webhook &&
+ 45 |         !isEmpty(values.schema)
+ 46 |       ) {
+ 47 |         outputs = transformRequestSchemaToOutput(values.schema);
+ 48 |       }
+ 49 | 
+ 50 |       const nextValues = {
+ 51 |         ...values,
+ 52 |         inputs: transferInputsArrayToObject(values.inputs),
+ 53 |         outputs,
+ 54 |       };
+ 55 | 
+ 56 |       updateNodeForm(id, nextValues);
+ 57 |     }
+ 58 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 59 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/user-setting/data-source/constant/bitbucket-constant.tsx:87:7]
+ 86 |       const index_mode = formValues?.config?.index_mode;
+ 87 |       console.log('formValues.config', formValues?.config);
+    :       ^^^^^^^^^^^
+ 88 |       return index_mode === 'projects';
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/schema-visual-editor.tsx:71:23]
+ 70 |       const { properties, ...rest } = newSchema;
+ 71 |       const { [name]: _, ...remainingProps } = properties || {};
+    :                       |
+    :                       `-- '_' is declared here
+ 72 | 
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/schema-visual-editor.tsx:103:21]
+ 102 |     // Create a new schema without the field
+ 103 |     const { [name]: _, ...remainingProps } = schema.properties;
+     :                     |
+     :                     `-- '_' is declared here
+ 104 | 
+     `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: filterStructuredOutput
+     ,-[src/pages/agent/form/components/prompt-editor/variable-picker-plugin.tsx:521:6]
+ 520 |     };
+ 521 |   }, [queryString, options, extraOptions, filterStructuredOutput]);
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 522 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/chunk-result-bar/checkbox-sets.tsx:33:7]
+ 32 |     (e: any) => {
+ 33 |       console.log('eee=', e);
+    :       ^^^^^^^^^^^
+ 34 |       selectAllChunk(e);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/switch-form/use-watch-change.ts:23:6]
+ 13 |     if (id) {
+ 14 |       values = form?.getValues() || {};
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 15 |       const nextValues: any = {
+ 16 |         ...values,
+ 17 |         conditions:
+ 18 |           values?.conditions?.map((x: ISwitchCondition) => ({ ...x })) ?? [], // Changing the form value with useFieldArray does not change the array reference
+ 19 |       };
+ 20 | 
+ 21 |       updateNodeForm(id, nextValues);
+ 22 |     }
+ 23 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 24 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agent/form/switch-form/use-watch-change.ts:12:5]
+ 11 |     // Manually triggered form updates are synchronized to the canvas
+ 12 |     console.log('🚀 ~ useWatchFormChange ~ values:', form?.formState.isDirty);
+    :     ^^^^^^^^^^^
+ 13 |     if (id) {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'handleFieldUpdate', 'handleCustomValidate', 'handleRender', 'setDefaultValues', and 'handleCustomSchema'
+    ,-[src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx:91:6]
+ 53 |       typeField.onChange = (value) => {
+ 54 |         handleFieldUpdate('value', {
+    :         ^^^^^^^^^^^^^^^^^
+ 55 |           type: TypeMaps[value as keyof typeof TypeMaps],
+ 56 |           render: handleRender(value),
+    :                   ^^^^^^^^^^^^
+ 57 |           customValidate: handleCustomValidate(value),
+    :                           ^^^^^^^^^^^^^^^^^^^^
+ 58 |           schema: handleCustomSchema(value),
+    :                   ^^^^^^^^^^^^^^^^^^
+ 59 |         });
+ 60 |         const values = formRef.current?.getValues();
+ 61 |         // setTimeout(() => {
+ 62 |         switch (value) {
+ 63 |           case TypesWithArray.Boolean:
+ 64 |             setDefaultValues?.({ ...values, value: false });
+    :             ^^^^^^^^^^^^^^^^
+ 65 |             break;
+ 66 |           case TypesWithArray.Number:
+ 67 |             setDefaultValues?.({ ...values, value: 0 });
+ 68 |             break;
+ 69 |           case TypesWithArray.Object:
+ 70 |             setDefaultValues?.({ ...values, value: {} });
+ 71 |             break;
+ 72 |           case TypesWithArray.ArrayString:
+ 73 |             setDefaultValues?.({ ...values, value: [''] });
+ 74 |             break;
+ 75 |           case TypesWithArray.ArrayNumber:
+ 76 |             setDefaultValues?.({ ...values, value: [''] });
+ 77 |             break;
+ 78 |           case TypesWithArray.ArrayBoolean:
+ 79 |             setDefaultValues?.({ ...values, value: [false] });
+ 80 |             break;
+ 81 |           case TypesWithArray.ArrayObject:
+ 82 |             setDefaultValues?.({ ...values, value: [] });
+ 83 |             break;
+ 84 |           default:
+ 85 |             setDefaultValues?.({ ...values, value: '' });
+ 86 |             break;
+ 87 |         }
+ 88 |         // }, 0);
+ 89 |       };
+ 90 |     }
+ 91 |   }, [fields]);
+    :      ^^^^^^^^
+ 92 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx:109:11]
+ 108 |         onSubmit={(data) => {
+ 109 |           console.log(data);
+     :           ^^^^^^^^^^^
+ 110 |         }}
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'ref', 'showPassword', 'suffix', 'prefix', and 'type'
+     ,-[src/components/ui/input.tsx:96:7]
+  69 |             <input
+  70 |               ref={ref}
+     :                    ^^^
+  71 |               type={isPasswordInput && showPassword ? 'text' : type}
+     :                                        ^^^^^^^^^^^^            ^^^^
+  72 |               className={cn(
+  73 |                 'peer/input',
+  74 |                 'flex h-8 w-full rounded-md border-0.5 border-border-button bg-bg-input px-3 py-2 outline-none text-sm text-text-primary',
+  75 |                 'file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-text-disabled',
+  76 |                 'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary',
+  77 |                 'disabled:cursor-not-allowed disabled:opacity-50 transition-colors',
+  78 |                 type === 'number' &&
+  79 |                   '[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none',
+  80 |                 className,
+  81 |               )}
+  82 |               style={{
+  83 |                 paddingInlineStart:
+  84 |                   !!prefix && prefixWidth ? `${prefixWidth}px` : '',
+     :                     ^^^^^^
+  85 |                 paddingInlineEnd: isPasswordInput
+  86 |                   ? '40px'
+  87 |                   : suffix
+     :                     ^^^^^^
+  88 |                     ? `${suffixWidth}px`
+  89 |                     : '',
+  90 |               }}
+  91 |               value={inputValue ?? ''}
+  92 |               onChange={handleChange}
+  93 |               {...restProps}
+  94 |             />
+  95 |           ),
+  96 | ,->       [
+  97 | |           prefixWidth,
+  98 | |           suffixWidth,
+  99 | |           isPasswordInput,
+ 100 | |           inputValue,
+ 101 | |           className,
+ 102 | |           handleChange,
+ 103 | |           restProps,
+ 104 | `->       ],
+ 105 |         );
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React hook useMemo depends on `handleChange`, which changes every render
+    ,-[src/components/ui/input.tsx:50:11]
+ 49 |     }, [prefix, suffix, prefixRef, suffixRef]);
+ 50 |     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    :           ^^^^^^|^^^^^
+    :                 `-- `handleChange` is declared here
+ 51 |       if (type === 'number') {
+    `----
+     ,-[src/components/ui/input.tsx:102:9]
+ 101 |         className,
+ 102 |         handleChange,
+     :         ^^^^^^|^^^^^
+     :               `-- it will always cause this hook to re-evaluate
+ 103 |         restProps,
+     `----
+  help: Try memoizing this variable with `useRef` or `useCallback`.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agent/hooks.tsx:86:9]
+ 85 |       if (id && name) {
+ 86 |         console.log(
+    :         ^^^^^^^^^^^
+ 87 |           '🚀 ~ useEffect ~ value:',
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name
+    ,-[src/pages/next-chats/hooks/use-send-shared-message.ts:48:5]
+ 47 |     sharedId: conversationId,
+ 48 |     data: data,
+    :     ^^^^^^^^^^
+ 49 |   } = useGetSharedChatSearchParams();
+    `----
+  help: Use the variable's original name or rename it to a different name
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'data'
+     ,-[src/pages/next-chats/hooks/use-send-shared-message.ts:118:6]
+ 112 |     const payload = { question: '' };
+ 113 |     const ret = await send(completionUrl, { ...payload, ...data });
+     :                                                            ^^|^
+     :                                                              `-- useCallback uses `data` here
+ 114 |     if (isCompletionError(ret)) {
+ 115 |       message.error(ret?.data.message ?? 'Unknown error');
+ 116 |       setHasError(true);
+ 117 |     }
+ 118 |   }, [send, completionUrl]);
+     :      ^^^^^^^^^^^^^^^^^^^^^
+ 119 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/next-chats/hooks/use-send-single-message.ts:96:9]
+ 95 |         setValue(message.content);
+ 96 |         console.info('removeLatestMessage111');
+    :         ^^^^^^^^^^^^
+ 97 |         removeLatestMessage();
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/common-hooks.tsx:130:15]
+ 129 |               resolve(ret);
+ 130 |               console.info(ret);
+     :               ^^^^^^^^^^^^
+ 131 |             } catch (error) {
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/admin/task-executor-detail.tsx:82:9]
+ 81 |       {Object.entries(content ?? {}).map(([name, data]) => {
+ 82 |         console.log(data);
+    :         ^^^^^^^^^^^
+ 83 | 
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-use-before-define): 'compareInto' was used before it was defined.
+    ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:58:3]
+ 57 |   const out: Diff = { warnings: [], failures: [] };
+ 58 |   compareInto(expected, actual, path, out);
+    :   ^^^^^|^^^^^
+    :        `-- used here
+ 59 |   return out;
+ 60 | };
+ 61 | 
+ 62 | const compareInto = (
+    :       ^^^^^|^^^^^
+    :            `-- defined here
+ 63 |   expected: any,
+    `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'record' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:74:5]
+  73 |   ) {
+  74 |     record(out, path, 'value', expected, actual, '');
+     :     ^^^|^^
+     :        `-- used here
+  75 |     return;
+  76 |   }
+  77 |   if (typeof expected !== 'object') {
+  78 |     record(out, path, 'value', expected, actual, '');
+  79 |     return;
+  80 |   }
+  81 |   const expArr = Array.isArray(expected);
+  82 |   const actArr = Array.isArray(actual);
+  83 |   if (expArr !== actArr) {
+  84 |     out.failures.push(`${path}: array/object mismatch`);
+  85 |     return;
+  86 |   }
+  87 |   if (expArr) {
+  88 |     if (expected.length !== actual.length) {
+  89 |       out.failures.push(
+  90 |         `${path}: length ${expected.length} != ${actual.length}`,
+  91 |       );
+  92 |     }
+  93 |     const n = Math.min(expected.length, actual.length);
+  94 |     for (let i = 0; i < n; i++) {
+  95 |       compareInto(expected[i], actual[i], `${path}[${i}]`, out);
+  96 |     }
+  97 |     return;
+  98 |   }
+  99 |   const allKeys = new Set([...Object.keys(expected), ...Object.keys(actual)]);
+ 100 |   for (const key of allKeys) {
+ 101 |     const sub = path ? `${path}.${key}` : key;
+ 102 |     if (!(key in expected)) {
+ 103 |       record(out, sub, 'missing in expected', undefined, actual[key], key);
+ 104 |       continue;
+ 105 |     }
+ 106 |     if (!(key in actual)) {
+ 107 |       record(out, sub, 'missing in actual', expected[key], undefined, key);
+ 108 |       continue;
+ 109 |     }
+ 110 |     if (typeof expected[key] === 'object' && expected[key] !== null) {
+ 111 |       compareInto(expected[key], actual[key], sub, out);
+ 112 |     } else if (expected[key] !== actual[key]) {
+ 113 |       record(out, sub, 'value', expected[key], actual[key], key);
+ 114 |     }
+ 115 |   }
+ 116 | };
+ 117 | 
+ 118 | const record = (
+     :       ^^^|^^
+     :          `-- defined here
+ 119 |   out: Diff,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'record' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:78:5]
+  77 |   if (typeof expected !== 'object') {
+  78 |     record(out, path, 'value', expected, actual, '');
+     :     ^^^|^^
+     :        `-- used here
+  79 |     return;
+  80 |   }
+  81 |   const expArr = Array.isArray(expected);
+  82 |   const actArr = Array.isArray(actual);
+  83 |   if (expArr !== actArr) {
+  84 |     out.failures.push(`${path}: array/object mismatch`);
+  85 |     return;
+  86 |   }
+  87 |   if (expArr) {
+  88 |     if (expected.length !== actual.length) {
+  89 |       out.failures.push(
+  90 |         `${path}: length ${expected.length} != ${actual.length}`,
+  91 |       );
+  92 |     }
+  93 |     const n = Math.min(expected.length, actual.length);
+  94 |     for (let i = 0; i < n; i++) {
+  95 |       compareInto(expected[i], actual[i], `${path}[${i}]`, out);
+  96 |     }
+  97 |     return;
+  98 |   }
+  99 |   const allKeys = new Set([...Object.keys(expected), ...Object.keys(actual)]);
+ 100 |   for (const key of allKeys) {
+ 101 |     const sub = path ? `${path}.${key}` : key;
+ 102 |     if (!(key in expected)) {
+ 103 |       record(out, sub, 'missing in expected', undefined, actual[key], key);
+ 104 |       continue;
+ 105 |     }
+ 106 |     if (!(key in actual)) {
+ 107 |       record(out, sub, 'missing in actual', expected[key], undefined, key);
+ 108 |       continue;
+ 109 |     }
+ 110 |     if (typeof expected[key] === 'object' && expected[key] !== null) {
+ 111 |       compareInto(expected[key], actual[key], sub, out);
+ 112 |     } else if (expected[key] !== actual[key]) {
+ 113 |       record(out, sub, 'value', expected[key], actual[key], key);
+ 114 |     }
+ 115 |   }
+ 116 | };
+ 117 | 
+ 118 | const record = (
+     :       ^^^|^^
+     :          `-- defined here
+ 119 |   out: Diff,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'record' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:103:7]
+ 102 |     if (!(key in expected)) {
+ 103 |       record(out, sub, 'missing in expected', undefined, actual[key], key);
+     :       ^^^|^^
+     :          `-- used here
+ 104 |       continue;
+ 105 |     }
+ 106 |     if (!(key in actual)) {
+ 107 |       record(out, sub, 'missing in actual', expected[key], undefined, key);
+ 108 |       continue;
+ 109 |     }
+ 110 |     if (typeof expected[key] === 'object' && expected[key] !== null) {
+ 111 |       compareInto(expected[key], actual[key], sub, out);
+ 112 |     } else if (expected[key] !== actual[key]) {
+ 113 |       record(out, sub, 'value', expected[key], actual[key], key);
+ 114 |     }
+ 115 |   }
+ 116 | };
+ 117 | 
+ 118 | const record = (
+     :       ^^^|^^
+     :          `-- defined here
+ 119 |   out: Diff,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'record' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:107:7]
+ 106 |     if (!(key in actual)) {
+ 107 |       record(out, sub, 'missing in actual', expected[key], undefined, key);
+     :       ^^^|^^
+     :          `-- used here
+ 108 |       continue;
+ 109 |     }
+ 110 |     if (typeof expected[key] === 'object' && expected[key] !== null) {
+ 111 |       compareInto(expected[key], actual[key], sub, out);
+ 112 |     } else if (expected[key] !== actual[key]) {
+ 113 |       record(out, sub, 'value', expected[key], actual[key], key);
+ 114 |     }
+ 115 |   }
+ 116 | };
+ 117 | 
+ 118 | const record = (
+     :       ^^^|^^
+     :          `-- defined here
+ 119 |   out: Diff,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'record' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:113:7]
+ 112 |     } else if (expected[key] !== actual[key]) {
+ 113 |       record(out, sub, 'value', expected[key], actual[key], key);
+     :       ^^^|^^
+     :          `-- used here
+ 114 |     }
+ 115 |   }
+ 116 | };
+ 117 | 
+ 118 | const record = (
+     :       ^^^|^^
+     :          `-- defined here
+ 119 |   out: Diff,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'stableStr' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:126:36]
+ 125 | ): void => {
+ 126 |   const msg = `${path}: ${kind} (${stableStr(exp)} vs ${stableStr(act)})`;
+     :                                    ^^^^|^^^^
+     :                                        `-- used here
+ 127 |   if (isInternalField(path, key)) {
+ 128 |     out.warnings.push(msg);
+ 129 |   } else {
+ 130 |     out.failures.push(msg);
+ 131 |   }
+ 132 | };
+ 133 | 
+ 134 | const stableStr = (v: any): string => {
+     :       ^^^^|^^^^
+     :           `-- defined here
+ 135 |   if (v === undefined) return 'undefined';
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'stableStr' was used before it was defined.
+     ,-[src/pages/agent/utils/__tests__/dsl-bridge.test.ts:126:57]
+ 125 | ): void => {
+ 126 |   const msg = `${path}: ${kind} (${stableStr(exp)} vs ${stableStr(act)})`;
+     :                                                         ^^^^|^^^^
+     :                                                             `-- used here
+ 127 |   if (isInternalField(path, key)) {
+ 128 |     out.warnings.push(msg);
+ 129 |   } else {
+ 130 |     out.failures.push(msg);
+ 131 |   }
+ 132 | };
+ 133 | 
+ 134 | const stableStr = (v: any): string => {
+     :       ^^^^|^^^^
+     :           `-- defined here
+ 135 |   if (v === undefined) return 'undefined';
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has missing dependencies: 'handleMouseMove', and 'handleMouseUp'
+     ,-[src/components/avatar-upload.tsx:233:7]
+ 229 |         }
+ 230 |         document.addEventListener('mousemove', handleMouseMove);
+     :                                                ^^^^^^^^^^^^^^^
+ 231 |         document.addEventListener('mouseup', handleMouseUp);
+     :                                              ^^^^^^^^^^^^^
+ 232 |       },
+ 233 |       [cropArea, imageScale, imageOffset],
+     :       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 234 |     );
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/hooks/auth-hooks.ts:59:3]
+ 58 | 
+ 59 |   console.debug(currentQueryParameters.get('auth'));
+    :   ^^^^^^^^^^^^^
+ 60 |   return currentQueryParameters.get('auth');
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/components/parse-editer/index.tsx:18:3]
+ 17 | }: FormatPreserveEditorProps) => {
+ 18 |   console.log('initialValue', initialValue);
+    :   ^^^^^^^^^^^
+ 19 | 
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-use-before-define): 'TreeItem' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:153:10]
+ 152 |       <div className={cn('overflow-hidden relative p-2', className)}>
+ 153 |         <TreeItem
+     :          ^^^^|^^^
+     :              `-- used here
+ 154 |           data={data}
+ 155 |           ref={ref}
+ 156 |           selectedItemId={selectedItemId}
+ 157 |           handleSelectChange={handleSelectChange}
+ 158 |           expandedItemIds={expandedItemIds}
+ 159 |           expandOnRowClick={expandOnRowClick}
+ 160 |           defaultLeafIcon={defaultLeafIcon}
+ 161 |           defaultNodeIcon={defaultNodeIcon}
+ 162 |           {...props}
+ 163 |         />
+ 164 |       </div>
+ 165 |     );
+ 166 |   },
+ 167 | );
+ 168 | TreeView.displayName = 'TreeView';
+ 169 | 
+ 170 | type TreeItemProps = TreeProps & {
+ 171 |   selectedItemId?: string;
+ 172 |   handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 173 |   expandedItemIds: string[];
+ 174 |   defaultNodeIcon?: any;
+ 175 |   defaultLeafIcon?: any;
+ 176 | };
+ 177 | 
+ 178 | const TreeItem = React.forwardRef<HTMLDivElement, TreeItemProps>(
+     :       ^^^^|^^^
+     :           `-- defined here
+ 179 |   (
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeNode' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:203:18]
+ 202 |               (item.children && item.children.length > 0) ? (
+ 203 |                 <TreeNode
+     :                  ^^^^|^^^
+     :                      `-- used here
+ 204 |                   item={item}
+ 205 |                   selectedItemId={selectedItemId}
+ 206 |                   expandedItemIds={expandedItemIds}
+ 207 |                   handleSelectChange={handleSelectChange}
+ 208 |                   expandOnRowClick={expandOnRowClick}
+ 209 |                   defaultNodeIcon={defaultNodeIcon}
+ 210 |                   defaultLeafIcon={defaultLeafIcon}
+ 211 |                 />
+ 212 |               ) : (
+ 213 |                 <TreeLeaf
+ 214 |                   item={item}
+ 215 |                   selectedItemId={selectedItemId}
+ 216 |                   handleSelectChange={handleSelectChange}
+ 217 |                   defaultLeafIcon={defaultLeafIcon}
+ 218 |                 />
+ 219 |               )}
+ 220 |             </li>
+ 221 |           ))}
+ 222 |         </ul>
+ 223 |       </div>
+ 224 |     );
+ 225 |   },
+ 226 | );
+ 227 | TreeItem.displayName = 'TreeItem';
+ 228 | 
+ 229 | const TreeNode = ({
+     :       ^^^^|^^^
+     :           `-- defined here
+ 230 |   item,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeLeaf' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:213:18]
+ 212 |               ) : (
+ 213 |                 <TreeLeaf
+     :                  ^^^^|^^^
+     :                      `-- used here
+ 214 |                   item={item}
+ 215 |                   selectedItemId={selectedItemId}
+ 216 |                   handleSelectChange={handleSelectChange}
+ 217 |                   defaultLeafIcon={defaultLeafIcon}
+ 218 |                 />
+ 219 |               )}
+ 220 |             </li>
+ 221 |           ))}
+ 222 |         </ul>
+ 223 |       </div>
+ 224 |     );
+ 225 |   },
+ 226 | );
+ 227 | TreeItem.displayName = 'TreeItem';
+ 228 | 
+ 229 | const TreeNode = ({
+ 230 |   item,
+ 231 |   handleSelectChange,
+ 232 |   expandedItemIds,
+ 233 |   selectedItemId,
+ 234 |   defaultNodeIcon,
+ 235 |   defaultLeafIcon,
+ 236 |   expandOnRowClick = true,
+ 237 | }: {
+ 238 |   item: TreeDataItem;
+ 239 |   handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 240 |   expandedItemIds: string[];
+ 241 |   selectedItemId?: string;
+ 242 |   defaultNodeIcon?: any;
+ 243 |   defaultLeafIcon?: any;
+ 244 |   expandOnRowClick?: boolean;
+ 245 | }) => {
+ 246 |   const [value, setValue] = React.useState(
+ 247 |     expandedItemIds.includes(item.id) ? [item.id] : [],
+ 248 |   );
+ 249 |   const isOpen = value.includes(item.id);
+ 250 |   const isSelected = selectedItemId === item.id;
+ 251 | 
+ 252 |   const handleSelect = () => {
+ 253 |     handleSelectChange(item);
+ 254 |     item.onClick?.();
+ 255 |   };
+ 256 | 
+ 257 |   // Split-click mode: the chevron toggles expansion by itself, so its click
+ 258 |   // must not bubble up to the row (which would also select the node).
+ 259 |   const handleChevronClick = (e: React.MouseEvent) => {
+ 260 |     e.stopPropagation();
+ 261 |     if (!isOpen) {
+ 262 |       item.onExpand?.();
+ 263 |     }
+ 264 |   };
+ 265 | 
+ 266 |   const content = (
+ 267 |     <AccordionContent className="ml-4 pl-1 border-l">
+ 268 |       <TreeItem
+ 269 |         data={item.children ?? []}
+ 270 |         selectedItemId={selectedItemId}
+ 271 |         handleSelectChange={handleSelectChange}
+ 272 |         expandedItemIds={expandedItemIds}
+ 273 |         expandOnRowClick={expandOnRowClick}
+ 274 |         defaultLeafIcon={defaultLeafIcon}
+ 275 |         defaultNodeIcon={defaultNodeIcon}
+ 276 |       />
+ 277 |     </AccordionContent>
+ 278 |   );
+ 279 | 
+ 280 |   if (!expandOnRowClick) {
+ 281 |     return (
+ 282 |       <AccordionPrimitive.Root
+ 283 |         type="multiple"
+ 284 |         value={value}
+ 285 |         onValueChange={setValue}
+ 286 |       >
+ 287 |         <AccordionPrimitive.Item value={item.id}>
+ 288 |           <AccordionPrimitive.Header>
+ 289 |             <div
+ 290 |               className={cn(
+ 291 |                 'flex flex-1 w-full items-center py-2 cursor-pointer',
+ 292 |                 treeVariants(),
+ 293 |                 isSelected && selectedTreeVariants(),
+ 294 |               )}
+ 295 |               onClick={handleSelect}
+ 296 |             >
+ 297 |               <AccordionPrimitive.Trigger
+ 298 |                 className="mr-1 shrink-0 data-[state=open]:[&>svg]:rotate-90"
+ 299 |                 onClick={handleChevronClick}
+ 300 |               >
+ 301 |                 <ChevronRight className="h-4 w-4 transition-transform duration-200 text-accent-foreground/50" />
+ 302 |               </AccordionPrimitive.Trigger>
+ 303 |               <TreeIcon
+ 304 |                 item={item}
+ 305 |                 isSelected={isSelected}
+ 306 |                 isOpen={isOpen}
+ 307 |                 default={defaultNodeIcon}
+ 308 |               />
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+     :       ^^^^|^^^
+     :           `-- defined here
+ 346 |   HTMLDivElement,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'AccordionContent' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:267:6]
+ 266 |   const content = (
+ 267 |     <AccordionContent className="ml-4 pl-1 border-l">
+     :      ^^^^^^^^|^^^^^^^
+     :              `-- used here
+ 268 |       <TreeItem
+ 269 |         data={item.children ?? []}
+ 270 |         selectedItemId={selectedItemId}
+ 271 |         handleSelectChange={handleSelectChange}
+ 272 |         expandedItemIds={expandedItemIds}
+ 273 |         expandOnRowClick={expandOnRowClick}
+ 274 |         defaultLeafIcon={defaultLeafIcon}
+ 275 |         defaultNodeIcon={defaultNodeIcon}
+ 276 |       />
+ 277 |     </AccordionContent>
+ 278 |   );
+ 279 | 
+ 280 |   if (!expandOnRowClick) {
+ 281 |     return (
+ 282 |       <AccordionPrimitive.Root
+ 283 |         type="multiple"
+ 284 |         value={value}
+ 285 |         onValueChange={setValue}
+ 286 |       >
+ 287 |         <AccordionPrimitive.Item value={item.id}>
+ 288 |           <AccordionPrimitive.Header>
+ 289 |             <div
+ 290 |               className={cn(
+ 291 |                 'flex flex-1 w-full items-center py-2 cursor-pointer',
+ 292 |                 treeVariants(),
+ 293 |                 isSelected && selectedTreeVariants(),
+ 294 |               )}
+ 295 |               onClick={handleSelect}
+ 296 |             >
+ 297 |               <AccordionPrimitive.Trigger
+ 298 |                 className="mr-1 shrink-0 data-[state=open]:[&>svg]:rotate-90"
+ 299 |                 onClick={handleChevronClick}
+ 300 |               >
+ 301 |                 <ChevronRight className="h-4 w-4 transition-transform duration-200 text-accent-foreground/50" />
+ 302 |               </AccordionPrimitive.Trigger>
+ 303 |               <TreeIcon
+ 304 |                 item={item}
+ 305 |                 isSelected={isSelected}
+ 306 |                 isOpen={isOpen}
+ 307 |                 default={defaultNodeIcon}
+ 308 |               />
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+     :       ^^^^^^^^|^^^^^^^
+     :               `-- defined here
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'AccordionContent' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:277:7]
+ 276 |       />
+ 277 |     </AccordionContent>
+     :       ^^^^^^^^|^^^^^^^
+     :               `-- used here
+ 278 |   );
+ 279 | 
+ 280 |   if (!expandOnRowClick) {
+ 281 |     return (
+ 282 |       <AccordionPrimitive.Root
+ 283 |         type="multiple"
+ 284 |         value={value}
+ 285 |         onValueChange={setValue}
+ 286 |       >
+ 287 |         <AccordionPrimitive.Item value={item.id}>
+ 288 |           <AccordionPrimitive.Header>
+ 289 |             <div
+ 290 |               className={cn(
+ 291 |                 'flex flex-1 w-full items-center py-2 cursor-pointer',
+ 292 |                 treeVariants(),
+ 293 |                 isSelected && selectedTreeVariants(),
+ 294 |               )}
+ 295 |               onClick={handleSelect}
+ 296 |             >
+ 297 |               <AccordionPrimitive.Trigger
+ 298 |                 className="mr-1 shrink-0 data-[state=open]:[&>svg]:rotate-90"
+ 299 |                 onClick={handleChevronClick}
+ 300 |               >
+ 301 |                 <ChevronRight className="h-4 w-4 transition-transform duration-200 text-accent-foreground/50" />
+ 302 |               </AccordionPrimitive.Trigger>
+ 303 |               <TreeIcon
+ 304 |                 item={item}
+ 305 |                 isSelected={isSelected}
+ 306 |                 isOpen={isOpen}
+ 307 |                 default={defaultNodeIcon}
+ 308 |               />
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+     :       ^^^^^^^^|^^^^^^^
+     :               `-- defined here
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeIcon' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:303:16]
+ 302 |               </AccordionPrimitive.Trigger>
+ 303 |               <TreeIcon
+     :                ^^^^|^^^
+     :                    `-- used here
+ 304 |                 item={item}
+ 305 |                 isSelected={isSelected}
+ 306 |                 isOpen={isOpen}
+ 307 |                 default={defaultNodeIcon}
+ 308 |               />
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+     :       ^^^^|^^^
+     :           `-- defined here
+ 433 |   item,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:310:16]
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+     :                ^^^^^|^^^^^
+     :                     `-- used here
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:310:68]
+ 309 |               <TreeItemLabel item={item} />
+ 310 |               <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+     :                                                                    ^^^^^|^^^^^
+     :                                                                         `-- used here
+ 311 |             </div>
+ 312 |           </AccordionPrimitive.Header>
+ 313 |           {content}
+ 314 |         </AccordionPrimitive.Item>
+ 315 |       </AccordionPrimitive.Root>
+ 316 |     );
+ 317 |   }
+ 318 | 
+ 319 |   return (
+ 320 |     <AccordionPrimitive.Root
+ 321 |       type="multiple"
+ 322 |       value={value}
+ 323 |       onValueChange={(s) => setValue(s)}
+ 324 |     >
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'AccordionTrigger' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:326:10]
+ 325 |       <AccordionPrimitive.Item value={item.id}>
+ 326 |         <AccordionTrigger
+     :          ^^^^^^^^|^^^^^^^
+     :                  `-- used here
+ 327 |           className={cn(treeVariants(), isSelected && selectedTreeVariants())}
+ 328 |           onClick={handleSelect}
+ 329 |         >
+ 330 |           <TreeIcon
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+     :       ^^^^^^^^|^^^^^^^
+     :               `-- defined here
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeIcon' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:330:12]
+ 329 |         >
+ 330 |           <TreeIcon
+     :            ^^^^|^^^
+     :                `-- used here
+ 331 |             item={item}
+ 332 |             isSelected={isSelected}
+ 333 |             isOpen={isOpen}
+ 334 |             default={defaultNodeIcon}
+ 335 |           />
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+     :       ^^^^|^^^
+     :           `-- defined here
+ 433 |   item,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:337:12]
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+     :            ^^^^^|^^^^^
+     :                 `-- used here
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:337:64]
+ 336 |           <TreeItemLabel item={item} />
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+     :                                                                ^^^^^|^^^^^
+     :                                                                     `-- used here
+ 338 |         </AccordionTrigger>
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'AccordionTrigger' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:338:11]
+ 337 |           <TreeActions isSelected={isSelected}>{item.actions}</TreeActions>
+ 338 |         </AccordionTrigger>
+     :           ^^^^^^^^|^^^^^^^
+     :                   `-- used here
+ 339 |         {content}
+ 340 |       </AccordionPrimitive.Item>
+ 341 |     </AccordionPrimitive.Root>
+ 342 |   );
+ 343 | };
+ 344 | 
+ 345 | const TreeLeaf = React.forwardRef<
+ 346 |   HTMLDivElement,
+ 347 |   React.HTMLAttributes<HTMLDivElement> & {
+ 348 |     item: TreeDataItem;
+ 349 |     selectedItemId?: string;
+ 350 |     handleSelectChange: (item: TreeDataItem | undefined) => void;
+ 351 |     defaultLeafIcon?: any;
+ 352 |   }
+ 353 | >(
+ 354 |   (
+ 355 |     {
+ 356 |       className,
+ 357 |       item,
+ 358 |       selectedItemId,
+ 359 |       handleSelectChange,
+ 360 |       defaultLeafIcon,
+ 361 |       ...props
+ 362 |     },
+ 363 |     ref,
+ 364 |   ) => {
+ 365 |     return (
+ 366 |       <div
+ 367 |         ref={ref}
+ 368 |         className={cn(
+ 369 |           'ml-5 flex text-left items-center py-2 cursor-pointer before:right-1',
+ 370 |           treeVariants(),
+ 371 |           className,
+ 372 |           selectedItemId === item.id && selectedTreeVariants(),
+ 373 |         )}
+ 374 |         onClick={() => {
+ 375 |           handleSelectChange(item);
+ 376 |           item.onClick?.();
+ 377 |         }}
+ 378 |         {...props}
+ 379 |       >
+ 380 |         <TreeIcon
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+     :       ^^^^^^^^|^^^^^^^
+     :               `-- defined here
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeIcon' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:380:10]
+ 379 |       >
+ 380 |         <TreeIcon
+     :          ^^^^|^^^
+     :              `-- used here
+ 381 |           item={item}
+ 382 |           isSelected={selectedItemId === item.id}
+ 383 |           default={defaultLeafIcon}
+ 384 |         />
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+     :       ^^^^|^^^
+     :           `-- defined here
+ 433 |   item,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:386:10]
+ 385 |         <TreeItemLabel item={item} />
+ 386 |         <TreeActions isSelected={selectedItemId === item.id}>
+     :          ^^^^^|^^^^^
+     :               `-- used here
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'TreeActions' was used before it was defined.
+     ,-[src/components/ui/tree-view.tsx:388:11]
+ 387 |           {item.actions}
+ 388 |         </TreeActions>
+     :           ^^^^^|^^^^^
+     :                `-- used here
+ 389 |       </div>
+ 390 |     );
+ 391 |   },
+ 392 | );
+ 393 | TreeLeaf.displayName = 'TreeLeaf';
+ 394 | 
+ 395 | const AccordionTrigger = React.forwardRef<
+ 396 |   React.ElementRef<typeof AccordionPrimitive.Trigger>,
+ 397 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+ 398 | >(({ className, children, ...props }, ref) => (
+ 399 |   <AccordionPrimitive.Header>
+ 400 |     <AccordionPrimitive.Trigger
+ 401 |       ref={ref}
+ 402 |       className={cn(
+ 403 |         'flex flex-1 w-full items-center py-2 transition-all first:[&[data-state=open]>svg]:rotate-90',
+ 404 |         className,
+ 405 |       )}
+ 406 |       {...props}
+ 407 |     >
+ 408 |       <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200 text-accent-foreground/50 mr-1" />
+ 409 |       {children}
+ 410 |     </AccordionPrimitive.Trigger>
+ 411 |   </AccordionPrimitive.Header>
+ 412 | ));
+ 413 | AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+ 414 | 
+ 415 | const AccordionContent = React.forwardRef<
+ 416 |   React.ElementRef<typeof AccordionPrimitive.Content>,
+ 417 |   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+ 418 | >(({ className, children, ...props }, ref) => (
+ 419 |   <AccordionPrimitive.Content
+ 420 |     ref={ref}
+ 421 |     className={cn(
+ 422 |       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+ 423 |       className,
+ 424 |     )}
+ 425 |     {...props}
+ 426 |   >
+ 427 |     <div className="pb-1 pt-0">{children}</div>
+ 428 |   </AccordionPrimitive.Content>
+ 429 | ));
+ 430 | AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+ 431 | 
+ 432 | const TreeIcon = ({
+ 433 |   item,
+ 434 |   isOpen,
+ 435 |   isSelected,
+ 436 |   default: defaultIcon,
+ 437 | }: {
+ 438 |   item: TreeDataItem;
+ 439 |   isOpen?: boolean;
+ 440 |   isSelected?: boolean;
+ 441 |   default?: any;
+ 442 | }) => {
+ 443 |   let Icon = defaultIcon;
+ 444 |   if (isSelected && item.selectedIcon) {
+ 445 |     Icon = item.selectedIcon;
+ 446 |   } else if (isOpen && item.openIcon) {
+ 447 |     Icon = item.openIcon;
+ 448 |   } else if (item.icon) {
+ 449 |     Icon = item.icon;
+ 450 |   }
+ 451 |   return Icon ? <Icon className="h-4 w-4 shrink-0 mr-2" /> : <></>;
+ 452 | };
+ 453 | 
+ 454 | const TreeActions = ({
+     :       ^^^^^|^^^^^
+     :            `-- defined here
+ 455 |   children,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/dataflow-result/components/parse-editer/json-parser.tsx:169:21]
+ 168 |                     clickChunk(item as unknown as IChunk);
+ 169 |                     console.log('clickChunk', item, index);
+     :                     ^^^^^^^^^^^
+ 170 |                     if (!isReadonly) {
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agent/use-agent-history-manager.ts:75:5]
+ 74 |   redo() {
+ 75 |     console.log('redo');
+    :     ^^^^^^^^^^^
+ 76 |     if (this.canRedo()) {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:102:24]
+ 101 |     if (property === 'minimum') {
+ 102 |       const { minimum: _, ...rest } = baseProperties;
+     :                        |
+     :                        `-- '_' is declared here
+ 103 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:108:24]
+ 107 |     if (property === 'maximum') {
+ 108 |       const { maximum: _, ...rest } = baseProperties;
+     :                        |
+     :                        `-- '_' is declared here
+ 109 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:114:33]
+ 113 |     if (property === 'exclusiveMinimum') {
+ 114 |       const { exclusiveMinimum: _, ...rest } = baseProperties;
+     :                                 |
+     :                                 `-- '_' is declared here
+ 115 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:120:33]
+ 119 |     if (property === 'exclusiveMaximum') {
+ 120 |       const { exclusiveMaximum: _, ...rest } = baseProperties;
+     :                                 |
+     :                                 `-- '_' is declared here
+ 121 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:126:27]
+ 125 |     if (property === 'multipleOf') {
+ 126 |       const { multipleOf: _, ...rest } = baseProperties;
+     :                           |
+     :                           `-- '_' is declared here
+ 127 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:132:21]
+ 131 |     if (property === 'enum') {
+ 132 |       const { enum: _, ...rest } = baseProperties;
+     :                     |
+     :                     `-- '_' is declared here
+ 133 |       onChange(rest as ObjectJSONSchema);
+     `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/canvas/node/note-node/use-watch-change.ts:17:6]
+ 11 |     if (id) {
+ 12 |       values = form?.getValues() || {};
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 13 |       const nextValues: any = values;
+ 14 | 
+ 15 |       updateNodeForm(id, nextValues);
+ 16 |     }
+ 17 |   }, [id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 18 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! typescript(no-extra-non-null-assertion): extra non-null assertion
+     ,-[src/pages/admin/service-status.tsx:249:55]
+ 248 |                           (table
+ 249 |                             .getColumn('service_type')!
+     :                                                       ^
+ 250 |                             ?.getFilterValue() as string) ?? ''
+     `----
+  help: Remove the redundant non-null assertion operator (`!`).
+  note: The non-null assertion operator in TypeScript, written as `!`, tells the compiler that an expression is definitely not `null` or `undefined` at that point. Chaining multiple non-null assertions on the same expression does not provide any additional safety and is redundant.
+
+  ! typescript(no-extra-non-null-assertion): extra non-null assertion
+     ,-[src/pages/admin/service-status.tsx:253:58]
+ 252 |                         onValueChange={
+ 253 |                           table.getColumn('service_type')!?.setFilterValue
+     :                                                          ^
+ 254 |                         }
+     `----
+  help: Remove the redundant non-null assertion operator (`!`).
+  note: The non-null assertion operator in TypeScript, written as `!`, tells the compiler that an expression is definitely not `null` or `undefined` at that point. Chaining multiple non-null assertions on the same expression does not provide any additional safety and is redundant.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:52:19]
+ 51 |     // Get all validation props except type and description
+ 52 |     const { type: _, description: __, ...validationProps } = baseSchema;
+    :                   |
+    :                   `-- '_' is declared here
+ 53 | 
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '__' is declared but never used.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:52:35]
+ 51 |     // Get all validation props except type and description
+ 52 |     const { type: _, description: __, ...validationProps } = baseSchema;
+    :                                   ^|
+    :                                    `-- '__' is declared here
+ 53 | 
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:89:23]
+ 88 |       if (!isBooleanSchema(baseSchema) && 'enum' in baseSchema) {
+ 89 |         const { enum: _, ...rest } = baseSchema;
+    :                       |
+    :                       `-- '_' is declared here
+ 90 |         onChange(rest as ObjectJSONSchema);
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/components/rerun-button/index.tsx:18:5]
+ 17 |   const clickFunc = () => {
+ 18 |     console.log('click rerun button');
+    :     ^^^^^^^^^^^
+ 19 |     Modal.show({
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/components/parse-editer/hook.ts:15:5]
+ 14 |     setContent(initialValue);
+ 15 |     console.log('initialValue json parse', initialValue);
+    :     ^^^^^^^^^^^
+ 16 |   }, [initialValue]);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-use-before-define): 'handleMouseMove' was used before it was defined.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx:52:44]
+ 51 |     isDraggingRef.current = true;
+ 52 |     document.addEventListener('mousemove', handleMouseMove);
+    :                                            ^^^^^^^|^^^^^^^
+    :                                                   `-- used here
+ 53 |     document.addEventListener('mouseup', handleMouseUp);
+ 54 |   };
+ 55 | 
+ 56 |   const handleMouseMove = (e: MouseEvent) => {
+    :         ^^^^^^^|^^^^^^^
+    :                `-- defined here
+ 57 |     if (!isDraggingRef.current || !containerRef.current) return;
+    `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'handleMouseUp' was used before it was defined.
+    ,-[src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx:53:42]
+ 52 |     document.addEventListener('mousemove', handleMouseMove);
+ 53 |     document.addEventListener('mouseup', handleMouseUp);
+    :                                          ^^^^^^|^^^^^^
+    :                                                `-- used here
+ 54 |   };
+ 55 | 
+ 56 |   const handleMouseMove = (e: MouseEvent) => {
+ 57 |     if (!isDraggingRef.current || !containerRef.current) return;
+ 58 | 
+ 59 |     const containerRect = containerRef.current.getBoundingClientRect();
+ 60 |     const newWidth =
+ 61 |       ((e.clientX - containerRect.left) / containerRect.width) * 100;
+ 62 | 
+ 63 |     // Limit the minimum and maximum width
+ 64 |     if (newWidth >= 20 && newWidth <= 80) {
+ 65 |       setLeftPanelWidth(newWidth);
+ 66 |     }
+ 67 |   };
+ 68 | 
+ 69 |   const handleMouseUp = () => {
+    :         ^^^^^^|^^^^^^
+    :               `-- defined here
+ 70 |     isDraggingRef.current = false;
+    `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-use-before-define): 'parseTimeInput' was used before it was defined.
+     ,-[src/components/ui/time-picker.tsx:247:28]
+ 246 |       if (newValue) {
+ 247 |         const parsedDate = parseTimeInput(newValue, format, use12Hours);
+     :                            ^^^^^^^|^^^^^^
+     :                                   `-- used here
+ 248 |         if (parsedDate) {
+ 249 |           onChange?.(parsedDate);
+ 250 |         }
+ 251 |       } else {
+ 252 |         onChange?.(undefined);
+ 253 |       }
+ 254 |     };
+ 255 | 
+ 256 |     // Parse time input string
+ 257 |     const parseTimeInput = (
+     :           ^^^^^^^|^^^^^^
+     :                  `-- defined here
+ 258 |       input: string,
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataset/compilation/hooks/use-create-directory.ts:41:9]
+ 40 |         // TODO: Replace with real API call
+ 41 |         console.log('Create directory:', values);
+    :         ^^^^^^^^^^^
+ 42 |         setOpen(false);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'onChange', 'defaultExpanded', 'options', 'i18n.language', and 'value'
+    ,-[src/components/json-edit/index.tsx:98:6]
+ 47 |               ...defaultConfig,
+ 48 |               language: i18n.language === 'zh' ? 'zh-CN' : 'en',
+    :                         ^^^^
+ 49 |               onChange: () => {
+ 50 |                 if (editorRef.current && onChange) {
+    :                                          ^^^^^^^^
+ 51 |                   try {
+ 52 |                     const updatedJson = editorRef.current.get();
+ 53 |                     onChange(updatedJson);
+ 54 |                   } catch (err) {
+ 55 |                     // Do not trigger onChange when parsing error occurs
+ 56 |                     console.error(err);
+ 57 |                   }
+ 58 |                 }
+ 59 |               },
+ 60 |               ...options, // Merge user provided options with defaults
+    :                  ^^^^^^^
+ 61 |             };
+ 62 | 
+ 63 |             editorRef.current = new JSONEditor(
+ 64 |               containerRef.current,
+ 65 |               defaultOptions,
+ 66 |             );
+ 67 | 
+ 68 |             if (value) {
+    :                 ^^^^^
+ 69 |               editorRef.current.set(value);
+ 70 | 
+ 71 |               if (defaultExpanded) {
+    :                   ^^^^^^^^^^^^^^^
+ 72 |                 editorRef.current.expandAll?.();
+ 73 |               }
+ 74 |             }
+ 75 | 
+ 76 |             setIsLoading(false);
+ 77 |           }
+ 78 |         } catch (error) {
+ 79 |           console.error('Failed to load jsoneditor:', error);
+ 80 |           if (isMounted) {
+ 81 |             setIsLoading(false);
+ 82 |           }
+ 83 |         }
+ 84 |       }
+ 85 |     };
+ 86 | 
+ 87 |     initEditor();
+ 88 | 
+ 89 |     return () => {
+ 90 |       isMounted = false;
+ 91 |       if (editorRef.current) {
+ 92 |         if (typeof editorRef.current.destroy === 'function') {
+ 93 |           editorRef.current.destroy();
+ 94 |         }
+ 95 |         editorRef.current = null;
+ 96 |       }
+ 97 |     };
+ 98 |   }, []);
+    :      ^^
+ 99 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/components/ui/modal/modal-manage.tsx:29:3]
+ 28 |   if (!mounted || !visible) return null;
+ 29 |   console.log('PortalModal:', visible);
+    :   ^^^^^^^^^^^
+ 30 |   return createPortal(
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has unnecessary dependency: formSchemaValues
+     ,-[src/pages/agent/debug-content/index.tsx:266:5]
+ 265 |     },
+ 266 |     [formSchemaValues, ok, parameters],
+     :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 267 |   );
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-use-before-define): 'sortKeysDeep' was used before it was defined.
+     ,-[src/utils/file-util.ts:229:41]
+ 228 |   // default, so no `ensure_ascii` toggle is needed.
+ 229 |   const blob = new Blob([JSON.stringify(sortKeysDeep(data), null, 2)], {
+     :                                         ^^^^^^|^^^^^
+     :                                               `-- used here
+ 230 |     type: FileMimeType.Json,
+ 231 |   });
+ 232 |   downloadFileFromBlob(blob, fileName);
+ 233 | };
+ 234 | 
+ 235 | // sortKeysDeep returns a structural copy of `value` with every
+ 236 | // plain-object key sorted alphabetically. Array element order is
+ 237 | // preserved (semantic — nodes/edges are not interchangeable), but
+ 238 | // each element is recursively sorted if it is itself an object.
+ 239 | // Primitives, `null`, and non-plain objects are passed through
+ 240 | // unchanged. Used to make the exported dsl byte-stable: JSON
+ 241 | // property iteration order is implementation-defined in JS, and
+ 242 | // React Flow nodes carry fields in a stable order today but we
+ 243 | // don't want to depend on that.
+ 244 | const sortKeysDeep = (value: any): any => {
+     :       ^^^^^^|^^^^^
+     :             `-- defined here
+ 245 |   if (Array.isArray(value)) {
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys'
+    ,-[src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:97:6]
+ 91 |           onValidate: (json) => {
+ 92 |             return validateKeys(json);
+    :                    ^^^^^^|^^^^^
+    :                          `-- useCallback uses `validateKeys` here
+ 93 |           },
+ 94 |         }}
+ 95 |       />
+ 96 |     );
+ 97 |   }, []);
+    :      ^^
+ 98 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys'
+     ,-[src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:115:6]
+ 100 |     try {
+ 101 |       if (validateKeys(value, [])?.length > 0) {
+     :           ^^^^^^|^^^^^
+     :                 `-- useCallback uses `validateKeys` here
+ 102 |         throw new Error(t('flow.formatTypeError'));
+ 103 |       }
+ 104 |       if (!z.object({}).safeParse(value).success) {
+ 105 |         throw new Error(t('flow.formatTypeError'));
+ 106 |       }
+ 107 |       if (value && typeof value === 'string' && !JSON.parse(value)) {
+ 108 |         throw new Error(t('flow.formatTypeError'));
+ 109 |       }
+ 110 |       return true;
+ 111 |     } catch (e) {
+ 112 |       console.log('object-render-error', e, value);
+ 113 |       throw new Error(t('flow.formatTypeError'));
+ 114 |     }
+ 115 |   }, []);
+     :      ^^
+ 116 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:112:7]
+ 111 |     } catch (e) {
+ 112 |       console.log('object-render-error', e, value);
+     :       ^^^^^^^^^^^
+ 113 |       throw new Error(t('flow.formatTypeError'));
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys'
+     ,-[src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:130:6]
+ 118 |     try {
+ 119 |       if (validateKeys(value, [])?.length > 0) {
+     :           ^^^^^^|^^^^^
+     :                 `-- useCallback uses `validateKeys` here
+ 120 |         throw new Error(t('flow.formatTypeError'));
+ 121 |       }
+ 122 |       if (value && typeof value === 'string' && !JSON.parse(value)) {
+ 123 |         throw new Error(t('flow.formatTypeError'));
+ 124 |       }
+ 125 |       return true;
+ 126 |     } catch (e) {
+ 127 |       console.log('object-render-error', e, value);
+ 128 |       throw new Error(t('flow.formatTypeError'));
+ 129 |     }
+ 130 |   }, []);
+     :      ^^
+ 131 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:127:7]
+ 126 |     } catch (e) {
+ 127 |       console.log('object-render-error', e, value);
+     :       ^^^^^^^^^^^
+ 128 |       throw new Error(t('flow.formatTypeError'));
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'form', 'replaceNodeForm', and 'enableReplacement'
+    ,-[src/pages/agent/hooks/use-watch-form-change.ts:35:6]
+ 29 |     
+ 30 |           values = form?.getValues() || {};
+    :                    ^^^^
+ 31 |           const nextValues: any = values;
+ 32 |     
+ 33 |           (enableReplacement ? replaceNodeForm : updateNodeForm)(id, nextValues);
+    :            ^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^
+ 34 |         }
+ 35 | ,->   }, [
+ 36 | |       form?.formState.isDirty,
+ 37 | |       id,
+ 38 | |       markNodeFormEdited,
+ 39 | |       readOnly,
+ 40 | |       updateNodeForm,
+ 41 | |       values,
+ 42 | `->   ]);
+ 43 |     }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/components/chunk-result-bar/checkbox-sets.tsx:18:7]
+ 17 |     (e: any) => {
+ 18 |       console.log('eee=', e);
+    :       ^^^^^^^^^^^
+ 19 |       selectAllChunk(e);
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchDocument'
+    ,-[src/components/document-preview/ppt-preview.tsx:68:6]
+ 65 |     if (url) {
+ 66 |       fetchDocument();
+    :       ^^^^^^|^^^^^^
+    :             `-- useEffect uses `fetchDocument` here
+ 67 |     }
+ 68 |   }, [url]);
+    :      ^^^^^
+ 69 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Parameter 'lineColor' is declared but never used.
+     ,-[src/components/originui/timeline.tsx:254:3]
+ 253 |   lineStyle = 'solid',
+ 254 |   lineColor = 'var(--text-secondary)',
+     :   ^^^^|^^^^
+     :       `-- 'lineColor' is declared here
+ 255 |   indicatorColor = 'rgb(var(--accent-primary))',
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Variable 'r' is declared but never used.
+     ,-[src/components/originui/timeline.tsx:272:10]
+ 271 |   };
+ 272 |   const [r, g, b] = parseColorToRGB(indicatorColor);
+     :          |
+     :          `-- 'r' is declared here
+ 273 |   return (
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'g' is declared but never used.
+     ,-[src/components/originui/timeline.tsx:272:13]
+ 271 |   };
+ 272 |   const [r, g, b] = parseColorToRGB(indicatorColor);
+     :             |
+     :             `-- 'g' is declared here
+ 273 |   return (
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'b' is declared but never used.
+     ,-[src/components/originui/timeline.tsx:272:16]
+ 271 |   };
+ 272 |   const [r, g, b] = parseColorToRGB(indicatorColor);
+     :                |
+     :                `-- 'b' is declared here
+ 273 |   return (
+     `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/message-form/use-watch-change.ts:23:6]
+ 12 |     if (id && form?.formState.isDirty) {
+ 13 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 14 |       let nextValues: any = values;
+ 15 | 
+ 16 |       nextValues = {
+ 17 |         ...values,
+ 18 |         content: convertToStringArray(values.content),
+ 19 |       };
+ 20 | 
+ 21 |       updateNodeForm(id, nextValues);
+ 22 |     }
+ 23 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 24 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchTxt'
+    ,-[src/components/document-preview/txt-preview.tsx:83:6]
+ 77 |     if (url) {
+ 78 |       fetchTxt();
+    :       ^^^^|^^^
+    :           `-- useEffect uses `fetchTxt` here
+ 79 |     } else {
+ 80 |       setLoading(false);
+ 81 |       setData('');
+ 82 |     }
+ 83 |   }, [url]);
+    :      ^^^^^
+ 84 |   return (
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agents/hooks/use-export-agent-log.ts:84:7]
+ 83 |     if (allData.length === 0) {
+ 84 |       console.log('No data to export', allData);
+    :       ^^^^^^^^^^^
+ 85 |       message.warning(t('flow.noDataToExport'));
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/components/list-filter-bar/filter-popover.tsx:317:15]
+ 316 |             onClick={() => {
+ 317 |               console.log(form.formState.errors, form.getValues());
+     :               ^^^^^^^^^^^
+ 318 |             }}
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchImage'
+    ,-[src/components/document-preview/image-preview.tsx:57:6]
+ 54 |     if (url) {
+ 55 |       fetchImage();
+    :       ^^^^^|^^^^
+    :            `-- useEffect uses `fetchImage` here
+ 56 |     }
+ 57 |   }, [url]);
+    :      ^^^^^
+ 58 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/components/indented-tree/indented-tree.tsx:127:25]
+ 126 |       .then(() => onRender?.(graph))
+ 127 |       .catch((error) => console.debug(error));
+     :                         ^^^^^^^^^^^^^
+ 128 |   }, [options, data, onRender]);
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/components/indented-tree/indented-tree.tsx:141:47]
+ 140 |     graph.resize(width, height);
+ 141 |     graph.fitView().catch((error: unknown) => console.debug(error));
+     :                                               ^^^^^^^^^^^^^
+ 142 |   }, [width, height]);
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name
+    ,-[src/pages/agents/agent-dropdown.tsx:28:3]
+ 27 |   showAgentRenameModal,
+ 28 |   agent: agent,
+    :   ^^^^^^^^^^^^
+ 29 | }: PropsWithChildren &
+    `----
+  help: Use the variable's original name or rename it to a different name
+
+  ! eslint(no-unused-vars): Variable 'toggleVisibility' is declared but never used.
+    ,-[src/components/originui/password-input.tsx:13:11]
+ 12 | 
+ 13 |     const toggleVisibility = () => setIsVisible((prevState) => !prevState);
+    :           ^^^^^^^^|^^^^^^^
+    :                   `-- 'toggleVisibility' is declared here
+ 14 | 
+    `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/agent-form/use-watch-change.ts:21:6]
+ 12 |     if (id && form?.formState.isDirty) {
+ 13 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 14 |       const nextValues: any = {
+ 15 |         ...values,
+ 16 |         prompts: [{ role: PromptRole.User, content: values.prompts }],
+ 17 |       };
+ 18 | 
+ 19 |       updateNodeForm(id, nextValues);
+ 20 |     }
+ 21 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 22 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Variable 'rest' is declared but never used.
+    ,-[src/pages/dataset/dataset-overview/dataset-filter.tsx:30:8]
+ 29 |     setActive,
+ 30 |     ...rest
+    :        ^^|^
+    :          `-- 'rest' is declared here
+ 31 |   } = props;
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/agent/chat/use-send-agent-message.ts:407:9]
+ 406 |       } catch (error) {
+ 407 |         console.log('🚀 ~ useSendAgentMessage ~ error:', error);
+     :         ^^^^^^^^^^^
+ 408 |       }
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Variable 'pane' is declared but never used.
+    ,-[src/pages/agent/canvas/context-menu/index.tsx:81:13]
+ 80 |       // doesn't get positioned off-screen.
+ 81 |       const pane = ref.current?.getBoundingClientRect();
+    :             ^^|^
+    :               `-- 'pane' is declared here
+ 82 |       // setMenu({
+    `----
+  help: Consider removing this declaration.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/string-transform-form/use-watch-form-change.ts:25:6]
+ 12 |     if (id && form?.formState.isDirty) {
+ 13 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 14 |       const nextValues: any = values;
+ 15 | 
+ 16 |       if (
+ 17 |         values.delimiters !== undefined &&
+ 18 |         values.method === StringTransformMethod.Merge
+ 19 |       ) {
+ 20 |         nextValues.delimiters = [values.delimiters];
+ 21 |       }
+ 22 | 
+ 23 |       updateNodeForm(id, nextValues);
+ 24 |     }
+ 25 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 26 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'isUser'
+     ,-[src/components/next-message-item/index.tsx:170:6]
+ 164 |                 clickDocumentButton={clickDocumentButton}
+ 165 |                 disableMath={isUser}
+     :                              ^^^|^^
+     :                                 `-- useCallback uses `isUser` here
+ 166 |               ></MarkdownContent>
+ 167 |             )}
+ 168 |           </div>
+ 169 |         );
+ 170 | ,->   }, [
+ 171 | |       children,
+ 172 | |       clickDocumentButton,
+ 173 | |       isAssistant,
+ 174 | |       isShare,
+ 175 | |       item.data,
+ 176 | |       loading,
+ 177 | |       messageContent,
+ 178 | |       reference,
+ 179 | |       sendLoading,
+ 180 | |       theme,
+ 181 | `->   ]);
+ 182 |     
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name
+    ,-[src/pages/datasets/hooks.ts:28:11]
+ 27 | export const useSaveKnowledge = () => {
+ 28 |   const { visible: visible, hideModal, showModal } = useSetModalState();
+    :           ^^^^^^^^^^^^^^^^
+ 29 |   const { loading, createKnowledge } = useCreateKnowledge();
+    `----
+  help: Use the variable's original name or rename it to a different name
+
+  ! eslint(no-unused-vars): Parameter '_' is declared but never used.
+     ,-[src/hooks/use-dataset-generate.ts:188:24]
+ 187 |     mutationKey: [DatasetKey.generate],
+ 188 |     mutationFn: async (_: { type: GenerateType }) => {
+     :                        |
+     :                        `-- '_' is declared here
+ 189 |       throw new Error(t('message.compileNotSupported'));
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter '_' is declared but never used.
+     ,-[src/hooks/use-dataset-generate.ts:198:24]
+ 197 |     mutationKey: [DatasetKey.pauseGenerate],
+ 198 |     mutationFn: async (_: { task_id: string; type: GenerateType }) => {
+     :                        |
+     :                        `-- '_' is declared here
+ 199 |       throw new Error(t('message.compileNotSupported'));
+     `----
+  help: Consider removing this parameter.
+
+  ! react(no-unescaped-entities): `'` can be escaped with &apos; or &lsquo; or &#39; or &rsquo;
+    ,-[src/pages/agent/form/agent-form/agent-tools.tsx:58:22]
+ 57 |         <TooltipContent>
+ 58 |           <p>It doesn't have any config.</p>
+    :                      ^
+ 59 |         </TooltipContent>
+    `----
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/user-fill-up-form/use-watch-change.ts:34:6]
+ 21 |     if (id) {
+ 22 |       values = form?.getValues() || {};
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 23 | 
+ 24 |       const inputs = transferInputsArrayToObject(values.inputs);
+ 25 | 
+ 26 |       const nextValues = {
+ 27 |         ...values,
+ 28 |         inputs,
+ 29 |         outputs: inputs,
+ 30 |       };
+ 31 | 
+ 32 |       updateNodeForm(id, nextValues);
+ 33 |     }
+ 34 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 35 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/iteration-form/use-watch-form-change.ts:29:6]
+ 19 |     if (id && form?.formState.isDirty) {
+ 20 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 21 |       console.log('🚀 ~ useEffect ~ values:', values);
+ 22 |       const nextValues: any = {
+ 23 |         ...values,
+ 24 |         outputs: transferToObject(values.outputs),
+ 25 |       };
+ 26 | 
+ 27 |       updateNodeForm(id, nextValues);
+ 28 |     }
+ 29 |   }, [form?.formState.isDirty, id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 30 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agent/form/iteration-form/use-watch-form-change.ts:21:7]
+ 20 |       values = form?.getValues();
+ 21 |       console.log('🚀 ~ useEffect ~ values:', values);
+    :       ^^^^^^^^^^^
+ 22 |       const nextValues: any = {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Variable 'auto_keywords' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:67:5]
+ 66 |   const {
+ 67 |     auto_keywords,
+    :     ^^^^^^|^^^^^^
+    :           `-- 'auto_keywords' is declared here
+ 68 |     auto_questions,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'auto_questions' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:68:5]
+ 67 |     auto_keywords,
+ 68 |     auto_questions,
+    :     ^^^^^^^|^^^^^^
+    :            `-- 'auto_questions' is declared here
+ 69 |     chunk_token_num,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'delimiter' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:70:5]
+ 69 |     chunk_token_num,
+ 70 |     delimiter,
+    :     ^^^^|^^^^
+    :         `-- 'delimiter' is declared here
+ 71 |     html4excel,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'html4excel' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:71:5]
+ 70 |     delimiter,
+ 71 |     html4excel,
+    :     ^^^^^|^^^^
+    :          `-- 'html4excel' is declared here
+ 72 |     layout_recognize,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'tag_kb_ids' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:73:5]
+ 72 |     layout_recognize,
+ 73 |     tag_kb_ids,
+    :     ^^^^^|^^^^
+    :          `-- 'tag_kb_ids' is declared here
+ 74 |     topn_tags,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'topn_tags' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:74:5]
+ 73 |     tag_kb_ids,
+ 74 |     topn_tags,
+    :     ^^^^|^^^^
+    :         `-- 'topn_tags' is declared here
+ 75 |     filename_embd_weight,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'filename_embd_weight' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:75:5]
+ 74 |     topn_tags,
+ 75 |     filename_embd_weight,
+    :     ^^^^^^^^^^|^^^^^^^^^
+    :               `-- 'filename_embd_weight' is declared here
+ 76 |     task_page_size,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'task_page_size' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:76:5]
+ 75 |     filename_embd_weight,
+ 76 |     task_page_size,
+    :     ^^^^^^^|^^^^^^
+    :            `-- 'task_page_size' is declared here
+ 77 |     pages,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Variable 'pages' is declared but never used.
+    ,-[src/hooks/parser-config-utils.ts:77:5]
+ 76 |     task_page_size,
+ 77 |     pages,
+    :     ^^|^^
+    :       `-- 'pages' is declared here
+ 78 |     children_delimiter,
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/parser.tsx:35:5]
+ 34 |     const type = outputs[key as keyof typeof outputs]?.type;
+ 35 |     console.log('outputs-->', outputs, data, key, value);
+    :     ^^^^^^^^^^^
+ 36 |     return {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/dataflow-result/parser.tsx:50:5]
+ 49 |   const handleSave = (newContent: any) => {
+ 50 |     console.log('newContent-change-->', newContent, initialValue);
+    :     ^^^^^^^^^^^
+ 51 |     if (JSON.stringify(newContent) !== JSON.stringify(initialValue)) {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Identifier 'message' is imported but never used.
+   ,-[src/pages/dataflow-result/hooks.ts:2:8]
+ 1 | import { TimelineNode } from '@/components/originui/timeline';
+ 2 | import message from '@/components/ui/message';
+   :        ^^^|^^^
+   :           `-- 'message' is imported here
+ 3 | import { useSetModalState, useShowDeleteConfirm } from '@/hooks/common-hooks';
+   `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'kbService' is imported but never used.
+   ,-[src/pages/dataflow-result/hooks.ts:7:8]
+ 6 | import { useCreateChunk, useDeleteChunk } from '@/hooks/use-chunk-request';
+ 7 | import kbService, { getPipelineDetail } from '@/services/knowledge-service';
+   :        ^^^^|^^^^
+   :            `-- 'kbService' is imported here
+ 8 | import { formatSecondsToHumanReadable } from '@/utils/date';
+   `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'useMutation' is imported but never used.
+    ,-[src/pages/dataflow-result/hooks.ts:10:10]
+  9 | import { buildChunkHighlights } from '@/utils/document-util';
+ 10 | import { useMutation, useQuery } from '@tanstack/react-query';
+    :          ^^^^^|^^^^^
+    :               `-- 'useMutation' is imported here
+ 11 | import { t } from 'i18next';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/use-send-message.ts:221:15]
+ 220 |             if (done) {
+ 221 |               console.log('agent chat sse reader done');
+     :               ^^^^^^^^^^^
+ 222 |               break;
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/use-send-message.ts:241:17]
+ 240 |               if (payload === '[DONE]') {
+ 241 |                 console.log('agent chat sse done sentinel');
+     :                 ^^^^^^^^^^^
+ 242 |                 break;
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/use-send-message.ts:245:15]
+ 244 |               const val = normalizeAgentEvent(JSON.parse(payload));
+ 245 |               console.log('agent chat sse event', val);
+     :               ^^^^^^^^^^^
+ 246 | 
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/hooks/use-send-message.ts:263:13]
+ 262 |           if (e instanceof DOMException && e.name === 'AbortError') {
+ 263 |             console.log('Request was aborted by user or logic.');
+     :             ^^^^^^^^^^^
+ 264 |           } else {
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form'
+    ,-[src/pages/agent/form/categorize-form/use-watch-change.ts:16:6]
+ 11 |     if (id) {
+ 12 |       values = form?.getValues();
+    :                ^^|^
+    :                  `-- useEffect uses `form` here
+ 13 | 
+ 14 |       updateNodeForm(id, { ...values, items: values.items || [] });
+ 15 |     }
+ 16 |   }, [id, updateNodeForm, values]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 17 | }
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'form'
+    ,-[src/pages/agent/form/tool-form/mcp-form/use-watch-change.ts:19:6]
+ 15 |     const mcpTools = data.variables?.tools || [];
+ 16 |     values = form?.getValues();
+    :              ^^|^
+    :                `-- useMemo uses `form` here
+ 17 | 
+ 18 |     return pick(mcpTools, values.items);
+ 19 |   }, [values, data?.variables]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^^^
+ 20 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Variable 'toggleLink' is declared but never used.
+    ,-[src/lib/editor/plugins/floating-selection-toolbar.tsx:97:9]
+ 96 | 
+ 97 |   const toggleLink = () => {
+    :         ^^^^^|^^^^
+    :              `-- 'toggleLink' is declared here
+ 98 |     const url = window.prompt('Enter URL:');
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/admin/login.tsx:84:7]
+ 83 |     onError: (error) => {
+ 84 |       console.log('Failed:', error);
+    :       ^^^^^^^^^^^
+ 85 |     },
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'queryClient'
+    ,-[src/pages/dataset/compilation/dataset-structure-view.tsx:50:6]
+ 46 |   const handleRunEnd = useCallback(() => {
+ 47 |     queryClient.invalidateQueries({
+    :     ^^^^^|^^^^^
+    :          `-- useCallback uses `queryClient` here
+ 48 |       queryKey: DatasetStructureKeys.kind(knowledgeBaseId, kind),
+ 49 |     });
+ 50 |   }, [knowledgeBaseId, kind]);
+    :      ^^^^^^^^^^^^^^^^^^^^^^^
+ 51 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! typescript(no-extra-non-null-assertion): extra non-null assertion
+     ,-[src/pages/admin/roles.tsx:343:41]
+ 342 |                 updateRoleDescriptionMutation.mutate({
+ 343 |                   name: roleToMakeAction!?.role_name,
+     :                                         ^
+ 344 |                   description: roleDescription.trim(),
+     `----
+  help: Remove the redundant non-null assertion operator (`!`).
+  note: The non-null assertion operator in TypeScript, written as `!`, tells the compiler that an expression is definitely not `null` or `undefined` at that point. Chaining multiple non-null assertions on the same expression does not provide any additional safety and is redundant.
+
+  ! typescript(no-extra-non-null-assertion): extra non-null assertion
+     ,-[src/pages/admin/roles.tsx:420:59]
+ 419 |                 roleToMakeAction &&
+ 420 |                 deleteRoleMutation.mutate(roleToMakeAction!?.role_name)
+     :                                                           ^
+ 421 |               }
+     `----
+  help: Remove the redundant non-null assertion operator (`!`).
+  note: The non-null assertion operator in TypeScript, written as `!`, tells the compiler that an expression is definitely not `null` or `undefined` at that point. Chaining multiple non-null assertions on the same expression does not provide any additional safety and is redundant.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/login-next/card.tsx:14:5]
+ 13 |   useEffect(() => {
+ 14 |     console.log('title', isLoginPage);
+    :     ^^^^^^^^^^^
+ 15 |     if (isLoginPage) {
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/agent/form/tool-form/exesql-form/index.tsx:28:35]
+ 27 | 
+ 28 |   const onError = (error: any) => console.log(error);
+    :                                   ^^^^^^^^^^^
+ 29 | 
+    `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Parameter '_selectedSkill' is declared but never used.
+    ,-[src/pages/dataset/compilation/skills-left-panel.tsx:27:18]
+ 26 | export function SkillsLeftPanel({
+ 27 |   selectedSkill: _selectedSkill,
+    :                  ^^^^^^^|^^^^^^
+    :                         `-- '_selectedSkill' is declared here
+ 28 |   onSelectSkill,
+    `----
+  help: Consider removing this parameter.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'setLangfuseConfig'
+    ,-[src/pages/user-setting/setting-model/langfuse/use-save-langfuse-configuration.tsx:39:5]
+ 31 |     async (params: ISetLangfuseConfigRequestBody) => {
+ 32 |       const ret = await setLangfuseConfig(params);
+    :                         ^^^^^^^^|^^^^^^^^
+    :                                 `-- useCallback uses `setLangfuseConfig` here
+ 33 | 
+ 34 |       if (ret === 0) {
+ 35 |         hideSaveLangfuseConfigurationModal();
+ 36 |       }
+ 37 |       return ret;
+ 38 |     },
+ 39 |     [hideSaveLangfuseConfigurationModal],
+    :     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 40 |   );
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-unused-vars): Variable '_' is declared but never used.
+    ,-[src/components/jsonjoy-builder/lib/schema-editor.ts:48:27]
+ 47 |   const newSchema = copySchema(schema);
+ 48 |   const { [propertyName]: _, ...remainingProps } = newSchema.properties;
+    :                           |
+    :                           `-- '_' is declared here
+ 49 |   newSchema.properties = remainingProps;
+    `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-unused-vars): Identifier 'VerifyButton' is imported but never used.
+    ,-[src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx:23:8]
+ 22 | import { ModelsSection } from '../models-section';
+ 23 | import VerifyButton from '../verify-button';
+    :        ^^^^^^|^^^^^
+    :              `-- 'VerifyButton' is imported here
+ 24 | import { InstanceNameSection } from './instance-name-section';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Parameter 'handleVerify' is declared but never used.
+    ,-[src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx:40:3]
+ 39 |   formRef,
+ 40 |   handleVerify,
+    :   ^^^^^^|^^^^^
+    :         `-- 'handleVerify' is declared here
+ 41 |   handleDelete,
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/dataset/components/metedata/hooks/use-manage-modal.ts:378:7]
+ 377 |     async (callback: () => void) => {
+ 378 |       console.log('handleSaveManage', tableData);
+     :       ^^^^^^^^^^^
+ 379 |       const { data: res } = await updateDocumentsMetadata({
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Parameter 'isShare' is declared but never used.
+    ,-[src/components/next-message-item/group-button.tsx:71:3]
+ 70 |   attachment,
+ 71 |   isShare,
+    :   ^^^|^^^
+    :      `-- 'isShare' is declared here
+ 72 | }: IProps) => {
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Identifier 'LLMFactory' is imported but never used.
+    ,-[src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:26:10]
+ 25 | import { Input } from '@/components/ui/input';
+ 26 | import { LLMFactory } from '@/constants/llm';
+    :          ^^^^^|^^^^
+    :               `-- 'LLMFactory' is imported here
+ 27 | import { useTranslate } from '@/hooks/common-hooks';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Identifier 'VerifyButton' is imported but never used.
+    ,-[src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:39:8]
+ 38 | import { ModelsSection } from '../models-section';
+ 39 | import VerifyButton from '../verify-button';
+    :        ^^^^^^|^^^^^
+    :              `-- 'VerifyButton' is imported here
+ 40 | import { cn } from '@/lib/utils';
+    `----
+  help: Consider removing this import.
+
+  ! eslint(no-unused-vars): Parameter 'handleVerify' is declared but never used.
+    ,-[src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:57:3]
+ 56 |   formRef,
+ 57 |   handleVerify,
+    :   ^^^^^^|^^^^^
+    :         `-- 'handleVerify' is declared here
+ 58 |   handleDelete,
+    `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Variable 'startRename' is declared but never used.
+     ,-[src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:100:9]
+  99 | 
+ 100 |   const startRename = () => {
+     :         ^^^^^|^^^^^
+     :              `-- 'startRename' is declared here
+ 101 |     setRenameValue(editedInstanceName);
+     `----
+  help: Consider removing this declaration.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/login-next/index.tsx:355:7]
+ 354 |     } catch (errorInfo) {
+ 355 |       console.log('Failed:', errorInfo);
+     :       ^^^^^^^^^^^
+ 356 |     }
+     `----
+  help: Supported methods are: warn, error.
+
+  ! eslint(no-unused-vars): Parameter '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/lib/schema-inference.ts:220:15]
+ 219 |   const requiredProps = Object.entries(propertyCounts)
+ 220 |     .filter(([_, count]) => count === totalItems)
+     :               |
+     :               `-- '_' is declared here
+ 221 |     .map(([key, _]) => key);
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-unused-vars): Parameter '_' is declared but never used.
+     ,-[src/components/jsonjoy-builder/lib/schema-inference.ts:221:17]
+ 220 |     .filter(([_, count]) => count === totalItems)
+ 221 |     .map(([key, _]) => key);
+     :                 |
+     :                 `-- '_' is declared here
+ 222 | 
+     `----
+  help: Consider removing this parameter.
+
+  ! eslint(no-console): Unexpected console statement.
+     ,-[src/pages/dataset/dataset/reparse-dialog.tsx:112:19]
+ 111 |                 onSubmit={(data) => {
+ 112 |                   console.log('submit', data);
+     :                   ^^^^^^^^^^^
+ 113 |                 }}
+     `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'onFilesUpload'
+     ,-[src/components/file-upload.tsx:524:5]
+ 518 |               requestAnimationFrame(() => {
+ 519 |                 onFilesUpload(acceptedFiles);
+     :                 ^^^^^^|^^^^^^
+     :                       `-- useCallback uses `onFilesUpload` here
+ 520 |               });
+ 521 |             }
+ 522 |           }
+ 523 |         },
+ 524 | ,->     [
+ 525 | |         store,
+ 526 | |         isControlled,
+ 527 | |         onValueChange,
+ 528 | |         onAccept,
+ 529 | |         onFileAccept,
+ 530 | |         onUpload,
+ 531 | |         maxFiles,
+ 532 | |         onFileValidate,
+ 533 | |         onFileReject,
+ 534 | |         acceptTypes,
+ 535 | |         maxSize,
+ 536 | |         disabled,
+ 537 | `->     ],
+ 538 |       );
+     `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-use-before-define): 'onFilesUpload' was used before it was defined.
+     ,-[src/components/file-upload.tsx:519:13]
+ 518 |           requestAnimationFrame(() => {
+ 519 |             onFilesUpload(acceptedFiles);
+     :             ^^^^^^|^^^^^^
+     :                   `-- used here
+ 520 |           });
+ 521 |         }
+ 522 |       }
+ 523 |     },
+ 524 |     [
+ 525 |       store,
+ 526 |       isControlled,
+ 527 |       onValueChange,
+ 528 |       onAccept,
+ 529 |       onFileAccept,
+ 530 |       onUpload,
+ 531 |       maxFiles,
+ 532 |       onFileValidate,
+ 533 |       onFileReject,
+ 534 |       acceptTypes,
+ 535 |       maxSize,
+ 536 |       disabled,
+ 537 |     ],
+ 538 |   );
+ 539 | 
+ 540 |   const onFilesUpload = React.useCallback(
+     :         ^^^^^^|^^^^^^
+     :               `-- defined here
+ 541 |     async (files: File[]) => {
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'checkValue'
+    ,-[src/pages/dataset/dataset/index.tsx:81:6]
+ 79 |   useEffect(() => {
+ 80 |     checkValue(filters);
+    :     ^^^^^|^^^^
+    :          `-- useEffect uses `checkValue` here
+ 81 |   }, [filters]);
+    :      ^^^^^^^^^
+ 82 | 
+    `----
+  help: Either include it or remove the dependency array.
+
+  ! eslint(no-use-before-define): 'DEFAULT_IGNORE_PATTERNS' was used before it was defined.
+     ,-[src/pages/skills/validation.ts:337:31]
+ 336 |       isMacJunkPath(sanitized) ||
+ 337 |       shouldIgnore(sanitized, DEFAULT_IGNORE_PATTERNS)
+     :                               ^^^^^^^^^^^|^^^^^^^^^^^
+     :                                          `-- used here
+ 338 |     ) {
+ 339 |       continue; // Skip junk and ignored files
+ 340 |     }
+ 341 | 
+ 342 |     validFiles.push(file);
+ 343 |   }
+ 344 | 
+ 345 |   // Find SKILL.md file
+ 346 |   const skillMdFile = validFiles.find((f) => {
+ 347 |     const path = f.webkitRelativePath || f.name;
+ 348 |     const normalized = path.toLowerCase();
+ 349 |     return normalized === 'skill.md' || normalized.endsWith('/skill.md');
+ 350 |   });
+ 351 | 
+ 352 |   if (!skillMdFile) {
+ 353 |     return { valid: false, error: 'missing_skill_md' };
+ 354 |   }
+ 355 | 
+ 356 |   // Read and validate SKILL.md content
+ 357 |   try {
+ 358 |     const content = await readFileAsText(skillMdFile);
+ 359 |     const {
+ 360 |       metadata,
+ 361 |       valid: frontmatterValid,
+ 362 |       error: frontmatterError,
+ 363 |     } = parseFrontmatter(content);
+ 364 | 
+ 365 |     if (!frontmatterValid) {
+ 366 |       return { valid: false, error: frontmatterError || 'invalid_frontmatter' };
+ 367 |     }
+ 368 | 
+ 369 |     // Validate required fields
+ 370 |     if (!metadata.name) {
+ 371 |       return { valid: false, error: 'missing_name' };
+ 372 |     }
+ 373 | 
+ 374 |     // Validate name format (slug format: lowercase, URL-safe)
+ 375 |     if (!/^[a-z0-9][a-z0-9_-]*$/.test(metadata.name)) {
+ 376 |       return { valid: false, error: 'invalid_name_format' };
+ 377 |     }
+ 378 | 
+ 379 |     // Validate version if provided (should be semver)
+ 380 |     if (metadata.version) {
+ 381 |       const version = String(metadata.version);
+ 382 |       // Simple semver check: x.y.z format
+ 383 |       if (!/^\d+\.\d+\.\d+/.test(version)) {
+ 384 |         return { valid: false, error: 'invalid_version' };
+ 385 |       }
+ 386 |     }
+ 387 | 
+ 388 |     // Validate all files are text-based
+ 389 |     for (const file of validFiles) {
+ 390 |       const path = file.webkitRelativePath || file.name;
+ 391 |       if (!isTextFile(path, file.type)) {
+ 392 |         return { valid: false, error: 'invalid_file_type', details: path };
+ 393 |       }
+ 394 |     }
+ 395 | 
+ 396 |     return {
+ 397 |       valid: true,
+ 398 |       name: metadata.name,
+ 399 |       description: metadata.description || '',
+ 400 |     };
+ 401 |   } catch (error) {
+ 402 |     console.error('Validation error:', error);
+ 403 |     return { valid: false, error: 'read_failed' };
+ 404 |   }
+ 405 | }
+ 406 | 
+ 407 | /**
+ 408 |  * Read a File as text
+ 409 |  */
+ 410 | function readFileAsText(file: File): Promise<string> {
+ 411 |   return new Promise((resolve, reject) => {
+ 412 |     const reader = new FileReader();
+ 413 |     reader.onload = () => resolve(reader.result as string);
+ 414 |     reader.onerror = () => reject(reader.error);
+ 415 |     reader.readAsText(file);
+ 416 |   });
+ 417 | }
+ 418 | 
+ 419 | // ============================================================================
+ 420 | // Ignore Pattern Handling (simplified version of ignore package)
+ 421 | // ============================================================================
+ 422 | 
+ 423 | /**
+ 424 |  * Simple ignore pattern matching
+ 425 |  * Supports basic glob patterns: *, ?, **
+ 426 |  */
+ 427 | export function shouldIgnore(filePath: string, patterns: string[]): boolean {
+ 428 |   const normalizedPath = filePath.toLowerCase();
+ 429 |   for (const pattern of patterns) {
+ 430 |     const trimmedPattern = pattern.trim();
+ 431 |     if (!trimmedPattern || trimmedPattern.startsWith('#')) continue;
+ 432 | 
+ 433 |     if (matchPattern(normalizedPath, trimmedPattern.toLowerCase())) {
+ 434 |       return true;
+ 435 |     }
+ 436 |   }
+ 437 |   return false;
+ 438 | }
+ 439 | 
+ 440 | function matchPattern(filePath: string, pattern: string): boolean {
+ 441 |   // Handle directory patterns (trailing slash)
+ 442 |   if (pattern.endsWith('/')) {
+ 443 |     const dirPattern = pattern.slice(0, -1);
+ 444 |     return filePath.startsWith(dirPattern + '/') || filePath === dirPattern;
+ 445 |   }
+ 446 | 
+ 447 |   // Handle exact match
+ 448 |   if (filePath === pattern) return true;
+ 449 | 
+ 450 |   // Handle glob patterns
+ 451 |   const regex = globToRegex(pattern);
+ 452 |   return regex.test(filePath);
+ 453 | }
+ 454 | 
+ 455 | function globToRegex(pattern: string): RegExp {
+ 456 |   let regex = '';
+ 457 |   let i = 0;
+ 458 | 
+ 459 |   while (i < pattern.length) {
+ 460 |     const c = pattern[i];
+ 461 | 
+ 462 |     if (c === '*') {
+ 463 |       if (pattern[i + 1] === '*') {
+ 464 |         // ** matches any number of directories
+ 465 |         regex += '.*';
+ 466 |         i += 2;
+ 467 |       } else {
+ 468 |         // * matches any characters except /
+ 469 |         regex += '[^/]*';
+ 470 |         i++;
+ 471 |       }
+ 472 |     } else if (c === '?') {
+ 473 |       // ? matches any single character except /
+ 474 |       regex += '[^/]';
+ 475 |       i++;
+ 476 |     } else if (c === '.') {
+ 477 |       regex += '\\.';
+ 478 |       i++;
+ 479 |     } else if (
+ 480 |       c === '\\' ||
+ 481 |       c === '/' ||
+ 482 |       c === '$' ||
+ 483 |       c === '^' ||
+ 484 |       c === '+' ||
+ 485 |       c === '(' ||
+ 486 |       c === ')' ||
+ 487 |       c === '[' ||
+ 488 |       c === ']' ||
+ 489 |       c === '{' ||
+ 490 |       c === '}'
+ 491 |     ) {
+ 492 |       regex += '\\' + c;
+ 493 |       i++;
+ 494 |     } else {
+ 495 |       regex += c;
+ 496 |       i++;
+ 497 |     }
+ 498 |   }
+ 499 | 
+ 500 |   return new RegExp(`^${regex}$`);
+ 501 | }
+ 502 | 
+ 503 | // ============================================================================
+ 504 | // Default Ignore Patterns
+ 505 | // ============================================================================
+ 506 | 
+ 507 | export const DEFAULT_IGNORE_PATTERNS = [
+     :              ^^^^^^^^^^^|^^^^^^^^^^^
+     :                         `-- defined here
+ 508 |   '.git/',
+     `----
+  help: Move the declaration before any references to it, or remove the reference if it is not needed.
+
+  ! eslint(no-console): Unexpected console statement.
+    ,-[src/pages/user-setting/data-source/constant/s3-constant.tsx:92:7]
+ 91 |       const bucketType = formValues?.config?.bucket_type;
+ 92 |       console.log('authMode', authMode, val);
+    :       ^^^^^^^^^^^
+ 93 |       if (
+    `----
+  help: Supported methods are: warn, error.
+
+  ! react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'isDraftInstance'
+     ,-[src/pages/user-setting/setting-model/instance-card/models-section/hooks.ts:482:6]
+ 480 |   useEffect(() => {
+ 481 |     onChangeRef.current?.(buildModelInfo(instanceItems, isDraftInstance));
+     :                                                         ^^^^^^^|^^^^^^^
+     :                                                                `-- useEffect uses `isDraftInstance` here
+ 482 |   }, [instanceItems]);
+     :      ^^^^^^^^^^^^^^^
+ 483 | 
+     `----
+  help: Either include it or remove the dependency array.
+
+Found 172 warnings and 0 errors.
+Finished in 85ms on 1504 files with 91 rules using 24 threads.

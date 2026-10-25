@@ -1,0 +1,11 @@
+{
+  "command": [
+    "git",
+    "archive",
+    "--format=tar",
+    "HEAD"
+  ],
+  "base": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+  "archive_bytes": 63907840,
+  "method": "Raw subprocess bytes, no PowerShell text pipe or Windows filesystem archive"
+}

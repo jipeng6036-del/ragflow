@@ -1,0 +1,24 @@
+[
+  {
+    "args": [
+      "lefthook",
+      "install"
+    ],
+    "code": 0,
+    "stdout": "sync hooks: \u2714\ufe0f(pre-commit)\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "git",
+      "commit",
+      "-m",
+      "fix(web): preserve analyzer controls during model lookup",
+      "-m",
+      "Keep registered analyzer cleanup controls available while model metadata is pending or unavailable. Refs #21221."
+    ],
+    "code": 0,
+    "stdout": "[fix/hide-unsupported-pdf-cleanup-options aa4189b] fix(web): preserve analyzer controls during model lookup\n 2 files changed, 73 insertions(+), 16 deletions(-)\n",
+    "stderr": "\u001b[38;2;56;56;56m\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\u001b[m\n\u001b[38;2;56;56;56m\u2502\u001b[m \ud83e\udd4a lefthook  v2.2.2   hook:  \u001b[1mpre-commit\u001b[m \u001b[38;2;56;56;56m\u2502\u001b[m\n\u001b[38;2;56;56;56m\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\u001b[m\n\u2502  ruff (skip) no files for inspection\n\u2502  ruff-format (skip) no files for inspection\n\u2502  gofmt (skip) no files for inspection\n\u2503  check-json \u276f \n\n\u2503  check-merge-conflict \u276f \n\n\u2503  end-of-file-fixer \u276f \n\n\u2503  trailing-whitespace \u276f \n\n\u2503  mixed-line-ending \u276f \n\n\u2503  check-symlinks \u276f \n\n\u2503  check-yaml \u276f \n\n\u2503  check-case-conflict \u276f \n\n\u001b[38;2;56;56;56m  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u001b[m\nsummary: (done in 0.05 seconds)\n\u2714\ufe0f check-json (0.03 seconds)\n\u2714\ufe0f check-merge-conflict (0.03 seconds)\n\u2714\ufe0f end-of-file-fixer (0.03 seconds)\n\u2714\ufe0f trailing-whitespace (0.03 seconds)\n\u2714\ufe0f check-symlinks (0.03 seconds)\n\u2714\ufe0f mixed-line-ending (0.03 seconds)\n\u2714\ufe0f check-yaml (0.03 seconds)\n\u2714\ufe0f check-case-conflict (0.05 seconds)\n"
+  }
+]

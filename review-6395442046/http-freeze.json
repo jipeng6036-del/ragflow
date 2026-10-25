@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-10-25T09:38:06.868764+00:00",
+  "scope": "Full synthetic server request/response history, including retained failed harness attempts. Successful final20step application runs are separately captured in browser-results JSON. Immutable copies prevent live autosave hash drift.",
+  "files": [
+    {
+      "path": "baseline-http-receipts-frozen.jsonl",
+      "sha256": "3c4e33d152979b4c63412c8d6bed58abb355f1c8bed19cf2a6c6ae09be1772ba",
+      "rows": 338,
+      "native_agent_gets": 39,
+      "native_agent_puts": 12
+    },
+    {
+      "path": "candidate-http-receipts-frozen.jsonl",
+      "sha256": "3ab552ddd236a3c892ed6bb2f703802ca859d0c31aa34dfce0bbf3842afba391",
+      "rows": 344,
+      "native_agent_gets": 40,
+      "native_agent_puts": 14
+    }
+  ]
+}

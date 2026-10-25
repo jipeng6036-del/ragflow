@@ -1,0 +1,12 @@
+{
+  "node": "v22.23.4",
+  "npm": "10.9.9",
+  "python": "Python 3.11.2",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "platform": "linux",
+  "arch": "x64",
+  "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+  "browser_version": "151.0.7922.138",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+  "playwright_cli": "0.1.22"
+}

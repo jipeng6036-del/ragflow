@@ -1,0 +1,146 @@
+[
+  {
+    "phase": "baseline",
+    "name": "lint",
+    "args": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 1094,
+    "log": "baseline-final-lint.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "type-check",
+    "args": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "code": 2,
+    "signal": null,
+    "ms": 21867,
+    "log": "baseline-final-type-check.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "build",
+    "args": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 72142,
+    "log": "baseline-final-build.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "test",
+    "args": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--json",
+      "--outputFile=/evidence/baseline-final-jest-results.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 98044,
+    "log": "baseline-final-test.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "candidate",
+    "name": "related",
+    "args": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "src/pages/agent/form/parser-form",
+      "--coverage=false"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 7406,
+    "log": "candidate-related.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "lint",
+    "args": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 214,
+    "log": "candidate-lint.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "type-check",
+    "args": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "code": 2,
+    "signal": null,
+    "ms": 21456,
+    "log": "candidate-type-check.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "build",
+    "args": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 102689,
+    "log": "candidate-build.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "test",
+    "args": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--json",
+      "--outputFile=/evidence/candidate-jest-results.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 100984,
+    "log": "candidate-test.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "format",
+    "args": [
+      "./node_modules/.bin/oxfmt",
+      "--check",
+      "src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+      "src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 1130,
+    "log": "candidate-format.log"
+  }
+]

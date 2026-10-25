@@ -1,0 +1,134 @@
+[
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "code": 0,
+    "stdout": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "code": 0,
+    "stdout": " M web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n M web/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "add",
+      "--",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-status"
+    ],
+    "code": 0,
+    "stdout": "M\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "version"
+    ],
+    "code": 0,
+    "stdout": "2.2.2\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "run",
+      "pre-commit",
+      "--files-from-stdin",
+      "--no-auto-install"
+    ],
+    "code": 0,
+    "stdout": "\u001b[38;2;56;56;56m╭─────────────────────────────────────────╮\u001b[m\n\u001b[38;2;56;56;56m│\u001b[m 🥊 lefthook  v2.2.2   hook:  \u001b[1mpre-commit\u001b[m \u001b[38;2;56;56;56m│\u001b[m\n\u001b[38;2;56;56;56m╰─────────────────────────────────────────╯\u001b[m\n│  gofmt (skip) no files for inspection\n│  ruff-format (skip) no files for inspection\n│  ruff (skip) no files for inspection\n┃  end-of-file-fixer ❯ \n\n┃  check-yaml ❯ \n\n┃  trailing-whitespace ❯ \n\n┃  mixed-line-ending ❯ \n\n┃  check-merge-conflict ❯ \n\n┃  check-json ❯ \n\n┃  check-symlinks ❯ \n\n┃  check-case-conflict ❯ \n\n\u001b[38;2;56;56;56m  ────────────────────────────────────\u001b[m\nsummary: (done in 0.08 seconds)\n✔️ end-of-file-fixer (0.05 seconds)\n✔️ check-yaml (0.06 seconds)\n✔️ trailing-whitespace (0.06 seconds)\n✔️ mixed-line-ending (0.06 seconds)\n✔️ check-merge-conflict (0.06 seconds)\n✔️ check-json (0.06 seconds)\n✔️ check-symlinks (0.07 seconds)\n✔️ check-case-conflict (0.07 seconds)\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "run",
+      "web-checks",
+      "--files-from-stdin",
+      "--no-auto-install"
+    ],
+    "code": 0,
+    "stdout": "\u001b[38;2;56;56;56m╭─────────────────────────────────────────╮\u001b[m\n\u001b[38;2;56;56;56m│\u001b[m 🥊 lefthook  v2.2.2   hook:  \u001b[1mweb-checks\u001b[m \u001b[38;2;56;56;56m│\u001b[m\n\u001b[38;2;56;56;56m╰─────────────────────────────────────────╯\u001b[m\n┃  web-oxfmt ❯ \nChecking formatting...\n\nAll matched files use the correct format.\nFinished in 5ms on 2 files using 24 threads.\n\n┃  web-oxlint ❯ \nFound 0 warnings and 0 errors.\nFinished in 54ms on 2 files with 91 rules using 24 threads.\n\n│  web-no-tests-dir (skip) no files for inspection\n\u001b[38;2;56;56;56m  ────────────────────────────────────\u001b[m\nsummary: (done in 0.48 seconds)\n✔️ web-oxfmt (0.25 seconds)\n✔️ web-oxlint (0.22 seconds)\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "code": 0,
+    "stdout": "M  web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM  web/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "ls-files",
+      "--stage",
+      "--",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+    ],
+    "code": 0,
+    "stdout": "100644 377a3517fc2ac018e23156a6da2de353fb464844 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n100644 57fd9bf11c1cde33c2f8f9a711b29a55fb02f4f6 0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/work/candidate",
+    "args": [
+      "git",
+      "diff",
+      "--cached",
+      "--numstat"
+    ],
+    "code": 0,
+    "stdout": "66\t6\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n7\t10\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  }
+]

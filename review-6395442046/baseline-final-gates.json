@@ -1,0 +1,61 @@
+[
+  {
+    "phase": "baseline",
+    "name": "lint",
+    "args": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 1094,
+    "log": "baseline-final-lint.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "type-check",
+    "args": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "code": 2,
+    "signal": null,
+    "ms": 21867,
+    "log": "baseline-final-type-check.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "build",
+    "args": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 72142,
+    "log": "baseline-final-build.log",
+    "exact_source_and_mode": true
+  },
+  {
+    "phase": "baseline",
+    "name": "test",
+    "args": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--json",
+      "--outputFile=/evidence/baseline-final-jest-results.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 98044,
+    "log": "baseline-final-test.log",
+    "exact_source_and_mode": true
+  }
+]

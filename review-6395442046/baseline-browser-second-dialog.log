@@ -1,0 +1,8 @@
+### Error
+Error: locator.evaluate: Error: strict mode violation: getByRole('dialog') resolved to 2 elements:
+    1) <div role="dialog" tabindex="-1" id="radix-:r4:" data-state="open" data-inspector-line="71" data-inspector-column="6" aria-labelledby="radix-:r5:" aria-describedby="radix-:r6:" data-inspector-relative-path="src/pages/agent/form-sheet/next.tsx" class="fixed z-50 bg-bg-base rounded-lg shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=closed]:pointer-events-none inset-y-0 right-0 h-f…>…</div> aka getByLabel('', { exact: true })
+    2) <div role="dialog" tabindex="-1" id="radix-:rg:" data-side="bottom" data-align="start" data-state="closed" data-inspector-line="291" data-inspector-column="8" data-inspector-relative-path="src/components/tree-select.tsx" class="z-50 rounded-md border-0.5 border-border-button bg-bg-base text-text-primary shadow-lg outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-…>…</div> aka getByRole('dialog').filter({ hasText: 'DeepDOCNaiveDoclingOpenDataLoaderTCADP ParserMonkeyOCRv2' })
+
+Call log:
+[2m  - waiting for getByRole('dialog')[22m
+

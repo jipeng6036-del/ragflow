@@ -1,0 +1,6 @@
+const fs=require('fs'),cp=require('child_process');const rows=[],env={...process.env,NODE_OPTIONS:'--max-old-space-size=6144',PYTHONDONTWRITEBYTECODE:'1'};function run(phase,name,args){const log=phase+'-'+name+'.log',fd=fs.openSync('/evidence/'+log,'w'),start=Date.now();const r=cp.spawnSync(args[0],args.slice(1),{cwd:'/work/'+phase+'/web',env,stdio:['ignore',fd,fd]});fs.closeSync(fd);rows.push({phase,name,args,code:r.status,signal:r.signal,ms:Date.now()-start,log});fs.writeFileSync('/evidence/quality-gates.json',JSON.stringify(rows,null,2));console.log(phase,name,r.status);}
+for(const phase of ['baseline','candidate']){
+ if(phase==='candidate')run(phase,'related',['npm','test','--','--runInBand','src/pages/agent/form/parser-form','--coverage=false']);
+ for(const [name,args]of[['lint',['npm','run','lint']],['type-check',['npm','run','type-check']],['build',['npm','run','build']],['test',['npm','test','--','--runInBand','--json','--outputFile=/evidence/'+phase+'-jest-results.json']]])run(phase,name,args);
+ if(phase==='candidate')run(phase,'format',['./node_modules/.bin/oxfmt','--check','src/pages/agent/form/parser-form/pdf-form-fields.tsx','src/pages/agent/form/parser-form/pdf-form-fields.test.tsx']);
+}

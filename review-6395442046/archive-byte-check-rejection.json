@@ -1,0 +1,5 @@
+{
+  "result": "Early Git status gate rejected Windows git archive CRLF conversions before any regression or quality check ran. No false green claimed.",
+  "recovery": "core.autocrlf=false, core.symlinks=true, core.filemode=true; git checkout-index --all --force from actual index; complete HEAD blob+mode verification passed for both5452files.",
+  "product_edited_at_detection": false
+}

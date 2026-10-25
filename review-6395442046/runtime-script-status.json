@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-10-25T09:40:22.645609+00:00",
+  "final_baseline": {
+    "exec_session": 53072,
+    "execution_wrapper_exit_code": 0,
+    "browser_function_pass": true,
+    "result_file": "baseline-browser-results.json",
+    "steps": 20,
+    "native_saves": 5,
+    "native_reloads": 4
+  },
+  "final_candidate": {
+    "exec_session": 13920,
+    "execution_wrapper_exit_code": 0,
+    "browser_function_pass": true,
+    "result_file": "candidate-browser-results.json",
+    "steps": 20,
+    "native_saves": 5,
+    "native_reloads": 4
+  },
+  "exit_code_boundary": "The tool records the execution wrapper exit code. Playwright CLI can print an Error while exiting0; final acceptance therefore requires parsed browser pass=true and all native payload assertions, not exit0 alone. No separate CLI exit file was captured.",
+  "native_service_boundary": "Final browser results retain actual Save PUT request bodies and native GET/reload responses. Fixture control/status calls manage metadata availability only; they do not replace application GET or manufacture Save payloads."
+}

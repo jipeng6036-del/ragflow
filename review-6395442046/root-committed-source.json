@@ -1,0 +1,12 @@
+{
+  "head": "aa4189ba737e38e0575e719de6aa41b3f896eb9c",
+  "parent": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+  "tree": "77db34d4eba897d543cf79dbcb19023616bed9f5",
+  "source_sha256": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "851297418e935912405a488cc7d8bd7977bdca13545980ee6b2a1d827df9858a",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "aa06d3300e44c7dab40924d57b03cf65ca1a8e178e75a244376def2768858270"
+  },
+  "stat": ".../form/parser-form/pdf-form-fields.test.tsx      | 72 ++++++++++++++++++++--\n .../agent/form/parser-form/pdf-form-fields.tsx     | 17 +++--\n 2 files changed, 73 insertions(+), 16 deletions(-)",
+  "modes": "100644 blob 377a3517fc2ac018e23156a6da2de353fb464844\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n100644 blob 57fd9bf11c1cde33c2f8f9a711b29a55fb02f4f6\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+  "clean": true
+}
