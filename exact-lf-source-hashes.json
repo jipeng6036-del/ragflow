@@ -1,0 +1,14 @@
+{
+  "base": "7105b5dd34b2def8ad8662160533bd8faccce1f8",
+  "branch": "fix/hide-unsupported-pdf-cleanup-options",
+  "host": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "253e5feb98eb18f09b38815bc377c1292c68eb4b6f02cd8bf2058c73daaacc35",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "a8b8b17fdeb4beb0e8f42b142a09207d88683860e69f5fb32c19ba1951341bb9"
+  },
+  "ram": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "253e5feb98eb18f09b38815bc377c1292c68eb4b6f02cd8bf2058c73daaacc35",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "a8b8b17fdeb4beb0e8f42b142a09207d88683860e69f5fb32c19ba1951341bb9"
+  },
+  "exact_match": true,
+  "new_file_mode": "100644"
+}

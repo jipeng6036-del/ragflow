@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-25T08:03:51.641632+00:00",
+  "scope": "Immutable copies of already completed native service receipts; live fixture may continue auto-save, these copies do not change.",
+  "files": [
+    {
+      "path": "exact-lf-baseline-http-receipts-frozen.jsonl",
+      "rows": 21,
+      "native_agent_get": 5,
+      "native_agent_put": 2,
+      "sha256": "1d34cf1aba7b96ee2b97012f69901c86843db6a355b15cdab95f016c4f9fbe00"
+    },
+    {
+      "path": "exact-lf-candidate-http-receipts-frozen.jsonl",
+      "rows": 48,
+      "native_agent_get": 13,
+      "native_agent_put": 7,
+      "sha256": "ba23d0ac84fb219e72abf34b6c16eb68c037bb0b3fba550314d2f93e18bcb653"
+    }
+  ]
+}

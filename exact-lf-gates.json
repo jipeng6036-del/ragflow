@@ -1,0 +1,161 @@
+[
+  {
+    "phase": "baseline",
+    "name": "lint",
+    "command": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 226,
+    "log": "exact-baseline-lint.log"
+  },
+  {
+    "phase": "baseline",
+    "name": "type-check",
+    "command": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "code": 2,
+    "signal": null,
+    "ms": 22540,
+    "log": "exact-baseline-type-check.log"
+  },
+  {
+    "phase": "baseline",
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 77874,
+    "log": "exact-baseline-build.log"
+  },
+  {
+    "phase": "baseline",
+    "name": "test",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--json",
+      "--outputFile=/evidence/exact-baseline-jest-results.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 69658,
+    "log": "exact-baseline-test.log"
+  },
+  {
+    "phase": "baseline",
+    "name": "new-regression",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--runTestsByPath",
+      "src/pages/agent/form/parser-form/pdf-form-fields.test.tsx",
+      "--coverage=false",
+      "--json",
+      "--outputFile=/evidence/exact-baseline-new-regression.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 3291,
+    "log": "exact-baseline-new-regression.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "lint",
+    "command": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 289,
+    "log": "exact-candidate-lint.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "type-check",
+    "command": [
+      "npm",
+      "run",
+      "type-check"
+    ],
+    "code": 2,
+    "signal": null,
+    "ms": 22947,
+    "log": "exact-candidate-type-check.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 73556,
+    "log": "exact-candidate-build.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "test",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "--json",
+      "--outputFile=/evidence/exact-candidate-jest-results.json"
+    ],
+    "code": 1,
+    "signal": null,
+    "ms": 86105,
+    "log": "exact-candidate-test.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "related",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand",
+      "src/pages/agent/form/parser-form",
+      "--coverage=false"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 4121,
+    "log": "exact-candidate-related.log"
+  },
+  {
+    "phase": "candidate",
+    "name": "format",
+    "command": [
+      "./node_modules/.bin/oxfmt",
+      "--check",
+      "src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+      "src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+    ],
+    "code": 0,
+    "signal": null,
+    "ms": 106,
+    "log": "exact-candidate-format.log"
+  }
+]

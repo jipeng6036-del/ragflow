@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-10-25T08:06:09.881853+00:00",
+  "scope": "Read-only version query in the existing worker-owned container and browser session; no source, frozen proof, fixture state, tests, or GitHub requests changed.",
+  "container": "ghpr-ragflow-21221",
+  "runtime": {
+    "node": "v22.23.4",
+    "npm": "10.9.9",
+    "platform": "linux",
+    "arch": "x64",
+    "kernel_release": "6.6.87.2-microsoft-standard-WSL2",
+    "uname": "Linux 1c748d016fa6 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 GNU/Linux",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n"
+  },
+  "browser_session": "ragflow21221",
+  "browser": {
+    "browser_version": "151.0.7922.138",
+    "navigator": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "platform": "Win32",
+      "language": "zh-CN"
+    },
+    "route": "http://127.0.0.1:19021/agent/pdf-cleanup-proof?category=dataflow_canvas"
+  },
+  "playwright_cli_version": "0.1.22"
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "command": [
+      "git",
+      "config",
+      "--local",
+      "core.autocrlf",
+      "false"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "config",
+      "--local",
+      "core.filemode",
+      "true"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "code": 0,
+    "stdout": "7105b5dd34b2def8ad8662160533bd8faccce1f8\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=normal"
+    ],
+    "code": 0,
+    "stdout": "A  web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM  web/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+      "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-status"
+    ],
+    "code": 0,
+    "stdout": "A\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "version"
+    ],
+    "code": 0,
+    "stdout": "2.2.2\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "run",
+      "pre-commit",
+      "--files-from-stdin",
+      "--no-auto-install"
+    ],
+    "code": 0,
+    "stdout": "\u001b[38;2;56;56;56m╭─────────────────────────────────────────╮\u001b[m\n\u001b[38;2;56;56;56m│\u001b[m 🥊 lefthook  v2.2.2   hook:  \u001b[1mpre-commit\u001b[m \u001b[38;2;56;56;56m│\u001b[m\n\u001b[38;2;56;56;56m╰─────────────────────────────────────────╯\u001b[m\n│  ruff-format (skip) no files for inspection\n│  ruff (skip) no files for inspection\n│  gofmt (skip) no files for inspection\n┃  mixed-line-ending ❯ \n\n┃  end-of-file-fixer ❯ \n\n┃  check-yaml ❯ \n\n┃  check-json ❯ \n\n┃  trailing-whitespace ❯ \n\n┃  check-symlinks ❯ \n\n┃  check-merge-conflict ❯ \n\n┃  check-case-conflict ❯ \n\n\u001b[38;2;56;56;56m  ────────────────────────────────────\u001b[m\nsummary: (done in 0.06 seconds)\n✔️ mixed-line-ending (0.04 seconds)\n✔️ end-of-file-fixer (0.04 seconds)\n✔️ check-yaml (0.04 seconds)\n✔️ check-json (0.04 seconds)\n✔️ trailing-whitespace (0.04 seconds)\n✔️ check-symlinks (0.04 seconds)\n✔️ check-merge-conflict (0.04 seconds)\n✔️ check-case-conflict (0.06 seconds)\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/work/hook-tools/node_modules/.bin/lefthook",
+      "run",
+      "web-checks",
+      "--files-from-stdin",
+      "--no-auto-install"
+    ],
+    "code": 0,
+    "stdout": "\u001b[38;2;56;56;56m╭─────────────────────────────────────────╮\u001b[m\n\u001b[38;2;56;56;56m│\u001b[m 🥊 lefthook  v2.2.2   hook:  \u001b[1mweb-checks\u001b[m \u001b[38;2;56;56;56m│\u001b[m\n\u001b[38;2;56;56;56m╰─────────────────────────────────────────╯\u001b[m\n┃  web-oxfmt ❯ \nChecking formatting...\n\nAll matched files use the correct format.\nFinished in 3ms on 2 files using 24 threads.\n\n┃  web-oxlint ❯ \nFound 0 warnings and 0 errors.\nFinished in 25ms on 2 files with 91 rules using 24 threads.\n\n│  web-no-tests-dir (skip) no files for inspection\n\u001b[38;2;56;56;56m  ────────────────────────────────────\u001b[m\nsummary: (done in 0.34 seconds)\n✔️ web-oxfmt (0.19 seconds)\n✔️ web-oxlint (0.15 seconds)\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=normal"
+    ],
+    "code": 0,
+    "stdout": "A  web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM  web/src/pages/agent/form/parser-form/pdf-form-fields.tsx\n",
+    "stderr": ""
+  }
+]

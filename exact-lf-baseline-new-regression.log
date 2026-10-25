@@ -1,0 +1,1330 @@
+
+> test
+> jest --no-cache --coverage --runInBand --runTestsByPath src/pages/agent/form/parser-form/pdf-form-fields.test.tsx --coverage=false --json --outputFile=/evidence/exact-baseline-new-regression.json
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at React (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useForm.ts:120:3)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+  console.error
+    Warning: An update to PdfForm inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at PdfForm (/work/baseline/web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:71:20)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at callback (node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at nameChanged (node_modules/react-hook-form/src/useWatch.ts:343:7)
+      at Object._fields [as callback] (node_modules/react-hook-form/src/useWatch.ts:367:53)
+      at Object.key [as next] (node_modules/react-hook-form/src/logic/createFormControl.ts:1086:15)
+      at Object.fieldNames [as next] (node_modules/react-hook-form/src/utils/extractFormValues.ts:10:36)
+      at me (node_modules/react-hook-form/src/logic/createFormControl.ts:943:5)
+
+FAIL src/pages/agent/form/parser-form/pdf-form-fields.test.tsx
+  PDF cleanup controls
+    ✕ does not offer ignored cleanup settings for Plain Text (55 ms)
+    ✕ does not offer ignored cleanup settings for plain_text (90 ms)
+    ✕ does not offer ignored cleanup settings for plaintext (37 ms)
+    ✕ does not offer ignored cleanup settings for Docling (24 ms)
+    ✕ does not offer ignored cleanup settings for OpenDataLoader (25 ms)
+    ✕ does not offer ignored cleanup settings for TCADP Parser (29 ms)
+    ✕ does not offer ignored cleanup settings for MonkeyOCRv2 (23 ms)
+    ✕ does not offer ignored cleanup settings for mineru (37 ms)
+    ✕ does not offer ignored cleanup settings for paddleocr (23 ms)
+    ✕ does not offer ignored cleanup settings for somark (22 ms)
+    ✕ does not offer ignored cleanup settings for tenant-ocr-model (28 ms)
+    ✕ does not offer ignored cleanup settings for Receipt OCR@local@PaddleOCR (32 ms)
+    ✕ does not offer ignored cleanup settings for Receipt OCR@PaddleOCR (29 ms)
+    ✓ preserves cleanup for the DeepDoc route DeepDOC (19 ms)
+    ✓ preserves cleanup for the DeepDoc route deepdoc (27 ms)
+    ✓ preserves cleanup for the DeepDoc route deepdoc_ee (21 ms)
+    ✓ preserves cleanup for the DeepDoc route registered_analyzer (22 ms)
+    ✓ preserves cleanup for the DeepDoc route  (15 ms)
+    ✕ retains edited values when changing methods through the real selector (111 ms)
+    ✕ does not expose controls before resolving a saved model: {"data":[],"isFetched":false,"isError":false} (43 ms)
+    ✕ does not expose controls before resolving a saved model: {"data":[],"isFetched":true,"isError":true} (25 ms)
+    ✕ keeps controls hidden when the model query finishes (26 ms)
+    ✕ restores a registered analyzer after model selections are resolved (27 ms)
+    ✓ keeps the built-in DeepDoc controls available if the model query fails (28 ms)
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for Plain Text
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for plain_text
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for plaintext
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for Docling
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for OpenDataLoader
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for TCADP Parser
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for MonkeyOCRv2
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for mineru
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for paddleocr
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for somark
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for tenant-ocr-model
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for Receipt OCR@local@PaddleOCR
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › does not offer ignored cleanup settings for Receipt OCR@PaddleOCR
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:130:5
+
+  ● PDF cleanup controls › retains edited values when changing methods through the real selector
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at Object.<anonymous> (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:147:5)
+
+  ● PDF cleanup controls › does not expose controls before resolving a saved model: {"data":[],"isFetched":false,"isError":false}
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:168:5
+
+  ● PDF cleanup controls › does not expose controls before resolving a saved model: {"data":[],"isFetched":true,"isError":true}
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:168:5
+
+  ● PDF cleanup controls › keeps controls hidden when the model query finishes
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at Object.<anonymous> (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:174:5)
+
+  ● PDF cleanup controls › restores a registered analyzer after model selections are resolved
+
+    expect(element).not.toBeInTheDocument()
+
+    expected document not to contain element, found <span>flow.removeToc</span> instead
+
+      104 |       expect(screen.getByText(label)).toBeInTheDocument();
+      105 |     } else {
+    > 106 |       expect(screen.queryByText(label)).not.toBeInTheDocument();
+          |                                             ^
+      107 |     }
+      108 |   }
+      109 |   expect(screen.getByText('flow.parserMethod')).toBeInTheDocument();
+
+      at expectCleanupVisible (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:106:45)
+      at Object.<anonymous> (src/pages/agent/form/parser-form/pdf-form-fields.test.tsx:187:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       18 failed, 6 passed, 24 total
+Snapshots:   0 total
+Time:        2.022 s
+Ran all test suites within paths "src/pages/agent/form/parser-form/pdf-form-fields.test.tsx".
+Test results written to: ../../../evidence/exact-baseline-new-regression.json

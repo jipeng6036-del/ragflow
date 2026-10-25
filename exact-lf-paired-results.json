@@ -1,0 +1,569 @@
+{
+  "typescript": {
+    "baseline_count": 146,
+    "candidate_count": 146,
+    "baseline_diagnostics": [
+      "src/components/document-preview/pdf-preview.tsx(131,17): error TS6133: 'viewportToScaled' is declared but its value is never read.",
+      "src/components/document-preview/pdf-preview.tsx(132,17): error TS6133: 'screenshot' is declared but its value is never read.",
+      "src/components/dynamic-form.tsx(307,11): error TS2740: Type '{}' is missing the following properties from type 'ZodType<any, ZodTypeDef, any>': _type, _output, _input, _def, and 34 more.",
+      "src/components/dynamic-form.tsx(309,9): error TS2322: Type 'ZodType<any, ZodTypeDef, any>' is not assignable to type 'Record<string, ZodType<any, ZodTypeDef, any>>'.",
+      "src/components/dynamic-form.tsx(403,52): error TS2345: Argument of type '{}' is not assignable to parameter of type 'ControllerRenderProps'.",
+      "src/components/dynamic-form.tsx(761,15): error TS2862: Type 'FieldErrors<T> | { [x: string]: never; }' is generic and can only be indexed for reading.",
+      "src/components/dynamic-form.tsx(787,30): error TS6133: 'values' is declared but its value is never read.",
+      "src/components/dynamic-form.tsx(1037,18): error TS2339: Property 'displayName' does not exist on type '<T extends FieldValues>(props: DynamicFormProps<T> & { ref?: Ref<DynamicFormRef> | undefined; }) => ReactElement<any, string | JSXElementConstructor<any>>'.",
+      "src/components/edit-tag/index.tsx(92,31): error TS7006: Parameter 'e' implicitly has an 'any' type.",
+      "src/components/file-upload.tsx(260,18): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/components/file-upload.tsx(361,23): error TS2345: Argument of type 'Set<() => void> | null' is not assignable to parameter of type 'Set<() => void>'.",
+      "src/components/file-upload.tsx(399,26): error TS18047: 'files' is possibly 'null'.",
+      "src/components/file-upload.tsx(400,27): error TS18047: 'urlCache' is possibly 'null'.",
+      "src/components/file-upload.tsx(549,13): error TS2322: Type '((file: File, progress: number) => void) | null' is not assignable to type '(file: File, progress: number) => void'.",
+      "src/components/file-upload.tsx(599,7): error TS2322: Type 'WeakMap<File, string> | null' is not assignable to type 'WeakMap<File, string>'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(63,5): error TS2322: Type 'Timeout' is not assignable to type 'number'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(181,22): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(182,25): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(186,34): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx(30,5): error TS2722: Cannot invoke an object which is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(205,10): error TS18048: 'validationNode.cumulativeChildrenErrors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(210,14): error TS18048: 'validationNode' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(112,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(135,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(234,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(264,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(296,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(326,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(357,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(382,16): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(143,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(169,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(203,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(223,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(168,48): error TS2694: Namespace 'languages' has no exported member 'json'.",
+      "src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(197,27): error TS2339: Property 'jsonDefaults' does not exist on type '{ deprecated: true; }'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(48,12): error TS2537: Type 'Record<string, JSONSchema> | undefined' has no matching index signature for type 'string'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(112,22): error TS2345: Argument of type '({ title?: string | undefined; pattern?: string | undefined; description?: string | undefined; type?: \"string\" | \"number\" | \"boolean\" | \"object\" | \"array\" | \"integer\" | \"null\" | (\"string\" | ... 5 more ... | \"null\")[] | undefined; ... 33 more ...; enum?: unknown[] | undefined; } & { ...; }) | undefined' is not assignable to parameter of type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(119,3): error TS2322: Type 'undefined' is not assignable to type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/lib/schema-inference.ts(129,42): error TS2345: Argument of type 'JSONSchema | undefined' is not assignable to parameter of type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/types/validation.ts(14,43): error TS18048: 'max' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(14,49): error TS18048: 'min' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(17,45): error TS18048: 'max' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(17,51): error TS18048: 'min' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(203,14): error TS2694: Namespace '\"/work/baseline/web/node_modules/zod/v3/external\"' has no exported member 'core'.",
+      "src/components/jsonjoy-builder/types/validation.ts(258,33): error TS2694: Namespace '\"/work/baseline/web/node_modules/zod/v3/external\"' has no exported member 'core'.",
+      "src/components/jsonjoy-builder/types/validation.ts(278,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.",
+      "src/components/jsonjoy-builder/types/validation.ts(372,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "src/components/markdown-content/__tests__/index.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.",
+      "src/components/next-message-item/group-button.tsx(71,3): error TS6133: 'isShare' is declared but its value is never read.",
+      "src/components/originui/password-input.tsx(13,11): error TS6133: 'toggleVisibility' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,10): error TS6133: 'r' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,13): error TS6133: 'g' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,16): error TS6133: 'b' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(12,1): error TS6192: All imports in import declaration are unused.",
+      "src/components/ui/audio-button.tsx(170,7): error TS6133: 'VoiceInputBox' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(227,10): error TS6133: 'recordingTime' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(228,10): error TS6133: 'transcript' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(229,10): error TS6133: 'popoverOpen' is declared but its value is never read.",
+      "src/components/ui/sidebar.tsx(283,17): error TS7006: Parameter 'event' implicitly has an 'any' type.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(17,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(61,22): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(70,27): error TS2322: Type 'string' is not assignable to type 'never'.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(82,22): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(102,27): error TS2322: Type 'string' is not assignable to type 'never'.",
+      "src/hooks/__tests__/parser-config-utils.test.ts(33,5): error TS2304: Cannot find name 'mockIsGoBackend'.",
+      "src/hooks/logic-hooks.ts(801,27): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?",
+      "src/hooks/logic-hooks.ts(801,47): error TS7006: Parameter 'x' implicitly has an 'any' type.",
+      "src/hooks/logic-hooks.ts(803,34): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?",
+      "src/hooks/logic-hooks/use-row-selection.ts(57,18): error TS6133: 'x' is declared but its value is never read.",
+      "src/hooks/use-chunk-request.ts(234,5): error TS2322: Type 'Pagination' is not assignable to type 'PaginationProps'.",
+      "src/lib/editor/plugins/floating-selection-toolbar.tsx(97,9): error TS6133: 'toggleLink' is declared but its value is never read.",
+      "src/pages/admin/utils.tsx(46,28): error TS6133: 'columnId' is declared but its value is never read.",
+      "src/pages/agent/canvas/context-menu/index.tsx(81,13): error TS6133: 'pane' is declared but its value is never read.",
+      "src/pages/agent/form/begin-form/use-edit-query.ts(19,27): error TS6133: 'item' is declared but its value is never read.",
+      "src/pages/agent/form/begin-form/use-edit-query.ts(51,10): error TS6133: 'item' is declared but its value is never read.",
+      "src/pages/agent/form/code-form/next-variable.tsx(86,25): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'SelectWithSearchFlagOptionType[]'.",
+      "src/pages/agent/form/components/query-variable-list.tsx(25,37): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.",
+      "src/pages/agent/form/components/query-variable.tsx(65,9): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.",
+      "src/pages/agent/form/components/query-variable.tsx(72,9): error TS2322: Type 'QueryVariableType[]' is not assignable to type 'JsonSchemaDataType[]'.",
+      "src/pages/agent/form/switch-form/index.tsx(104,11): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.",
+      "src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx(112,9): error TS2322: Type '{ children: Element; ref: RefObject<DynamicFormRef>; fields: FormFieldConfig[]; onSubmit: (data: FieldValues) => void; defaultValues: FieldValues | undefined; onFieldUpdate: (fieldName: string, updatedField: Partial<...>) => void; }' is not assignable to type 'IntrinsicAttributes & DynamicFormProps<FieldValues> & { ref?: Ref<DynamicFormRef> | undefined; }'.",
+      "src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(26,11): error TS2322: Type 'boolean' is not assignable to type 'SegmentedValue | undefined'.",
+      "src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(187,30): error TS7006: Parameter 'value' implicitly has an 'any' type.",
+      "src/pages/agent/gobal-variable-sheet/index.tsx(14,1): error TS6133: 't' is declared but its value is never read.",
+      "src/pages/agent/gobal-variable-sheet/index.tsx(145,37): error TS7006: Parameter 'e' implicitly has an 'any' type.",
+      "src/pages/agent/hooks/use-build-options.tsx(16,7): error TS2353: Object literal may only specify known properties, and 'Icon' does not exist in type '{ nodes: BaseNode[]; edges: Edge[]; nodeId?: string | undefined; }'.",
+      "src/pages/agent/hooks/use-build-options.tsx(16,16): error TS7031: Binding element 'name' implicitly has an 'any' type.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(465,28): error TS2339: Property 'options' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(484,24): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(520,19): error TS2339: Property 'parentLabel' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(532,23): error TS2339: Property 'type' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/options.ts(2166,9): error TS6133: 'x' is declared but its value is never read.",
+      "src/pages/agent/setting-dialog/index.tsx(25,34): error TS2345: Argument of type '{ title: string; permission: string; description?: string | null | undefined; avatar?: string | null | undefined; }' is not assignable to parameter of type '{ id?: string | undefined; title?: string | undefined; dsl?: Record<string, any> | undefined; avatar?: string | undefined; canvas_category?: string | undefined; release?: string | undefined; description?: string | ... 1 more ... | undefined; permission?: string | undefined; }'.",
+      "src/pages/agent/store.ts(265,26): error TS6133: 'event' is declared but its value is never read.",
+      "src/pages/agent/store.ts(272,26): error TS6133: 'event' is declared but its value is never read.",
+      "src/pages/agent/use-agent-history-manager.ts(11,11): error TS6133: 'lastSavedState' is declared but its value is never read.",
+      "src/pages/agents/agent-log-page.tsx(374,31): error TS2345: Argument of type 'string | number | boolean | IReference[] | IAgentLogMessage[] | undefined' is not assignable to parameter of type 'string'.",
+      "src/pages/agents/agent-templates.tsx(69,7): error TS2322: Type 'Record<string, any> | DSL | undefined' is not assignable to type 'DSL | undefined'.",
+      "src/pages/agents/builtin-pipeline-list.test.ts(87,31): error TS2345: Argument of type '{ operator: string; values: AgentCategory[]; }' is not assignable to parameter of type 'string | string[] | Record<string, string[]> | undefined'.",
+      "src/pages/agents/builtin-pipeline-section.test.tsx(108,9): error TS2322: Type '{ operator: string; values: AgentCategory.DataflowCanvas[]; }' is not assignable to type 'string | string[] | Record<string, string[]> | undefined'.",
+      "src/pages/agents/builtin-pipeline-section.test.tsx(148,7): error TS2554: Expected 1 arguments, but got 2.",
+      "src/pages/dataflow-result/components/parse-editer/index.tsx(36,11): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.",
+      "src/pages/dataflow-result/components/parse-editer/index.tsx(53,11): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: string; type: string; value: string; params: ComponentParams; }'.",
+      "src/pages/dataflow-result/components/parse-editer/json-parser.tsx(43,6): error TS6133: 'e' is declared but its value is never read.",
+      "src/pages/dataflow-result/components/time-line/index.tsx(22,29): error TS6133: 'step' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(2,1): error TS6133: 'message' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(7,8): error TS6133: 'kbService' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(10,10): error TS6133: 'useMutation' is declared but its value is never read.",
+      "src/pages/dataflow-result/parser.tsx(117,15): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: never[]; params?: undefined; } | { key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: any; value: any; params: ComponentParams; }' is not assignable to type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.",
+      "src/pages/dataset/compilation/skills-view.tsx(60,9): error TS2322: Type '{ type: ViewMode.Skills; disabled: boolean; data: ITraceInfo | undefined; }' is not assignable to type 'IntrinsicAttributes & ICompilationEmptyStateProps'.",
+      "src/pages/dataset/dataset-overview/dataset-filter.tsx(30,8): error TS6133: 'rest' is declared but its value is never read.",
+      "src/pages/dataset/dataset-overview/dataset-filter.tsx(36,18): error TS2365: Operator '+' cannot be applied to types 'number' and 'number | string[]'.",
+      "src/pages/dataset/dataset/dataset-table.tsx(194,11): error TS2322: Type '{ record: IDocumentInfo; visible: true; onOk: (parserConfigInfo: IChangeParserRequestBody) => Promise<void>; hideModal: () => void; loading: boolean; }' is not assignable to type 'IntrinsicAttributes & ChangeParserDialogProps'.",
+      "src/pages/dataset/knowledge-graph/util.ts(11,13): error TS6133: 'x' is declared but its value is never read.",
+      "src/pages/files/use-upload-file.ts(19,48): error TS2322: Type '(File | { path: string; file: File; })[]' is not assignable to type 'File[]'.",
+      "src/pages/home/datasets.tsx(44,14): error TS18048: 'kbs.length' is possibly 'undefined'.",
+      "src/pages/login-next/index.tsx(346,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "src/pages/memories/hooks.ts(192,21): error TS2339: Property 'getMemoryDetailShare' does not exist on type 'Record<\"createMemory\" | \"getMemoryList\" | \"deleteMemory\" | \"getMemoryConfig\" | \"deleteMemoryMessage\" | \"getMessageContent\" | \"updateMessageState\" | \"getMemoryFilters\", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.",
+      "src/pages/memories/hooks.ts(193,21): error TS2339: Property 'getMemoryDetail' does not exist on type 'Record<\"createMemory\" | \"getMemoryList\" | \"deleteMemory\" | \"getMemoryConfig\" | \"deleteMemoryMessage\" | \"getMessageContent\" | \"updateMessageState\" | \"getMemoryFilters\", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.",
+      "src/pages/memories/hooks.ts(269,17): error TS6133: 'data' is declared but its value is never read.",
+      "src/pages/memory/memory-message/index.tsx(16,5): error TS6133: 'loading' is declared but its value is never read.",
+      "src/pages/memory/memory-setting/hook.ts(11,11): error TS6133: 'res' is declared but its value is never read.",
+      "src/pages/next-chats/chat/chat-box/single-chat-box.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.",
+      "src/pages/next-chats/hooks/use-send-single-message.ts(125,9): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.",
+      "src/pages/next-chats/hooks/use-send-single-message.ts(140,13): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.",
+      "src/pages/next-chats/index.tsx(117,20): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(124,11): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(146,12): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(149,18): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-searches/hooks.ts(325,17): error TS6133: 'data' is declared but its value is never read.",
+      "src/pages/skills/types.ts(156,10): error TS1205: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.",
+      "src/pages/skills/types.ts(178,12): error TS2304: Cannot find name 'SkillSearchConfig'.",
+      "src/pages/skills/types.ts(179,20): error TS2304: Cannot find name 'SkillSearchConfig'.",
+      "src/pages/user-setting/data-source/log-summary.tsx(57,48): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.RUNNING | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '\"5\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(61,47): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '\"1\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(65,44): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.QUEUED' and '\"4\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(69,46): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.DONE | RunningStatus.QUEUED' and '\"2\"' have no overlap.",
+      "src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(23,1): error TS6133: 'VerifyButton' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(40,3): error TS6133: 'handleVerify' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(26,1): error TS6133: 'LLMFactory' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(39,1): error TS6133: 'VerifyButton' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(57,3): error TS6133: 'handleVerify' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(100,9): error TS6133: 'startRename' is declared but its value is never read.",
+      "src/services/knowledge-service.ts(41,3): error TS2339: Property 'getMetaKeys' does not exist on type '{ login: string; logout: string; register: string; setting: string; userInfo: string; tenantInfo: string; loginChannels: string; loginChannel: (channel: string) => string; addTenantUser: (tenantId: string) => string; ... 255 more ...; skillReindex: string; }'.",
+      "src/utils/__tests__/pipeline-operator.test.ts(123,5): error TS2304: Cannot find name 'mockIsGoBackend'."
+    ],
+    "candidate_diagnostics": [
+      "src/components/document-preview/pdf-preview.tsx(131,17): error TS6133: 'viewportToScaled' is declared but its value is never read.",
+      "src/components/document-preview/pdf-preview.tsx(132,17): error TS6133: 'screenshot' is declared but its value is never read.",
+      "src/components/dynamic-form.tsx(307,11): error TS2740: Type '{}' is missing the following properties from type 'ZodType<any, ZodTypeDef, any>': _type, _output, _input, _def, and 34 more.",
+      "src/components/dynamic-form.tsx(309,9): error TS2322: Type 'ZodType<any, ZodTypeDef, any>' is not assignable to type 'Record<string, ZodType<any, ZodTypeDef, any>>'.",
+      "src/components/dynamic-form.tsx(403,52): error TS2345: Argument of type '{}' is not assignable to parameter of type 'ControllerRenderProps'.",
+      "src/components/dynamic-form.tsx(761,15): error TS2862: Type 'FieldErrors<T> | { [x: string]: never; }' is generic and can only be indexed for reading.",
+      "src/components/dynamic-form.tsx(787,30): error TS6133: 'values' is declared but its value is never read.",
+      "src/components/dynamic-form.tsx(1037,18): error TS2339: Property 'displayName' does not exist on type '<T extends FieldValues>(props: DynamicFormProps<T> & { ref?: Ref<DynamicFormRef> | undefined; }) => ReactElement<any, string | JSXElementConstructor<any>>'.",
+      "src/components/edit-tag/index.tsx(92,31): error TS7006: Parameter 'e' implicitly has an 'any' type.",
+      "src/components/file-upload.tsx(260,18): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/components/file-upload.tsx(361,23): error TS2345: Argument of type 'Set<() => void> | null' is not assignable to parameter of type 'Set<() => void>'.",
+      "src/components/file-upload.tsx(399,26): error TS18047: 'files' is possibly 'null'.",
+      "src/components/file-upload.tsx(400,27): error TS18047: 'urlCache' is possibly 'null'.",
+      "src/components/file-upload.tsx(549,13): error TS2322: Type '((file: File, progress: number) => void) | null' is not assignable to type '(file: File, progress: number) => void'.",
+      "src/components/file-upload.tsx(599,7): error TS2322: Type 'WeakMap<File, string> | null' is not assignable to type 'WeakMap<File, string>'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(63,5): error TS2322: Type 'Timeout' is not assignable to type 'number'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(181,22): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(182,25): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/features/json-validator.tsx(186,34): error TS18048: 'validationResult.errors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx(30,5): error TS2722: Cannot invoke an object which is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(205,10): error TS18048: 'validationNode.cumulativeChildrenErrors' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(210,14): error TS18048: 'validationNode' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(112,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(135,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(234,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(264,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(296,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(326,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(357,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(382,16): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(143,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(169,13): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(203,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(223,11): error TS2322: Type 'false | \"text-destructive\"' is not assignable to type 'string | undefined'.",
+      "src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(168,48): error TS2694: Namespace 'languages' has no exported member 'json'.",
+      "src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(197,27): error TS2339: Property 'jsonDefaults' does not exist on type '{ deprecated: true; }'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(48,12): error TS2537: Type 'Record<string, JSONSchema> | undefined' has no matching index signature for type 'string'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(112,22): error TS2345: Argument of type '({ title?: string | undefined; pattern?: string | undefined; description?: string | undefined; type?: \"string\" | \"number\" | \"boolean\" | \"object\" | \"array\" | \"integer\" | \"null\" | (\"string\" | ... 5 more ... | \"null\")[] | undefined; ... 33 more ...; enum?: unknown[] | undefined; } & { ...; }) | undefined' is not assignable to parameter of type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/lib/schema-editor.ts(119,3): error TS2322: Type 'undefined' is not assignable to type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/lib/schema-inference.ts(129,42): error TS2345: Argument of type 'JSONSchema | undefined' is not assignable to parameter of type 'JSONSchema'.",
+      "src/components/jsonjoy-builder/types/validation.ts(14,43): error TS18048: 'max' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(14,49): error TS18048: 'min' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(17,45): error TS18048: 'max' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(17,51): error TS18048: 'min' is possibly 'undefined'.",
+      "src/components/jsonjoy-builder/types/validation.ts(203,14): error TS2694: Namespace '\"/work/baseline/web/node_modules/zod/v3/external\"' has no exported member 'core'.",
+      "src/components/jsonjoy-builder/types/validation.ts(258,33): error TS2694: Namespace '\"/work/baseline/web/node_modules/zod/v3/external\"' has no exported member 'core'.",
+      "src/components/jsonjoy-builder/types/validation.ts(278,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.",
+      "src/components/jsonjoy-builder/types/validation.ts(372,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "src/components/markdown-content/__tests__/index.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.",
+      "src/components/next-message-item/group-button.tsx(71,3): error TS6133: 'isShare' is declared but its value is never read.",
+      "src/components/originui/password-input.tsx(13,11): error TS6133: 'toggleVisibility' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,10): error TS6133: 'r' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,13): error TS6133: 'g' is declared but its value is never read.",
+      "src/components/originui/timeline.tsx(272,16): error TS6133: 'b' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(12,1): error TS6192: All imports in import declaration are unused.",
+      "src/components/ui/audio-button.tsx(170,7): error TS6133: 'VoiceInputBox' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(227,10): error TS6133: 'recordingTime' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(228,10): error TS6133: 'transcript' is declared but its value is never read.",
+      "src/components/ui/audio-button.tsx(229,10): error TS6133: 'popoverOpen' is declared but its value is never read.",
+      "src/components/ui/sidebar.tsx(283,17): error TS7006: Parameter 'event' implicitly has an 'any' type.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(17,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(61,22): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(70,27): error TS2322: Type 'string' is not assignable to type 'never'.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(82,22): error TS2540: Cannot assign to 'current' because it is a read-only property.",
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(102,27): error TS2322: Type 'string' is not assignable to type 'never'.",
+      "src/hooks/__tests__/parser-config-utils.test.ts(33,5): error TS2304: Cannot find name 'mockIsGoBackend'.",
+      "src/hooks/logic-hooks.ts(801,27): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?",
+      "src/hooks/logic-hooks.ts(801,47): error TS7006: Parameter 'x' implicitly has an 'any' type.",
+      "src/hooks/logic-hooks.ts(803,34): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?",
+      "src/hooks/logic-hooks/use-row-selection.ts(57,18): error TS6133: 'x' is declared but its value is never read.",
+      "src/hooks/use-chunk-request.ts(234,5): error TS2322: Type 'Pagination' is not assignable to type 'PaginationProps'.",
+      "src/lib/editor/plugins/floating-selection-toolbar.tsx(97,9): error TS6133: 'toggleLink' is declared but its value is never read.",
+      "src/pages/admin/utils.tsx(46,28): error TS6133: 'columnId' is declared but its value is never read.",
+      "src/pages/agent/canvas/context-menu/index.tsx(81,13): error TS6133: 'pane' is declared but its value is never read.",
+      "src/pages/agent/form/begin-form/use-edit-query.ts(19,27): error TS6133: 'item' is declared but its value is never read.",
+      "src/pages/agent/form/begin-form/use-edit-query.ts(51,10): error TS6133: 'item' is declared but its value is never read.",
+      "src/pages/agent/form/code-form/next-variable.tsx(86,25): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'SelectWithSearchFlagOptionType[]'.",
+      "src/pages/agent/form/components/query-variable-list.tsx(25,37): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.",
+      "src/pages/agent/form/components/query-variable.tsx(65,9): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.",
+      "src/pages/agent/form/components/query-variable.tsx(72,9): error TS2322: Type 'QueryVariableType[]' is not assignable to type 'JsonSchemaDataType[]'.",
+      "src/pages/agent/form/switch-form/index.tsx(104,11): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.",
+      "src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx(112,9): error TS2322: Type '{ children: Element; ref: RefObject<DynamicFormRef>; fields: FormFieldConfig[]; onSubmit: (data: FieldValues) => void; defaultValues: FieldValues | undefined; onFieldUpdate: (fieldName: string, updatedField: Partial<...>) => void; }' is not assignable to type 'IntrinsicAttributes & DynamicFormProps<FieldValues> & { ref?: Ref<DynamicFormRef> | undefined; }'.",
+      "src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(26,11): error TS2322: Type 'boolean' is not assignable to type 'SegmentedValue | undefined'.",
+      "src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(187,30): error TS7006: Parameter 'value' implicitly has an 'any' type.",
+      "src/pages/agent/gobal-variable-sheet/index.tsx(14,1): error TS6133: 't' is declared but its value is never read.",
+      "src/pages/agent/gobal-variable-sheet/index.tsx(145,37): error TS7006: Parameter 'e' implicitly has an 'any' type.",
+      "src/pages/agent/hooks/use-build-options.tsx(16,7): error TS2353: Object literal may only specify known properties, and 'Icon' does not exist in type '{ nodes: BaseNode[]; edges: Edge[]; nodeId?: string | undefined; }'.",
+      "src/pages/agent/hooks/use-build-options.tsx(16,16): error TS7031: Binding element 'name' implicitly has an 'any' type.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(465,28): error TS2339: Property 'options' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(484,24): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(520,19): error TS2339: Property 'parentLabel' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/hooks/use-get-begin-query.tsx(532,23): error TS2339: Property 'type' does not exist on type 'DefaultOptionType'.",
+      "src/pages/agent/options.ts(2166,9): error TS6133: 'x' is declared but its value is never read.",
+      "src/pages/agent/setting-dialog/index.tsx(25,34): error TS2345: Argument of type '{ title: string; permission: string; description?: string | null | undefined; avatar?: string | null | undefined; }' is not assignable to parameter of type '{ id?: string | undefined; title?: string | undefined; dsl?: Record<string, any> | undefined; avatar?: string | undefined; canvas_category?: string | undefined; release?: string | undefined; description?: string | ... 1 more ... | undefined; permission?: string | undefined; }'.",
+      "src/pages/agent/store.ts(265,26): error TS6133: 'event' is declared but its value is never read.",
+      "src/pages/agent/store.ts(272,26): error TS6133: 'event' is declared but its value is never read.",
+      "src/pages/agent/use-agent-history-manager.ts(11,11): error TS6133: 'lastSavedState' is declared but its value is never read.",
+      "src/pages/agents/agent-log-page.tsx(374,31): error TS2345: Argument of type 'string | number | boolean | IReference[] | IAgentLogMessage[] | undefined' is not assignable to parameter of type 'string'.",
+      "src/pages/agents/agent-templates.tsx(69,7): error TS2322: Type 'Record<string, any> | DSL | undefined' is not assignable to type 'DSL | undefined'.",
+      "src/pages/agents/builtin-pipeline-list.test.ts(87,31): error TS2345: Argument of type '{ operator: string; values: AgentCategory[]; }' is not assignable to parameter of type 'string | string[] | Record<string, string[]> | undefined'.",
+      "src/pages/agents/builtin-pipeline-section.test.tsx(108,9): error TS2322: Type '{ operator: string; values: AgentCategory.DataflowCanvas[]; }' is not assignable to type 'string | string[] | Record<string, string[]> | undefined'.",
+      "src/pages/agents/builtin-pipeline-section.test.tsx(148,7): error TS2554: Expected 1 arguments, but got 2.",
+      "src/pages/dataflow-result/components/parse-editer/index.tsx(36,11): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.",
+      "src/pages/dataflow-result/components/parse-editer/index.tsx(53,11): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: string; type: string; value: string; params: ComponentParams; }'.",
+      "src/pages/dataflow-result/components/parse-editer/json-parser.tsx(43,6): error TS6133: 'e' is declared but its value is never read.",
+      "src/pages/dataflow-result/components/time-line/index.tsx(22,29): error TS6133: 'step' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(2,1): error TS6133: 'message' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(7,8): error TS6133: 'kbService' is declared but its value is never read.",
+      "src/pages/dataflow-result/hooks.ts(10,10): error TS6133: 'useMutation' is declared but its value is never read.",
+      "src/pages/dataflow-result/parser.tsx(117,15): error TS2322: Type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: never[]; params?: undefined; } | { key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: any; value: any; params: ComponentParams; }' is not assignable to type '{ key: \"html\" | \"text\" | \"json\" | \"chunks\"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.",
+      "src/pages/dataset/compilation/skills-view.tsx(60,9): error TS2322: Type '{ type: ViewMode.Skills; disabled: boolean; data: ITraceInfo | undefined; }' is not assignable to type 'IntrinsicAttributes & ICompilationEmptyStateProps'.",
+      "src/pages/dataset/dataset-overview/dataset-filter.tsx(30,8): error TS6133: 'rest' is declared but its value is never read.",
+      "src/pages/dataset/dataset-overview/dataset-filter.tsx(36,18): error TS2365: Operator '+' cannot be applied to types 'number' and 'number | string[]'.",
+      "src/pages/dataset/dataset/dataset-table.tsx(194,11): error TS2322: Type '{ record: IDocumentInfo; visible: true; onOk: (parserConfigInfo: IChangeParserRequestBody) => Promise<void>; hideModal: () => void; loading: boolean; }' is not assignable to type 'IntrinsicAttributes & ChangeParserDialogProps'.",
+      "src/pages/dataset/knowledge-graph/util.ts(11,13): error TS6133: 'x' is declared but its value is never read.",
+      "src/pages/files/use-upload-file.ts(19,48): error TS2322: Type '(File | { path: string; file: File; })[]' is not assignable to type 'File[]'.",
+      "src/pages/home/datasets.tsx(44,14): error TS18048: 'kbs.length' is possibly 'undefined'.",
+      "src/pages/login-next/index.tsx(346,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "src/pages/memories/hooks.ts(192,21): error TS2339: Property 'getMemoryDetailShare' does not exist on type 'Record<\"createMemory\" | \"getMemoryList\" | \"deleteMemory\" | \"getMemoryConfig\" | \"deleteMemoryMessage\" | \"getMessageContent\" | \"updateMessageState\" | \"getMemoryFilters\", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.",
+      "src/pages/memories/hooks.ts(193,21): error TS2339: Property 'getMemoryDetail' does not exist on type 'Record<\"createMemory\" | \"getMemoryList\" | \"deleteMemory\" | \"getMemoryConfig\" | \"deleteMemoryMessage\" | \"getMessageContent\" | \"updateMessageState\" | \"getMemoryFilters\", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.",
+      "src/pages/memories/hooks.ts(269,17): error TS6133: 'data' is declared but its value is never read.",
+      "src/pages/memory/memory-message/index.tsx(16,5): error TS6133: 'loading' is declared but its value is never read.",
+      "src/pages/memory/memory-setting/hook.ts(11,11): error TS6133: 'res' is declared but its value is never read.",
+      "src/pages/next-chats/chat/chat-box/single-chat-box.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.",
+      "src/pages/next-chats/hooks/use-send-single-message.ts(125,9): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.",
+      "src/pages/next-chats/hooks/use-send-single-message.ts(140,13): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.",
+      "src/pages/next-chats/index.tsx(117,20): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(124,11): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(146,12): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-chats/index.tsx(149,18): error TS18048: 'data' is possibly 'undefined'.",
+      "src/pages/next-searches/hooks.ts(325,17): error TS6133: 'data' is declared but its value is never read.",
+      "src/pages/skills/types.ts(156,10): error TS1205: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.",
+      "src/pages/skills/types.ts(178,12): error TS2304: Cannot find name 'SkillSearchConfig'.",
+      "src/pages/skills/types.ts(179,20): error TS2304: Cannot find name 'SkillSearchConfig'.",
+      "src/pages/user-setting/data-source/log-summary.tsx(57,48): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.RUNNING | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '\"5\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(61,47): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '\"1\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(65,44): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.QUEUED' and '\"4\"' have no overlap.",
+      "src/pages/user-setting/data-source/log-summary.tsx(69,46): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.DONE | RunningStatus.QUEUED' and '\"2\"' have no overlap.",
+      "src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(23,1): error TS6133: 'VerifyButton' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(40,3): error TS6133: 'handleVerify' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(26,1): error TS6133: 'LLMFactory' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(39,1): error TS6133: 'VerifyButton' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(57,3): error TS6133: 'handleVerify' is declared but its value is never read.",
+      "src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(100,9): error TS6133: 'startRename' is declared but its value is never read.",
+      "src/services/knowledge-service.ts(41,3): error TS2339: Property 'getMetaKeys' does not exist on type '{ login: string; logout: string; register: string; setting: string; userInfo: string; tenantInfo: string; loginChannels: string; loginChannel: (channel: string) => string; addTenantUser: (tenantId: string) => string; ... 255 more ...; skillReindex: string; }'.",
+      "src/utils/__tests__/pipeline-operator.test.ts(123,5): error TS2304: Cannot find name 'mockIsGoBackend'."
+    ],
+    "added": [],
+    "removed": []
+  },
+  "jest": {
+    "baseline": {
+      "counts": {
+        "numTotalTests": 1059,
+        "numPassedTests": 1035,
+        "numFailedTests": 24,
+        "numFailedTestSuites": 11,
+        "numPassedTestSuites": 133
+      },
+      "failed_suites": [
+        "src/components/__tests__/switch-fom-field.test.tsx",
+        "src/components/highlight-markdown/__tests__/index.test.tsx",
+        "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+        "src/pages/agent/utils/pipeline-connection.test.ts",
+        "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+        "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+        "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+        "src/utils/__tests__/chat.test.ts",
+        "src/utils/__tests__/file-util.test.ts",
+        "src/utils/__tests__/llm-util.test.ts",
+        "src/utils/__tests__/source-locate.test.ts"
+      ],
+      "failed_assertions": [
+        [
+          "src/components/__tests__/switch-fom-field.test.tsx",
+          "SwitchFormField toggles the switch when the label text is clicked"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should NOT scroll to bottom when isAtBottom is false and messages change"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should indicate button should appear when user is not at bottom"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should scroll to bottom when isAtBottom is true and messages change"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should set isAtBottom false when user is not at bottom"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should set isAtBottom true when user is at bottom"
+        ],
+        [
+          "src/pages/agent/utils/pipeline-connection.test.ts",
+          "buildPipelineNextOperators always offers Extractor, which is multi-instance"
+        ],
+        [
+          "src/pages/agent/utils/pipeline-connection.test.ts",
+          "isSingleInstanceOperator leaves multi-instance operators unchecked"
+        ],
+        [
+          "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+          "FunASR local provider configuration registers an optional-key local endpoint with the FunASR default URL"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX converts block \\[ \\] to $$ $$"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX converts inline \\( \\) to $ $"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles double-escaped inline LaTeX"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles mixed double-escaped delimiters with HTML entities"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles multiple block equations"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-16BE with BOM (0xfe 0xff)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-16LE with BOM (0xff 0xfe)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-8 with BOM and strips the leading U+FEFF"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes a 1-byte buffer without a false BOM match"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes plain UTF-8 without a BOM"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText falls back to GBK when strict UTF-8 throws (GB2312 Chinese text)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText falls through to GBK on a truncated UTF-8 BOM prefix"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText returns an empty string for an empty buffer"
+        ],
+        [
+          "src/utils/__tests__/llm-util.test.ts",
+          "addTenantParams \u2014 clearing model selections clears a stale tenant rerank model id when rerank is explicitly cleared"
+        ],
+        [
+          "src/utils/__tests__/source-locate.test.ts",
+          "supportsSourceLocate rejects unsupported or missing extensions"
+        ]
+      ],
+      "load_failures": [
+        "src/components/highlight-markdown/__tests__/index.test.tsx",
+        "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+        "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx"
+      ]
+    },
+    "candidate": {
+      "counts": {
+        "numTotalTests": 1083,
+        "numPassedTests": 1059,
+        "numFailedTests": 24,
+        "numFailedTestSuites": 11,
+        "numPassedTestSuites": 134
+      },
+      "failed_suites": [
+        "src/components/__tests__/switch-fom-field.test.tsx",
+        "src/components/highlight-markdown/__tests__/index.test.tsx",
+        "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+        "src/pages/agent/utils/pipeline-connection.test.ts",
+        "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+        "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+        "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+        "src/utils/__tests__/chat.test.ts",
+        "src/utils/__tests__/file-util.test.ts",
+        "src/utils/__tests__/llm-util.test.ts",
+        "src/utils/__tests__/source-locate.test.ts"
+      ],
+      "failed_assertions": [
+        [
+          "src/components/__tests__/switch-fom-field.test.tsx",
+          "SwitchFormField toggles the switch when the label text is clicked"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should NOT scroll to bottom when isAtBottom is false and messages change"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should indicate button should appear when user is not at bottom"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should scroll to bottom when isAtBottom is true and messages change"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should set isAtBottom false when user is not at bottom"
+        ],
+        [
+          "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+          "useScrollToBottom should set isAtBottom true when user is at bottom"
+        ],
+        [
+          "src/pages/agent/utils/pipeline-connection.test.ts",
+          "buildPipelineNextOperators always offers Extractor, which is multi-instance"
+        ],
+        [
+          "src/pages/agent/utils/pipeline-connection.test.ts",
+          "isSingleInstanceOperator leaves multi-instance operators unchecked"
+        ],
+        [
+          "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+          "FunASR local provider configuration registers an optional-key local endpoint with the FunASR default URL"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX converts block \\[ \\] to $$ $$"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX converts inline \\( \\) to $ $"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles double-escaped inline LaTeX"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles mixed double-escaped delimiters with HTML entities"
+        ],
+        [
+          "src/utils/__tests__/chat.test.ts",
+          "preprocessLaTeX handles multiple block equations"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-16BE with BOM (0xfe 0xff)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-16LE with BOM (0xff 0xfe)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes UTF-8 with BOM and strips the leading U+FEFF"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes a 1-byte buffer without a false BOM match"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText decodes plain UTF-8 without a BOM"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText falls back to GBK when strict UTF-8 throws (GB2312 Chinese text)"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText falls through to GBK on a truncated UTF-8 BOM prefix"
+        ],
+        [
+          "src/utils/__tests__/file-util.test.ts",
+          "decodeBlobText returns an empty string for an empty buffer"
+        ],
+        [
+          "src/utils/__tests__/llm-util.test.ts",
+          "addTenantParams \u2014 clearing model selections clears a stale tenant rerank model id when rerank is explicitly cleared"
+        ],
+        [
+          "src/utils/__tests__/source-locate.test.ts",
+          "supportsSourceLocate rejects unsupported or missing extensions"
+        ]
+      ],
+      "load_failures": [
+        "src/components/highlight-markdown/__tests__/index.test.tsx",
+        "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+        "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx"
+      ]
+    },
+    "added_assertions": [],
+    "removed_assertions": [],
+    "added_suites": [],
+    "removed_suites": [],
+    "load_failures_identical": true
+  },
+  "new_regression": {
+    "baseline_failed": 18,
+    "baseline_passed": 6,
+    "candidate_passed": 24,
+    "candidate_failed": 0
+  },
+  "parity_pass": true,
+  "affected_paths_clean": true
+}

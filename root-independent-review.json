@@ -1,0 +1,236 @@
+{
+  "at": "2026-10-25T08:03:14.005071+00:00",
+  "base": "7105b5dd34b2def8ad8662160533bd8faccce1f8",
+  "gates": [
+    {
+      "phase": "baseline",
+      "name": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 226,
+      "log": "exact-baseline-lint.log"
+    },
+    {
+      "phase": "baseline",
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 77874,
+      "log": "exact-baseline-build.log"
+    },
+    {
+      "phase": "candidate",
+      "name": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 289,
+      "log": "exact-candidate-lint.log"
+    },
+    {
+      "phase": "candidate",
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 73556,
+      "log": "exact-candidate-build.log"
+    },
+    {
+      "phase": "candidate",
+      "name": "related",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--runInBand",
+        "src/pages/agent/form/parser-form",
+        "--coverage=false"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 4121,
+      "log": "exact-candidate-related.log"
+    },
+    {
+      "phase": "candidate",
+      "name": "format",
+      "command": [
+        "./node_modules/.bin/oxfmt",
+        "--check",
+        "src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+        "src/pages/agent/form/parser-form/pdf-form-fields.test.tsx"
+      ],
+      "code": 0,
+      "signal": null,
+      "ms": 106,
+      "log": "exact-candidate-format.log"
+    }
+  ],
+  "requiredCommandsPass": true,
+  "pairedGlobalFailuresIdentical": true,
+  "baselineGlobal": {
+    "numTotalTests": 1059,
+    "numPassedTests": 1035,
+    "numFailedTests": 24,
+    "numFailedTestSuites": 11,
+    "numPassedTestSuites": 133
+  },
+  "candidateGlobal": {
+    "numTotalTests": 1083,
+    "numPassedTests": 1059,
+    "numFailedTests": 24,
+    "numFailedTestSuites": 11,
+    "numPassedTestSuites": 134
+  },
+  "typescriptDiagnosticCount": {
+    "baseline": 146,
+    "candidate": 146
+  },
+  "failedSuites": [
+    "src/components/__tests__/switch-fom-field.test.tsx",
+    "src/components/highlight-markdown/__tests__/index.test.tsx",
+    "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+    "src/pages/agent/utils/pipeline-connection.test.ts",
+    "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+    "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+    "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+    "src/utils/__tests__/chat.test.ts",
+    "src/utils/__tests__/file-util.test.ts",
+    "src/utils/__tests__/llm-util.test.ts",
+    "src/utils/__tests__/source-locate.test.ts"
+  ],
+  "failedAssertions": [
+    [
+      "src/components/__tests__/switch-fom-field.test.tsx",
+      "SwitchFormField toggles the switch when the label text is clicked"
+    ],
+    [
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+      "useScrollToBottom should NOT scroll to bottom when isAtBottom is false and messages change"
+    ],
+    [
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+      "useScrollToBottom should indicate button should appear when user is not at bottom"
+    ],
+    [
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+      "useScrollToBottom should scroll to bottom when isAtBottom is true and messages change"
+    ],
+    [
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+      "useScrollToBottom should set isAtBottom false when user is not at bottom"
+    ],
+    [
+      "src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx",
+      "useScrollToBottom should set isAtBottom true when user is at bottom"
+    ],
+    [
+      "src/pages/agent/utils/pipeline-connection.test.ts",
+      "buildPipelineNextOperators always offers Extractor, which is multi-instance"
+    ],
+    [
+      "src/pages/agent/utils/pipeline-connection.test.ts",
+      "isSingleInstanceOperator leaves multi-instance operators unchecked"
+    ],
+    [
+      "src/pages/user-setting/setting-model/provider-schema/field-config/local-llm-configs.test.ts",
+      "FunASR local provider configuration registers an optional-key local endpoint with the FunASR default URL"
+    ],
+    [
+      "src/utils/__tests__/chat.test.ts",
+      "preprocessLaTeX converts block \\[ \\] to $$ $$"
+    ],
+    [
+      "src/utils/__tests__/chat.test.ts",
+      "preprocessLaTeX converts inline \\( \\) to $ $"
+    ],
+    [
+      "src/utils/__tests__/chat.test.ts",
+      "preprocessLaTeX handles double-escaped inline LaTeX"
+    ],
+    [
+      "src/utils/__tests__/chat.test.ts",
+      "preprocessLaTeX handles mixed double-escaped delimiters with HTML entities"
+    ],
+    [
+      "src/utils/__tests__/chat.test.ts",
+      "preprocessLaTeX handles multiple block equations"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText decodes UTF-16BE with BOM (0xfe 0xff)"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText decodes UTF-16LE with BOM (0xff 0xfe)"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText decodes UTF-8 with BOM and strips the leading U+FEFF"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText decodes a 1-byte buffer without a false BOM match"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText decodes plain UTF-8 without a BOM"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText falls back to GBK when strict UTF-8 throws (GB2312 Chinese text)"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText falls through to GBK on a truncated UTF-8 BOM prefix"
+    ],
+    [
+      "src/utils/__tests__/file-util.test.ts",
+      "decodeBlobText returns an empty string for an empty buffer"
+    ],
+    [
+      "src/utils/__tests__/llm-util.test.ts",
+      "addTenantParams — clearing model selections clears a stale tenant rerank model id when rerank is explicitly cleared"
+    ],
+    [
+      "src/utils/__tests__/source-locate.test.ts",
+      "supportsSourceLocate rejects unsupported or missing extensions"
+    ]
+  ],
+  "loadFailures": [
+    "src/components/highlight-markdown/__tests__/index.test.tsx",
+    "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+    "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx"
+  ],
+  "baselineNewTests": {
+    "numTotalTests": 24,
+    "numPassedTests": 6,
+    "numFailedTests": 18
+  },
+  "treeManifest": "exact-lf-tree-manifest.json",
+  "browserPass": true,
+  "scope": "real application route/Parser/selector/Save/native PUT+GET/reload; synthetic HTTP persistence; no PDF parsing or external inference",
+  "finalDoclingScreenshotReview": "root visually inspected settled Docling, DeepDoc and tenant refresh screenshots; positive Parser/selected-method controls confirmed",
+  "sourceRootReviewed": true,
+  "publicationApproved": true,
+  "approvedAt": "2026-10-25T08:04:13.612693+00:00"
+}

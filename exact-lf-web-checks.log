@@ -1,0 +1,20 @@
+COMMAND: /work/hook-tools/node_modules/.bin/lefthook run web-checks --files-from-stdin --no-auto-install
+EXIT: 0
+╭─────────────────────────────────────────╮
+│ 🥊 lefthook  v2.2.2   hook:  web-checks │
+╰─────────────────────────────────────────╯
+┃  web-oxfmt ❯ 
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 3ms on 2 files using 24 threads.
+
+┃  web-oxlint ❯ 
+Found 0 warnings and 0 errors.
+Finished in 25ms on 2 files with 91 rules using 24 threads.
+
+│  web-no-tests-dir (skip) no files for inspection
+  ────────────────────────────────────
+summary: (done in 0.34 seconds)
+✔️ web-oxfmt (0.19 seconds)
+✔️ web-oxlint (0.15 seconds)

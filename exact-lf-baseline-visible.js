@@ -1,0 +1,1 @@
+async page=>{await page.getByRole('button',{name:'Docling',exact:true}).waitFor();await page.screenshot({path:'exact-lf-baseline-docling-persisted.png',animations:'disabled'});return {route:page.url(),dialog:await page.getByRole('dialog').boundingBox(),switches:await page.getByRole('switch').evaluateAll(nodes=>nodes.map(x=>x.getAttribute('aria-checked')))};}

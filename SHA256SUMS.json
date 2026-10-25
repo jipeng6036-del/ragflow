@@ -1,0 +1,253 @@
+{
+  "at": "2026-10-25T08:08:23.317653+00:00",
+  "source": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+  "base": "7105b5dd34b2def8ad8662160533bd8faccce1f8",
+  "scope": "explicit final proof allowlist; local synthetic HTTP data; no Git metadata, HOME, databases, private configuration or old setup attempts",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 34,
+      "sha256": "a0a792693b51c88163b4b341ab0323c2e8d7ce5f5c8797ab215d4e5d05551661"
+    },
+    {
+      "path": "exact-gates.cjs",
+      "bytes": 1596,
+      "sha256": "58c1b9f38dca38049b4f396f83d63cada5067682e0336831470763f626fbc982"
+    },
+    {
+      "path": "exact-lf-baseline-browser-results.json",
+      "bytes": 18892,
+      "sha256": "6e9ee2028dbb1684236efa8abf3012bb660ebfc73ef1c69075f08066c2a6bee1"
+    },
+    {
+      "path": "exact-lf-baseline-browser.js",
+      "bytes": 2134,
+      "sha256": "1c3e3232066e7f7b8a4838ef8762c5f82e1470897cac8c6a77557b83cc6a6ad1"
+    },
+    {
+      "path": "exact-lf-baseline-build.log",
+      "bytes": 79401,
+      "sha256": "5e6d25b1b0486aef6b13a39518e519b8cdc5c0c00a74f138f10c3c5b9f75388d"
+    },
+    {
+      "path": "exact-lf-baseline-docling-persisted.png",
+      "bytes": 85636,
+      "sha256": "8491702fae0a3457f99280569079337b2b8e5064262c64a44dfed0532551b076"
+    },
+    {
+      "path": "exact-lf-baseline-http-receipts-frozen.jsonl",
+      "bytes": 5431,
+      "sha256": "1d34cf1aba7b96ee2b97012f69901c86843db6a355b15cdab95f016c4f9fbe00"
+    },
+    {
+      "path": "exact-lf-baseline-lint.log",
+      "bytes": 153323,
+      "sha256": "34514c5d54ee4f5a892e3e815eb911a3a1e5a9c8c559d09dcd811e4c5a9ac306"
+    },
+    {
+      "path": "exact-lf-baseline-new-regression.log",
+      "bytes": 74250,
+      "sha256": "36e332d2774db5d9100e4ed230c7aa5776104eb7a7c687d9f0ec3689479f12c4"
+    },
+    {
+      "path": "exact-lf-baseline-test.log",
+      "bytes": 199037,
+      "sha256": "7d44817774599ebb1607a2bfbbd8c6a309bb99ccf2e865e6e64316c1272ea71b"
+    },
+    {
+      "path": "exact-lf-baseline-type-check.log",
+      "bytes": 28625,
+      "sha256": "52ce804eb304a515f639e0c5671ff320cd3d7af49af905f7aa4b06a7d6cc547f"
+    },
+    {
+      "path": "exact-lf-baseline-visible.js",
+      "bytes": 362,
+      "sha256": "343f8ccef400313bcb64369b57681dd93ff92b2da442cb8e87da73c727616d6b"
+    },
+    {
+      "path": "exact-lf-baseline-visible.log",
+      "bytes": 620,
+      "sha256": "bd90d9912a5fe6cea61b9b42d203eb65c943a92eca7c745ba624d1b0e4704d3d"
+    },
+    {
+      "path": "exact-lf-build-manifest.json",
+      "bytes": 397868,
+      "sha256": "98c51975a3c1198c8fc1341f6291da100d0bb5fb6014f7e503a7836ba0ceac49"
+    },
+    {
+      "path": "exact-lf-candidate-browser-results.json",
+      "bytes": 52010,
+      "sha256": "693bcdce72a4ca70a4c8b0c1ec8e196fdcacce512034d63f3b996be526a96590"
+    },
+    {
+      "path": "exact-lf-candidate-browser.js",
+      "bytes": 3875,
+      "sha256": "813950100112bd9464e8ac1db0177611e0d47328b70e58548a8ea33d3299cdbe"
+    },
+    {
+      "path": "exact-lf-candidate-build.log",
+      "bytes": 79439,
+      "sha256": "1e6354ec5bc9766e5c98e9c9809b72b9bd36b5acf6d0ffd813237bcb15d31975"
+    },
+    {
+      "path": "exact-lf-candidate-deepdoc-refresh.png",
+      "bytes": 83105,
+      "sha256": "51b516c1195621d02e7e22fc8e545c77762ad94548c723e8944f66b1430ee201"
+    },
+    {
+      "path": "exact-lf-candidate-docling-persisted.png",
+      "bytes": 78147,
+      "sha256": "586d40b5ec114e1781a08e5da471461732e71691c23bc4a4e972f915a77aafef"
+    },
+    {
+      "path": "exact-lf-candidate-docling-visible-results.json",
+      "bytes": 12509,
+      "sha256": "b05d9e484fe3a12b13f99d0bc85224828109dc70d88d54f6aa1ec040e4ffe4d8"
+    },
+    {
+      "path": "exact-lf-candidate-docling-visible.js",
+      "bytes": 1779,
+      "sha256": "b78101ad79cdca9733954bebf2cf33267f9c65b4d16bdb89710390a4abcdae89"
+    },
+    {
+      "path": "exact-lf-candidate-format.log",
+      "bytes": 111,
+      "sha256": "5c0f52f5d8f15d3ff304f5c12a57adb52867c58709673030f760592f495da3ec"
+    },
+    {
+      "path": "exact-lf-candidate-http-receipts-frozen.jsonl",
+      "bytes": 16035,
+      "sha256": "ba23d0ac84fb219e72abf34b6c16eb68c037bb0b3fba550314d2f93e18bcb653"
+    },
+    {
+      "path": "exact-lf-candidate-lint.log",
+      "bytes": 153323,
+      "sha256": "51661e83447ecfc47b59746ddb5171967d30f69cae53717f19e49df0d464c929"
+    },
+    {
+      "path": "exact-lf-candidate-naive-saved.png",
+      "bytes": 77228,
+      "sha256": "8e2f7c5f4699eae0baa17048d997a232ef29d996758a200fff8c04cdf97134a6"
+    },
+    {
+      "path": "exact-lf-candidate-related.log",
+      "bytes": 72614,
+      "sha256": "1a3d64df8d335e5d61430a6f5cde3cbd39f4f8aeff6339b613ce0e5a89128d2b"
+    },
+    {
+      "path": "exact-lf-candidate-tenant-refresh.png",
+      "bytes": 79661,
+      "sha256": "5556bdc82915c88cb36be640e727bc769ec1156fcb090e2ee216f513ef1d4f69"
+    },
+    {
+      "path": "exact-lf-candidate-test.log",
+      "bytes": 285956,
+      "sha256": "0fda855056a7c675a4f4f574a158b3171a967a520a3b2ffdef020e80bfdf2451"
+    },
+    {
+      "path": "exact-lf-candidate-type-check.log",
+      "bytes": 28625,
+      "sha256": "52ce804eb304a515f639e0c5671ff320cd3d7af49af905f7aa4b06a7d6cc547f"
+    },
+    {
+      "path": "exact-lf-candidate.patch",
+      "bytes": 9728,
+      "sha256": "847ccabbf73dce2e2dc8f87f8ddb85fde2b7de69a10619d418b5cd031460612c"
+    },
+    {
+      "path": "exact-lf-freeze.py",
+      "bytes": 2540,
+      "sha256": "ac34b88e72e91cef700e4ff827028600d9e58f60565d11ae8d09fde9b49025f8"
+    },
+    {
+      "path": "exact-lf-gates.json",
+      "bytes": 3160,
+      "sha256": "a85a2e5dacc52dc1d99079dc56023ac0a0dc98e12cb1726cab8163af144cdbbf"
+    },
+    {
+      "path": "exact-lf-http-freeze.json",
+      "bytes": 696,
+      "sha256": "cd285832776e5f316e9c1921420798afad4760d10a19d8f82a4e351366841f55"
+    },
+    {
+      "path": "exact-lf-page-server.cjs",
+      "bytes": 4306,
+      "sha256": "beccbb70f9bbae72509d1d46ae3c95d07bf36a8dc3708709a47326ba65e38b83"
+    },
+    {
+      "path": "exact-lf-paired-results.json",
+      "bytes": 61357,
+      "sha256": "9dcd5014d18348e3e35cd458657a0eb5ceb3cf3aeceb26a12ff5cae3d14ad646"
+    },
+    {
+      "path": "exact-lf-paired-results.py",
+      "bytes": 3573,
+      "sha256": "54302fbe5ba6a4abd97a808713e84c15a8282e400ce7fb9fff58cf2360077c6a"
+    },
+    {
+      "path": "exact-lf-pre-commit.log",
+      "bytes": 1263,
+      "sha256": "c600526891b45ccde4e39469d4ddc29aa856126badf3882f56641bd670ba5ddb"
+    },
+    {
+      "path": "exact-lf-real-hooks.json",
+      "bytes": 4670,
+      "sha256": "7cfac2121578c3710a800478bb90ed2a11a3e5e9966c8a7481f87d4ef12ccf7c"
+    },
+    {
+      "path": "exact-lf-runtime-versions.json",
+      "bytes": 1346,
+      "sha256": "0c551b2ae6bc8934a39200e35ec2908ef6eee5e6e3015e408540fcedb31db4b6"
+    },
+    {
+      "path": "exact-lf-source-hashes.json",
+      "bytes": 748,
+      "sha256": "837bc87874898903786a86f84cc954bfc26c17f7afff792476cae61ffef469ec"
+    },
+    {
+      "path": "exact-lf-tree-manifest.json",
+      "bytes": 3178,
+      "sha256": "dda534a1899e7230f0c0d271c6d09aa60095f3fbf69432d39447416cc7e9b29e"
+    },
+    {
+      "path": "exact-lf-web-checks.log",
+      "bytes": 949,
+      "sha256": "1958715d19a437aac2b2a49ddcd590f9553ad8c2410a48c9f277a9f179c15404"
+    },
+    {
+      "path": "init-browser.js",
+      "bytes": 438,
+      "sha256": "808546d8c33f70b8edec245c0b2582118b3e5db7c892112f1eba3928c4d55d24"
+    },
+    {
+      "path": "normal-commit-hook.log",
+      "bytes": 1487,
+      "sha256": "d67ce433bffdca7188067c8e756ba7a6b2bfdd49eee2ba2663d1126164901577"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6715,
+      "sha256": "91fe0d87262d3b3a53c1b239ae7380a927f270d556c3bf336f05ef3fe75afef1"
+    },
+    {
+      "path": "real-hooks.cjs",
+      "bytes": 1534,
+      "sha256": "d0e0522da1d59f3d29cd98676da66ca73cb5436b626f63a00be5714d95fb3968"
+    },
+    {
+      "path": "restore-exact-blobs.py",
+      "bytes": 1953,
+      "sha256": "4efd866dd63bfbcf338a6ec0567ce9a5c9bc1b2330679805a5c72d823bbca8cc"
+    },
+    {
+      "path": "root-independent-review.json",
+      "bytes": 7609,
+      "sha256": "8da3b366b18401df01841fbfe9398fbc618db5559a13d3b2561c0501c30a1726"
+    },
+    {
+      "path": "root-source-commit.json",
+      "bytes": 1063,
+      "sha256": "cd402b7d70ff631a9adb545b90531e18ff85cd8cfae44d431f01d888af7460ff"
+    }
+  ]
+}

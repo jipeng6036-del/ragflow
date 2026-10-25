@@ -1,0 +1,36 @@
+[fix/hide-unsupported-pdf-cleanup-options 84ae424] fix(web): hide unsupported PDF cleanup options
+ 2 files changed, 241 insertions(+), 2 deletions(-)
+ create mode 100644 web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx
+
+[38;2;56;56;56m╭─────────────────────────────────────────╮[m
+[38;2;56;56;56m│[m 🥊 lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰─────────────────────────────────────────╯[m
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+│  gofmt (skip) no files for inspection
+┃  check-symlinks ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  check-yaml ❯ 
+
+┃  check-json ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-case-conflict ❯ 
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.07 seconds)
+✔️ check-symlinks (0.04 seconds)
+✔️ mixed-line-ending (0.04 seconds)
+✔️ check-yaml (0.04 seconds)
+✔️ check-json (0.05 seconds)
+✔️ end-of-file-fixer (0.05 seconds)
+✔️ check-merge-conflict (0.05 seconds)
+✔️ trailing-whitespace (0.05 seconds)
+✔️ check-case-conflict (0.06 seconds)

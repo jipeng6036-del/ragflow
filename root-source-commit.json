@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-25T08:04:21.712186+00:00",
+  "base": "7105b5dd34b2def8ad8662160533bd8faccce1f8",
+  "head": "84ae4246afadcf18bb02d8521dee1bbe0c4ffa1e",
+  "branch": "fix/hide-unsupported-pdf-cleanup-options",
+  "files": "A\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\nM\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+  "numstat": "198\t0\tweb/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx\n43\t2\tweb/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+  "sourceBlobSha256": {
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx": "253e5feb98eb18f09b38815bc377c1292c68eb4b6f02cd8bf2058c73daaacc35",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.test.tsx": "a8b8b17fdeb4beb0e8f42b142a09207d88683860e69f5fb32c19ba1951341bb9"
+  },
+  "hostStatus": "",
+  "normalGitCommitWithLefthook": true,
+  "localBackupStashRetained": "Saved working directory and index state On fix/hide-unsupported-pdf-cleanup-options: ragflow21221 pre-bundle backup",
+  "pushed": false,
+  "prCreated": false
+}

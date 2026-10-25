@@ -1,0 +1,34 @@
+COMMAND: /work/hook-tools/node_modules/.bin/lefthook run pre-commit --files-from-stdin --no-auto-install
+EXIT: 0
+╭─────────────────────────────────────────╮
+│ 🥊 lefthook  v2.2.2   hook:  pre-commit │
+╰─────────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+│  gofmt (skip) no files for inspection
+┃  mixed-line-ending ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  check-yaml ❯ 
+
+┃  check-json ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-symlinks ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  check-case-conflict ❯ 
+
+  ────────────────────────────────────
+summary: (done in 0.06 seconds)
+✔️ mixed-line-ending (0.04 seconds)
+✔️ end-of-file-fixer (0.04 seconds)
+✔️ check-yaml (0.04 seconds)
+✔️ check-json (0.04 seconds)
+✔️ trailing-whitespace (0.04 seconds)
+✔️ check-symlinks (0.04 seconds)
+✔️ check-merge-conflict (0.04 seconds)
+✔️ check-case-conflict (0.06 seconds)

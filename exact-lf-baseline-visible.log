@@ -1,0 +1,7 @@
+### Result
+{"route":"http://127.0.0.1:19021/agent/pdf-cleanup-proof?category=dataflow_canvas","dialog":{"x":619.34375,"y":80,"width":309.65625,"height":917},"switches":["false","false","false","true"]}
+### Ran Playwright code
+```js
+await (async page=>{await page.getByRole('button',{name:'Docling',exact:true}).waitFor();await page.screenshot({path:'exact-lf-baseline-docling-persisted.png',animations:'disabled'});return {route:page.url(),dialog:await page.getByRole('dialog').boundingBox(),switches:await page.getByRole('switch').evaluateAll(nodes=>nodes.map(x=>x.getAttribute('aria-checked')))};}
+)(page);
+```

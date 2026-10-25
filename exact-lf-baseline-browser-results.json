@@ -1,0 +1,598 @@
+{
+  "pass": true,
+  "scope": "real Vite application and native service; synthetic local API persistence; no PDF parsing",
+  "results": [
+    {
+      "step": "initial-native-get",
+      "response": {
+        "code": 0,
+        "message": "success",
+        "data": {
+          "id": "pdf-cleanup-proof",
+          "title": "baseline PDF cleanup - local HTTP fixture",
+          "tenant_id": "fixture-owner",
+          "user_id": "fixture-owner",
+          "permission": "me",
+          "canvas_category": "dataflow_canvas",
+          "dsl": {
+            "globals": {},
+            "variables": [],
+            "retrieval": [],
+            "history": [],
+            "path": [],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "File",
+                  "type": "beginNode",
+                  "position": {
+                    "x": 50,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "File",
+                    "name": "File"
+                  },
+                  "sourcePosition": "left",
+                  "targetPosition": "right"
+                },
+                {
+                  "id": "Parser:receipt",
+                  "type": "parserNode",
+                  "position": {
+                    "x": 350,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "Parser",
+                    "name": "Parser",
+                    "form": {
+                      "outputs": {
+                        "json": {
+                          "type": "Array<object>",
+                          "value": []
+                        }
+                      },
+                      "vlm": {
+                        "llm_id": "",
+                        "system_prompt": ""
+                      },
+                      "enable_vision_enhancement": false,
+                      "setups": [
+                        {
+                          "fileFormat": "pdf",
+                          "parse_method": "Docling",
+                          "preprocess": "main_content",
+                          "remove_toc": true,
+                          "remove_header_footer": true,
+                          "pages": [
+                            {
+                              "from": 1,
+                              "to": 100000
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "sourcePosition": "right",
+                  "targetPosition": "left"
+                }
+              ],
+              "edges": [
+                {
+                  "id": "file-parser",
+                  "source": "File",
+                  "sourceHandle": "start",
+                  "target": "Parser:receipt",
+                  "targetHandle": "end"
+                }
+              ]
+            },
+            "components": {
+              "File": {
+                "obj": {
+                  "component_name": "File",
+                  "params": {}
+                },
+                "upstream": [],
+                "downstream": [
+                  "Parser:receipt"
+                ]
+              },
+              "Parser:receipt": {
+                "obj": {
+                  "component_name": "Parser",
+                  "params": {
+                    "outputs": {
+                      "json": {
+                        "type": "Array<object>",
+                        "value": []
+                      }
+                    },
+                    "vlm": {
+                      "llm_id": "",
+                      "system_prompt": ""
+                    },
+                    "enable_vision_enhancement": false,
+                    "setups": [
+                      {
+                        "fileFormat": "pdf",
+                        "parse_method": "Docling",
+                        "preprocess": "main_content",
+                        "remove_toc": true,
+                        "remove_header_footer": true,
+                        "pages": [
+                          {
+                            "from": 1,
+                            "to": 100000
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "upstream": [
+                  "File"
+                ],
+                "downstream": []
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "step": "native-save",
+      "putStatus": 200,
+      "putBody": {
+        "title": "baseline PDF cleanup - local HTTP fixture",
+        "dsl": {
+          "globals": {
+            "sys.history": []
+          },
+          "variables": [],
+          "retrieval": [],
+          "history": [],
+          "path": [],
+          "graph": {
+            "nodes": [
+              {
+                "id": "File",
+                "type": "beginNode",
+                "position": {
+                  "x": 50,
+                  "y": 200
+                },
+                "data": {
+                  "label": "File",
+                  "name": "File"
+                },
+                "sourcePosition": "left",
+                "targetPosition": "right",
+                "measured": {
+                  "width": 200,
+                  "height": 50
+                }
+              },
+              {
+                "id": "Parser:receipt",
+                "type": "parserNode",
+                "position": {
+                  "x": 350,
+                  "y": 200
+                },
+                "data": {
+                  "label": "Parser",
+                  "name": "Parser",
+                  "form": {
+                    "outputs": {
+                      "json": {
+                        "type": "Array<object>",
+                        "value": []
+                      }
+                    },
+                    "vlm": {
+                      "llm_id": "",
+                      "system_prompt": ""
+                    },
+                    "enable_vision_enhancement": false,
+                    "setups": [
+                      {
+                        "fileFormat": "pdf",
+                        "parse_method": "Docling",
+                        "preprocess": "main_content",
+                        "remove_toc": false,
+                        "remove_header_footer": true,
+                        "pages": [
+                          {
+                            "from": 1,
+                            "to": 100000
+                          }
+                        ],
+                        "lang": "English"
+                      }
+                    ]
+                  }
+                },
+                "sourcePosition": "right",
+                "targetPosition": "left",
+                "measured": {
+                  "width": 200,
+                  "height": 74
+                },
+                "selected": true
+              }
+            ],
+            "edges": [
+              {
+                "id": "file-parser",
+                "source": "File",
+                "sourceHandle": "start",
+                "target": "Parser:receipt",
+                "targetHandle": "end"
+              }
+            ]
+          },
+          "components": {
+            "File": {
+              "obj": {
+                "component_name": "File",
+                "params": {}
+              },
+              "downstream": [
+                "Parser:receipt"
+              ],
+              "upstream": []
+            },
+            "Parser:receipt": {
+              "obj": {
+                "component_name": "Parser",
+                "params": {
+                  "outputs": {
+                    "json": {
+                      "type": "Array<object>",
+                      "value": []
+                    }
+                  },
+                  "vlm": {
+                    "llm_id": "",
+                    "system_prompt": ""
+                  },
+                  "enable_vision_enhancement": false,
+                  "pdf": {
+                    "suffix": [
+                      "pdf"
+                    ],
+                    "parse_method": "Docling",
+                    "lang": "English",
+                    "remove_toc": false,
+                    "remove_header_footer": true,
+                    "pages": [
+                      [
+                        1,
+                        100000
+                      ]
+                    ],
+                    "order_index": 0
+                  }
+                }
+              },
+              "downstream": [],
+              "upstream": [
+                "File"
+              ]
+            }
+          },
+          "messages": []
+        }
+      },
+      "getStatus": 200,
+      "getBody": {
+        "code": 0,
+        "message": "success",
+        "data": {
+          "id": "pdf-cleanup-proof",
+          "title": "baseline PDF cleanup - local HTTP fixture",
+          "tenant_id": "fixture-owner",
+          "user_id": "fixture-owner",
+          "permission": "me",
+          "canvas_category": "dataflow_canvas",
+          "dsl": {
+            "globals": {
+              "sys.history": []
+            },
+            "variables": [],
+            "retrieval": [],
+            "history": [],
+            "path": [],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "File",
+                  "type": "beginNode",
+                  "position": {
+                    "x": 50,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "File",
+                    "name": "File"
+                  },
+                  "sourcePosition": "left",
+                  "targetPosition": "right",
+                  "measured": {
+                    "width": 200,
+                    "height": 50
+                  }
+                },
+                {
+                  "id": "Parser:receipt",
+                  "type": "parserNode",
+                  "position": {
+                    "x": 350,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "Parser",
+                    "name": "Parser",
+                    "form": {
+                      "outputs": {
+                        "json": {
+                          "type": "Array<object>",
+                          "value": []
+                        }
+                      },
+                      "vlm": {
+                        "llm_id": "",
+                        "system_prompt": ""
+                      },
+                      "enable_vision_enhancement": false,
+                      "setups": [
+                        {
+                          "fileFormat": "pdf",
+                          "parse_method": "Docling",
+                          "preprocess": "main_content",
+                          "remove_toc": false,
+                          "remove_header_footer": true,
+                          "pages": [
+                            {
+                              "from": 1,
+                              "to": 100000
+                            }
+                          ],
+                          "lang": "English"
+                        }
+                      ]
+                    }
+                  },
+                  "sourcePosition": "right",
+                  "targetPosition": "left",
+                  "measured": {
+                    "width": 200,
+                    "height": 74
+                  },
+                  "selected": true
+                }
+              ],
+              "edges": [
+                {
+                  "id": "file-parser",
+                  "source": "File",
+                  "sourceHandle": "start",
+                  "target": "Parser:receipt",
+                  "targetHandle": "end"
+                }
+              ]
+            },
+            "components": {
+              "File": {
+                "obj": {
+                  "component_name": "File",
+                  "params": {}
+                },
+                "downstream": [
+                  "Parser:receipt"
+                ],
+                "upstream": []
+              },
+              "Parser:receipt": {
+                "obj": {
+                  "component_name": "Parser",
+                  "params": {
+                    "outputs": {
+                      "json": {
+                        "type": "Array<object>",
+                        "value": []
+                      }
+                    },
+                    "vlm": {
+                      "llm_id": "",
+                      "system_prompt": ""
+                    },
+                    "enable_vision_enhancement": false,
+                    "pdf": {
+                      "suffix": [
+                        "pdf"
+                      ],
+                      "parse_method": "Docling",
+                      "lang": "English",
+                      "remove_toc": false,
+                      "remove_header_footer": true,
+                      "pages": [
+                        [
+                          1,
+                          100000
+                        ]
+                      ],
+                      "order_index": 0
+                    }
+                  }
+                },
+                "downstream": [],
+                "upstream": [
+                  "File"
+                ]
+              }
+            },
+            "messages": []
+          }
+        }
+      }
+    },
+    {
+      "step": "reload-native-get",
+      "body": {
+        "code": 0,
+        "message": "success",
+        "data": {
+          "id": "pdf-cleanup-proof",
+          "title": "baseline PDF cleanup - local HTTP fixture",
+          "tenant_id": "fixture-owner",
+          "user_id": "fixture-owner",
+          "permission": "me",
+          "canvas_category": "dataflow_canvas",
+          "dsl": {
+            "globals": {
+              "sys.history": []
+            },
+            "variables": [],
+            "retrieval": [],
+            "history": [],
+            "path": [],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "File",
+                  "type": "beginNode",
+                  "position": {
+                    "x": 50,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "File",
+                    "name": "File"
+                  },
+                  "sourcePosition": "left",
+                  "targetPosition": "right",
+                  "measured": {
+                    "width": 200,
+                    "height": 50
+                  }
+                },
+                {
+                  "id": "Parser:receipt",
+                  "type": "parserNode",
+                  "position": {
+                    "x": 350,
+                    "y": 200
+                  },
+                  "data": {
+                    "label": "Parser",
+                    "name": "Parser",
+                    "form": {
+                      "outputs": {
+                        "json": {
+                          "type": "Array<object>",
+                          "value": []
+                        }
+                      },
+                      "vlm": {
+                        "llm_id": "",
+                        "system_prompt": ""
+                      },
+                      "enable_vision_enhancement": false,
+                      "setups": [
+                        {
+                          "fileFormat": "pdf",
+                          "parse_method": "Docling",
+                          "preprocess": "main_content",
+                          "remove_toc": false,
+                          "remove_header_footer": true,
+                          "pages": [
+                            {
+                              "from": 1,
+                              "to": 100000
+                            }
+                          ],
+                          "lang": "English"
+                        }
+                      ]
+                    }
+                  },
+                  "sourcePosition": "right",
+                  "targetPosition": "left",
+                  "measured": {
+                    "width": 200,
+                    "height": 74
+                  },
+                  "selected": true
+                }
+              ],
+              "edges": [
+                {
+                  "id": "file-parser",
+                  "source": "File",
+                  "sourceHandle": "start",
+                  "target": "Parser:receipt",
+                  "targetHandle": "end"
+                }
+              ]
+            },
+            "components": {
+              "File": {
+                "obj": {
+                  "component_name": "File",
+                  "params": {}
+                },
+                "downstream": [
+                  "Parser:receipt"
+                ],
+                "upstream": []
+              },
+              "Parser:receipt": {
+                "obj": {
+                  "component_name": "Parser",
+                  "params": {
+                    "outputs": {
+                      "json": {
+                        "type": "Array<object>",
+                        "value": []
+                      }
+                    },
+                    "vlm": {
+                      "llm_id": "",
+                      "system_prompt": ""
+                    },
+                    "enable_vision_enhancement": false,
+                    "pdf": {
+                      "suffix": [
+                        "pdf"
+                      ],
+                      "parse_method": "Docling",
+                      "lang": "English",
+                      "remove_toc": false,
+                      "remove_header_footer": true,
+                      "pages": [
+                        [
+                          1,
+                          100000
+                        ]
+                      ],
+                      "order_index": 0
+                    }
+                  }
+                },
+                "downstream": [],
+                "upstream": [
+                  "File"
+                ]
+              }
+            },
+            "messages": []
+          }
+        }
+      }
+    }
+  ]
+}
