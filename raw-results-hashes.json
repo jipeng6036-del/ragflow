@@ -1,0 +1,20 @@
+{
+  "scope": "Hashes of complete locally retained Jest JSONs; complete test text logs and failed-ID/diagnostic comparison are published separately.",
+  "files": [
+    {
+      "path": "exact-baseline-jest-results.json",
+      "bytes": 10171864,
+      "sha256": "ae7d8fdfd1f3da8cf0016bd9cfa1671bbfc24f372ab1191d549d9fe6c0d0bf62"
+    },
+    {
+      "path": "exact-candidate-jest-results.json",
+      "bytes": 10189159,
+      "sha256": "6d2a35d9aaf26d94f6fb7171fc28e78d6241e1272a391762960a76fa896c3fb6"
+    },
+    {
+      "path": "exact-baseline-new-regression.json",
+      "bytes": 54708,
+      "sha256": "4d9ef5b2dae0b601aafc75be74779f4169f7f5870a8a43143ffefe704e2db843"
+    }
+  ]
+}
